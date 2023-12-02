@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B72ADC6C-C390-46E6-A9C8-C56CF4E994FB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>JourneyX</RootNamespace>
+    <AssemblyName>JourneyX</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.4.2, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>packages\Guna.UI2.WinForms.2.0.4.2\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin.Designer.cs">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminProfile.Designer.cs">
+      <DependentUpon>AdminProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DashBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DashBoard.Designer.cs">
+      <DependentUpon>DashBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Feedback.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Feedback.Designer.cs">
+      <DependentUpon>Feedback.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GoogleMap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GoogleMap.Designer.cs">
+      <DependentUpon>GoogleMap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notification.Designer.cs">
+      <DependentUpon>Notification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OffersAndNews.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OffersAndNews.Designer.cs">
+      <DependentUpon>OffersAndNews.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Profile.Designer.cs">
+      <DependentUpon>Profile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Schedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Schedule.Designer.cs">
+      <DependentUpon>Schedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SQL.cs" />
+    <Compile Include="Taxi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Taxi.Designer.cs">
+      <DependentUpon>Taxi.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Admin.resx">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminProfile.resx">
+      <DependentUpon>AdminProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DashBoard.resx">
+      <DependentUpon>DashBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Feedback.resx">
+      <DependentUpon>Feedback.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GoogleMap.resx">
+      <DependentUpon>GoogleMap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notification.resx">
+      <DependentUpon>Notification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OffersAndNews.resx">
+      <DependentUpon>OffersAndNews.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Profile.resx">
+      <DependentUpon>Profile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Schedule.resx">
+      <DependentUpon>Schedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Taxi.resx">
+      <DependentUpon>Taxi.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icons\angry color.png" />
+    <Content Include="Icons\angry.png" />
+    <Content Include="Icons\calendar.png" />
+    <Content Include="Icons\cancel %281%29.png" />
+    <Content Include="Icons\cancel.png" />
+    <Content Include="Icons\dashboard.png" />
+    <Content Include="Icons\date-of-birth.png" />
+    <Content Include="Icons\edit.png" />
+    <Content Include="Icons\email.png" />
+    <Content Include="Icons\exit.png" />
+    <Content Include="Icons\explore+exploit+tradeoff.jpg" />
+    <Content Include="Icons\eye.png" />
+    <Content Include="Icons\feedback.png" />
+    <Content Include="Icons\filter.png" />
+    <Content Include="Icons\geniva.jpg" />
+    <Content Include="Icons\gift.png" />
+    <Content Include="Icons\handshake.png" />
+    <Content Include="Icons\happy color.png" />
+    <Content Include="Icons\happy.png" />
+    <Content Include="Icons\hidden.png" />
+    <Content Include="Icons\home.png" />
+    <Content Include="Icons\location.png" />
+    <Content Include="Icons\maximize.png" />
+    <Content Include="Icons\mini-van.png" />
+    <Content Include="Icons\minus %281%29.png" />
+    <Content Include="Icons\mobile-application.png" />
+    <Content Include="Icons\neutral color.png" />
+    <Content Include="Icons\neutral.png" />
+    <Content Include="Icons\notification.png" />
+    <Content Include="Icons\notification2.png" />
+    <Content Include="Icons\notifications.png" />
+    <Content Include="Icons\padlock.png" />
+    <Content Include="Icons\password.png" />
+    <Content Include="Icons\Picture02.png" />
+    <Content Include="Icons\Picture03.png" />
+    <Content Include="Icons\Picture04.png" />
+    <Content Include="Icons\Picture05.png" />
+    <Content Include="Icons\Picture06.png" />
+    <Content Include="Icons\price-tag.png" />
+    <Content Include="Icons\restore-down.png" />
+    <Content Include="Icons\rickshaw.png" />
+    <Content Include="Icons\sad color.png" />
+    <Content Include="Icons\sad-face.png" />
+    <Content Include="Icons\search-interface-symbol.png" />
+    <Content Include="Icons\smile color.png" />
+    <Content Include="Icons\smile.png" />
+    <Content Include="Icons\sport-car.png" />
+    <Content Include="Icons\star.png" />
+    <Content Include="Icons\starcolor.png" />
+    <Content Include="Icons\telephone.png" />
+    <Content Include="Icons\user %281%29.png" />
+    <Content Include="Icons\user %282%29.png" />
+    <Content Include="Icons\Picture01.png" />
+    <Content Include="Icons\user.png" />
+    <Content Include="Pictures\1.jpg" />
+    <Content Include="Pictures\10.jpg" />
+    <Content Include="Pictures\2.jpg" />
+    <Content Include="Pictures\3.jpg" />
+    <Content Include="Pictures\4.jpg" />
+    <Content Include="Pictures\5.jpg" />
+    <Content Include="Pictures\6.jpg" />
+    <Content Include="Pictures\7.jpg" />
+    <Content Include="Pictures\8.jpg" />
+    <Content Include="Pictures\9.jpg" />
+    <Content Include="Icons\accessibility.png" />
+    <Content Include="Pictures\IMG_1155.JPG" />
+    <Content Include="Pictures\shutterstock_11416168821.jpg" />
+    <Content Include="Pictures\sigiriya.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
