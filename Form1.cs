@@ -342,12 +342,12 @@ namespace JourneyX
             if(TextBox_LoginPassword.UseSystemPasswordChar == true)
             {
                 TextBox_LoginPassword.UseSystemPasswordChar = false;
-                Button_LPHiden.Image = Image.FromFile("C:\\Users\\PRAMOD MADHUBHASHANA\\Documents\\Visual Studio 2022\\GUI\\JourneyX\\Icons\\eye.png");
+                Button_LPHiden.Image = Image.FromFile("Icons\\eye.png");
             }
             else
             {
                 TextBox_LoginPassword.UseSystemPasswordChar = true;
-                Button_LPHiden.Image = Image.FromFile("C:\\Users\\PRAMOD MADHUBHASHANA\\Documents\\Visual Studio 2022\\GUI\\JourneyX\\Icons\\hidden.png");
+                Button_LPHiden.Image = Image.FromFile("Icons\\hidden.png");
             }
         }
         private void Button_SHiddenPassword_Click(object sender, EventArgs e)
@@ -355,12 +355,12 @@ namespace JourneyX
             if (TextBox_Password.UseSystemPasswordChar == true)
             {
                 TextBox_Password.UseSystemPasswordChar = false;
-                Button_LPHiden.Image = Image.FromFile("C:\\Users\\PRAMOD MADHUBHASHANA\\Documents\\Visual Studio 2022\\GUI\\JourneyX\\Icons\\eye.png");
+                Button_LPHiden.Image = Image.FromFile("Icons\\eye.png");
             }
             else
             {
                 TextBox_Password.UseSystemPasswordChar = true;
-                Button_LPHiden.Image = Image.FromFile("C:\\Users\\PRAMOD MADHUBHASHANA\\Documents\\Visual Studio 2022\\GUI\\JourneyX\\Icons\\hidden.png");
+                Button_LPHiden.Image = Image.FromFile("Icons\\hidden.png");
             }
         }
         private void Button_SCHidden_Click(object sender, EventArgs e)
@@ -368,12 +368,12 @@ namespace JourneyX
             if (TextBox_ConfirmPassword.UseSystemPasswordChar == true)
             {
                 TextBox_ConfirmPassword.UseSystemPasswordChar = false;
-                Button_LPHiden.Image = Image.FromFile("C:\\Users\\PRAMOD MADHUBHASHANA\\Documents\\Visual Studio 2022\\GUI\\JourneyX\\Icons\\eye.png");
+                Button_LPHiden.Image = Image.FromFile("Icons\\eye.png");
             }
             else
             {
                 TextBox_ConfirmPassword.UseSystemPasswordChar = true;
-                Button_LPHiden.Image = Image.FromFile("C:\\Users\\PRAMOD MADHUBHASHANA\\Documents\\Visual Studio 2022\\GUI\\JourneyX\\Icons\\hidden.png");
+                Button_LPHiden.Image = Image.FromFile("Icons\\hidden.png");
             }
         } 
         private void TextBox_Password_TextChanged(object sender, EventArgs e)
@@ -443,16 +443,16 @@ namespace JourneyX
         } 
         private void timer_PictureBox_Tick(object sender, EventArgs e)
         {
-            Image[] images = {  Image.FromFile("C:\\Users\\PRAMOD MADHUBHASHANA\\Documents\\Visual Studio 2022\\GUI\\JourneyX\\Pictures\\1.jpg"),
-                                Image.FromFile("C:\\Users\\PRAMOD MADHUBHASHANA\\Documents\\Visual Studio 2022\\GUI\\JourneyX\\Pictures\\2.jpg"),
-                                Image.FromFile("C:\\Users\\PRAMOD MADHUBHASHANA\\Documents\\Visual Studio 2022\\GUI\\JourneyX\\Pictures\\3.jpg"),
-                                Image.FromFile("C:\\Users\\PRAMOD MADHUBHASHANA\\Documents\\Visual Studio 2022\\GUI\\JourneyX\\Pictures\\4.jpg"),
-                                Image.FromFile("C:\\Users\\PRAMOD MADHUBHASHANA\\Documents\\Visual Studio 2022\\GUI\\JourneyX\\Pictures\\5.jpg"),
-                                Image.FromFile("C:\\Users\\PRAMOD MADHUBHASHANA\\Documents\\Visual Studio 2022\\GUI\\JourneyX\\Pictures\\6.jpg"),
-                                Image.FromFile("C:\\Users\\PRAMOD MADHUBHASHANA\\Documents\\Visual Studio 2022\\GUI\\JourneyX\\Pictures\\7.jpg"),
-                                Image.FromFile("C:\\Users\\PRAMOD MADHUBHASHANA\\Documents\\Visual Studio 2022\\GUI\\JourneyX\\Pictures\\8.jpg"),
-                                Image.FromFile("C:\\Users\\PRAMOD MADHUBHASHANA\\Documents\\Visual Studio 2022\\GUI\\JourneyX\\Pictures\\9.jpg"),
-                                Image.FromFile("C:\\Users\\PRAMOD MADHUBHASHANA\\Documents\\Visual Studio 2022\\GUI\\JourneyX\\Pictures\\10.jpg")
+            Image[] images = {  Image.FromFile("Pictures\\1.jpg"),
+                                Image.FromFile("Pictures\\2.jpg"),
+                                Image.FromFile("Pictures\\3.jpg"),
+                                Image.FromFile("Pictures\\4.jpg"),
+                                Image.FromFile("Pictures\\5.jpg"),
+                                Image.FromFile("Pictures\\6.jpg"),
+                                Image.FromFile("Pictures\\7.jpg"),
+                                Image.FromFile("Pictures\\8.jpg"),
+                                Image.FromFile("Pictures\\9.jpg"),
+                                Image.FromFile("Pictures\\10.jpg")
                            };
             imageindex++; 
             if(imageindex >= images.Length)
