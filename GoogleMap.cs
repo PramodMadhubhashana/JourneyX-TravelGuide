@@ -35,13 +35,13 @@ namespace JourneyX
             if (this.WindowState != FormWindowState.Maximized)
             {
                 this.WindowState = FormWindowState.Maximized;
-                Button_Maximize.Image = Image.FromFile("C:\\Users\\PRAMOD MADHUBHASHANA\\Documents\\Visual Studio 2022\\GUI\\JourneyX\\Icons\\restore-down.png");
+                Button_Maximize.Image = Image.FromFile("Icons\\restore-down.png");
                 Button_Maximize.Image = new Bitmap(Button_Maximize.Image, new Size(15, 15));
             }
             else
             {
                 this.WindowState = FormWindowState.Normal;
-                Button_Maximize.Image = Image.FromFile("C:\\Users\\PRAMOD MADHUBHASHANA\\Documents\\Visual Studio 2022\\GUI\\JourneyX\\Icons\\maximize.png");
+                Button_Maximize.Image = Image.FromFile("Icons\\maximize.png");
                 Button_Maximize.Image = new Bitmap(Button_Maximize.Image, new Size(15, 15));
             }
            

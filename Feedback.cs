@@ -30,12 +30,12 @@ namespace JourneyX
         {
             if (VeryBad == false)
             {
-                Button_verybad.Image = Image.FromFile("C:\\Users\\PRAMOD MADHUBHASHANA\\Documents\\Visual Studio 2022\\GUI\\JourneyX\\Icons\\angry color.png");
+                Button_verybad.Image = Image.FromFile("Icons\\angry color.png");
                 VeryBad = true;
             }
             else
             {
-                Button_verybad.Image = Image.FromFile("C:\\Users\\PRAMOD MADHUBHASHANA\\Documents\\Visual Studio 2022\\GUI\\JourneyX\\Icons\\angry.png");
+                Button_verybad.Image = Image.FromFile("Icons\\angry.png");
                 VeryBad = false;
             }
         }
@@ -44,12 +44,12 @@ namespace JourneyX
         {
             if (Poor == false)
             {
-                Button_poor.Image = Image.FromFile("C:\\Users\\PRAMOD MADHUBHASHANA\\Documents\\Visual Studio 2022\\GUI\\JourneyX\\Icons\\sad color.png");
+                Button_poor.Image = Image.FromFile("Icons\\sad color.png");
                 Poor = true;
             }
             else
             {
-                Button_poor.Image = Image.FromFile("C:\\Users\\PRAMOD MADHUBHASHANA\\Documents\\Visual Studio 2022\\GUI\\JourneyX\\Icons\\sad-face.png");
+                Button_poor.Image = Image.FromFile("Icons\\sad-face.png");
                 Poor = false;
             }
         }
@@ -58,12 +58,12 @@ namespace JourneyX
         {
             if (Medium == false)
             {
-                Button_medium.Image = Image.FromFile("C:\\Users\\PRAMOD MADHUBHASHANA\\Documents\\Visual Studio 2022\\GUI\\JourneyX\\Icons\\neutral color.png");
+                Button_medium.Image = Image.FromFile("Icons\\neutral color.png");
                 Medium = true;
             }
             else
             {
-                Button_medium.Image = Image.FromFile("C:\\Users\\PRAMOD MADHUBHASHANA\\Documents\\Visual Studio 2022\\GUI\\JourneyX\\Icons\\neutral.png");
+                Button_medium.Image = Image.FromFile("Icons\\neutral.png");
                 Medium = false;
             }
 
@@ -73,12 +73,12 @@ namespace JourneyX
         {
             if (Good == false)
             {
-                Button_Good.Image = Image.FromFile("C:\\Users\\PRAMOD MADHUBHASHANA\\Documents\\Visual Studio 2022\\GUI\\JourneyX\\Icons\\smile color.png");
+                Button_Good.Image = Image.FromFile("Icons\\smile color.png");
                 Good = true;
             }
             else
             {
-                Button_Good.Image = Image.FromFile("C:\\Users\\PRAMOD MADHUBHASHANA\\Documents\\Visual Studio 2022\\GUI\\JourneyX\\Icons\\smile.png");
+                Button_Good.Image = Image.FromFile("Icons\\smile.png");
                 Good = false;
             }
         }
@@ -87,12 +87,12 @@ namespace JourneyX
         {
             if(Excellent == false)
             {
-                Button_Ecellent.Image = Image.FromFile("C:\\Users\\PRAMOD MADHUBHASHANA\\Documents\\Visual Studio 2022\\GUI\\JourneyX\\Icons\\happy color.png");
+                Button_Ecellent.Image = Image.FromFile("Icons\\happy color.png");
                 Excellent = true;
             }
             else
             {
-                Button_Ecellent.Image = Image.FromFile("C:\\Users\\PRAMOD MADHUBHASHANA\\Documents\\Visual Studio 2022\\GUI\\JourneyX\\Icons\\happy.png");
+                Button_Ecellent.Image = Image.FromFile("Icons\\happy.png");
                 Excellent = false;
             }
         }
