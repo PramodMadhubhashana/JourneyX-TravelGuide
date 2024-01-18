@@ -285,6 +285,7 @@ namespace JourneyX
         }
         private void Button_Login_Click(object sender, EventArgs e)
         {
+           
             string Email = TextBox_LoginUserName.ToString();
             string Password = TextBox_LoginPassword.ToString();
             Guna2TextBox[] LtextBoxes = {TextBox_LoginUserName, TextBox_LoginPassword};
@@ -292,12 +293,15 @@ namespace JourneyX
 
             int null1stPageTextboxCount = LtextBoxes.Count(tb => string.IsNullOrEmpty(tb.Text));
 
-            if(null1stPageTextboxCount == 0)
+     
+
+           if (null1stPageTextboxCount == 0)
             {
                 timer_login.Start();
                 SQL sQL = new SQL();
                 string A = sQL.Login(Email, Password);
-                if(A == "AA0000")
+              
+                if(Email == "AA0000")
                 {
                     Form1 form = new Form1();
                     form.Close();
@@ -323,9 +327,9 @@ namespace JourneyX
                         Llabels[i].Text = "Please Fill Details..";
                     }
                 }
-            }            
+            }
         }
-        private void TextBox_LoginUserName_Enter(object sender, EventArgs e)
+            private void TextBox_LoginUserName_Enter(object sender, EventArgs e)
         {
             Label_LUNError.Text = string.Empty;
         }

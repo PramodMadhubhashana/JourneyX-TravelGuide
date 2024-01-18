@@ -58,3 +58,26 @@ C:\Users\PRAMOD MADHUBHASHANA\Documents\Visual Studio 2022\GUI\New folder (2)\24
 C:\Users\PRAMOD MADHUBHASHANA\Documents\Visual Studio 2022\GUI\New folder (2)\240223\JourneyX\obj\Debug\JourneyX.csproj.CopyComplete
 C:\Users\PRAMOD MADHUBHASHANA\Documents\Visual Studio 2022\GUI\New folder (2)\240223\JourneyX\obj\Debug\JourneyX.exe
 C:\Users\PRAMOD MADHUBHASHANA\Documents\Visual Studio 2022\GUI\New folder (2)\240223\JourneyX\obj\Debug\JourneyX.pdb
+E:\Final Project\JourneyX-TravelGuide\bin\Debug\JourneyX.exe.config
+E:\Final Project\JourneyX-TravelGuide\bin\Debug\JourneyX.exe
+E:\Final Project\JourneyX-TravelGuide\bin\Debug\JourneyX.pdb
+E:\Final Project\JourneyX-TravelGuide\bin\Debug\Guna.UI2.dll
+E:\Final Project\JourneyX-TravelGuide\obj\Debug\JourneyX.csproj.AssemblyReference.cache
+E:\Final Project\JourneyX-TravelGuide\obj\Debug\JourneyX.csproj.SuggestedBindingRedirects.cache
+E:\Final Project\JourneyX-TravelGuide\obj\Debug\JourneyX.Admin.resources
+E:\Final Project\JourneyX-TravelGuide\obj\Debug\JourneyX.AdminProfile.resources
+E:\Final Project\JourneyX-TravelGuide\obj\Debug\JourneyX.DashBoard.resources
+E:\Final Project\JourneyX-TravelGuide\obj\Debug\JourneyX.Feedback.resources
+E:\Final Project\JourneyX-TravelGuide\obj\Debug\JourneyX.Form_JourneyX.resources
+E:\Final Project\JourneyX-TravelGuide\obj\Debug\JourneyX.GoogleMap.resources
+E:\Final Project\JourneyX-TravelGuide\obj\Debug\JourneyX.Notification.resources
+E:\Final Project\JourneyX-TravelGuide\obj\Debug\JourneyX.OffersAndNews.resources
+E:\Final Project\JourneyX-TravelGuide\obj\Debug\JourneyX.Profile.resources
+E:\Final Project\JourneyX-TravelGuide\obj\Debug\JourneyX.Properties.Resources.resources
+E:\Final Project\JourneyX-TravelGuide\obj\Debug\JourneyX.Schedule.resources
+E:\Final Project\JourneyX-TravelGuide\obj\Debug\JourneyX.Taxi.resources
+E:\Final Project\JourneyX-TravelGuide\obj\Debug\JourneyX.csproj.GenerateResource.cache
+E:\Final Project\JourneyX-TravelGuide\obj\Debug\JourneyX.csproj.CoreCompileInputs.cache
+E:\Final Project\JourneyX-TravelGuide\obj\Debug\JourneyX.csproj.CopyComplete
+E:\Final Project\JourneyX-TravelGuide\obj\Debug\JourneyX.exe
+E:\Final Project\JourneyX-TravelGuide\obj\Debug\JourneyX.pdb
