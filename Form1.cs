@@ -1,6 +1,7 @@
 ﻿using Guna.UI2;
 using Guna.UI2.WinForms;
 using System;
+using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -440,26 +441,33 @@ namespace JourneyX
 
 
            // this.WindowState = FormWindowState.Minimized;
-        } 
+        }
         private void timer_PictureBox_Tick(object sender, EventArgs e)
         {
-            Image[] images = {  Image.FromFile("Pictures\\1.jpg"),
-                                Image.FromFile("Pictures\\2.jpg"),
-                                Image.FromFile("Pictures\\3.jpg"),
-                                Image.FromFile("Pictures\\4.jpg"),
-                                Image.FromFile("Pictures\\5.jpg"),
-                                Image.FromFile("Pictures\\6.jpg"),
-                                Image.FromFile("Pictures\\7.jpg"),
-                                Image.FromFile("Pictures\\8.jpg"),
-                                Image.FromFile("Pictures\\9.jpg"),
-                                Image.FromFile("Pictures\\10.jpg")
-                           };
-            imageindex++; 
-            if(imageindex >= images.Length)
+            string basepath = Application.StartupPath;
+
+            string[] imagePaths =
             {
-                imageindex = 0;
+                Path.Combine(basepath,"Pictures","1.jpg"),
+                Path.Combine(basepath,"Pictures","2.jpg"),
+                Path.Combine(basepath,"Pictures","3.jpg"),
+                Path.Combine(basepath,"Pictures","4.jpg"),
+                Path.Combine(basepath,"Pictures","5.jpg"),
+                Path.Combine(basepath,"Pictures","6.jpg"),
+                Path.Combine(basepath,"Pictures","7.jpg"),
+                Path.Combine(basepath,"Pictures","8.jpg"),
+                Path.Combine(basepath,"Pictures","9.jpg"),
+                Path.Combine(basepath,"Pictures","10.jpg")
             }
-            PictureBox_LoginPage.Image = images[imageindex];  
+
+            Image[] images = new Image[imagePaths.Length];
+
+            imageindex++;
+            if (imageindex >= images.Length)
+            {
+                imageindex = 0; 
+            }
+            PictureBox_LoginPage.Image = images[imageindex];
         }
         private int imageindex = 0;
         private void Form_JourneyX_Load(object sender, EventArgs e)
