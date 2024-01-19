@@ -127,9 +127,6 @@
             this.timer_PictureBox = new System.Windows.Forms.Timer(this.components);
             this.timer_login = new System.Windows.Forms.Timer(this.components);
             this.Label_welcome = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.Button_Exit = new Guna.UI2.WinForms.Guna2Button();
-            this.Button_Minimize = new Guna.UI2.WinForms.Guna2Button();
             this.PictureBox_LoginPage = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.GradientPanel_CreateAccount1st.SuspendLayout();
@@ -145,7 +142,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.GradientPanel_Sigiriya.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
-            this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox_LoginPage)).BeginInit();
             this.SuspendLayout();
             // 
@@ -235,7 +231,7 @@
             this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
             this.guna2CustomGradientPanel1.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
             this.guna2CustomGradientPanel1.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
-            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(364, 167);
+            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(364, 135);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(356, 424);
             this.guna2CustomGradientPanel1.TabIndex = 1;
@@ -387,7 +383,7 @@
             this.Label_Journey.BackColor = System.Drawing.Color.Transparent;
             this.Label_Journey.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label_Journey.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
-            this.Label_Journey.Location = new System.Drawing.Point(724, 94);
+            this.Label_Journey.Location = new System.Drawing.Point(724, 71);
             this.Label_Journey.Name = "Label_Journey";
             this.Label_Journey.Size = new System.Drawing.Size(71, 26);
             this.Label_Journey.TabIndex = 4;
@@ -398,7 +394,7 @@
             this.Label_X.BackColor = System.Drawing.Color.Transparent;
             this.Label_X.Font = new System.Drawing.Font("Segoe Script", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label_X.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
-            this.Label_X.Location = new System.Drawing.Point(802, 89);
+            this.Label_X.Location = new System.Drawing.Point(802, 66);
             this.Label_X.Name = "Label_X";
             this.Label_X.Size = new System.Drawing.Size(21, 40);
             this.Label_X.TabIndex = 4;
@@ -1492,65 +1488,18 @@
             this.Label_welcome.BackColor = System.Drawing.Color.Transparent;
             this.Label_welcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label_welcome.ForeColor = System.Drawing.Color.White;
-            this.Label_welcome.Location = new System.Drawing.Point(679, 47);
+            this.Label_welcome.Location = new System.Drawing.Point(679, 24);
             this.Label_welcome.Name = "Label_welcome";
             this.Label_welcome.Size = new System.Drawing.Size(182, 41);
             this.Label_welcome.TabIndex = 3;
             this.Label_welcome.Text = "WELCOME";
-            // 
-            // guna2GradientPanel1
-            // 
-            this.guna2GradientPanel1.Controls.Add(this.Button_Exit);
-            this.guna2GradientPanel1.Controls.Add(this.Button_Minimize);
-            this.guna2GradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
-            this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
-            this.guna2GradientPanel1.Location = new System.Drawing.Point(358, 0);
-            this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(843, 40);
-            this.guna2GradientPanel1.TabIndex = 7;
-            // 
-            // Button_Exit
-            // 
-            this.Button_Exit.BackColor = System.Drawing.Color.Transparent;
-            this.Button_Exit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.Button_Exit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.Button_Exit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Button_Exit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Button_Exit.FillColor = System.Drawing.Color.Transparent;
-            this.Button_Exit.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.Button_Exit.ForeColor = System.Drawing.Color.White;
-            this.Button_Exit.Image = ((System.Drawing.Image)(resources.GetObject("Button_Exit.Image")));
-            this.Button_Exit.ImageSize = new System.Drawing.Size(15, 15);
-            this.Button_Exit.Location = new System.Drawing.Point(792, 6);
-            this.Button_Exit.Name = "Button_Exit";
-            this.Button_Exit.Size = new System.Drawing.Size(26, 26);
-            this.Button_Exit.TabIndex = 3;
-            this.Button_Exit.Click += new System.EventHandler(this.Button_Exit_Click);
-            // 
-            // Button_Minimize
-            // 
-            this.Button_Minimize.BackColor = System.Drawing.Color.Transparent;
-            this.Button_Minimize.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.Button_Minimize.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.Button_Minimize.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Button_Minimize.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Button_Minimize.FillColor = System.Drawing.Color.Transparent;
-            this.Button_Minimize.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.Button_Minimize.ForeColor = System.Drawing.Color.White;
-            this.Button_Minimize.Image = ((System.Drawing.Image)(resources.GetObject("Button_Minimize.Image")));
-            this.Button_Minimize.ImageSize = new System.Drawing.Size(15, 15);
-            this.Button_Minimize.Location = new System.Drawing.Point(753, 6);
-            this.Button_Minimize.Name = "Button_Minimize";
-            this.Button_Minimize.Size = new System.Drawing.Size(26, 26);
-            this.Button_Minimize.TabIndex = 3;
-            this.Button_Minimize.Click += new System.EventHandler(this.Button_Minimize_Click);
             // 
             // PictureBox_LoginPage
             // 
             this.PictureBox_LoginPage.BackColor = System.Drawing.Color.Transparent;
             this.PictureBox_LoginPage.BorderRadius = 30;
             this.PictureBox_LoginPage.ImageRotate = 0F;
-            this.PictureBox_LoginPage.Location = new System.Drawing.Point(735, 173);
+            this.PictureBox_LoginPage.Location = new System.Drawing.Point(735, 141);
             this.PictureBox_LoginPage.Name = "PictureBox_LoginPage";
             this.PictureBox_LoginPage.Size = new System.Drawing.Size(454, 424);
             this.PictureBox_LoginPage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1563,7 +1512,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.ClientSize = new System.Drawing.Size(1201, 611);
-            this.Controls.Add(this.guna2GradientPanel1);
             this.Controls.Add(this.PictureBox_LoginPage);
             this.Controls.Add(this.GradientPanel_CreateAccount1st);
             this.Controls.Add(this.GradientPanel_PopularPlace);
@@ -1600,7 +1548,6 @@
             this.GradientPanel_Sigiriya.ResumeLayout(false);
             this.GradientPanel_Sigiriya.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
-            this.guna2GradientPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox_LoginPage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -1620,8 +1567,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel Label_LoginError;
         private Guna.UI2.WinForms.Guna2Button Button_SignUp;
         private Guna.UI2.WinForms.Guna2HtmlLabel Label_OrSignUp;
-        private Guna.UI2.WinForms.Guna2Button Button_Minimize;
-        private Guna.UI2.WinForms.Guna2Button Button_Exit;
         private Guna.UI2.WinForms.Guna2BorderlessForm BorderlessForm_JourneyX;
         private Guna.UI2.WinForms.Guna2HtmlLabel Label_X;
         private Guna.UI2.WinForms.Guna2HtmlLabel Label_Journey;
@@ -1706,7 +1651,6 @@
         private System.Windows.Forms.Timer timer_PictureBox;
         private Guna.UI2.WinForms.Guna2WinProgressIndicator ProgressIndicator_Login;
         private System.Windows.Forms.Timer timer_login;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
         private Guna.UI2.WinForms.Guna2CustomRadioButton RadioButton_Female;
         private Guna.UI2.WinForms.Guna2CustomRadioButton RadioButton_Male;
     }
