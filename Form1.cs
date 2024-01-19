@@ -446,8 +446,7 @@ namespace JourneyX
         {
             string basepath = Application.StartupPath;
 
-            string[] imagePaths =
-            {
+            string[] imagePaths = {
                 Path.Combine(basepath,"Pictures","1.jpg"),
                 Path.Combine(basepath,"Pictures","2.jpg"),
                 Path.Combine(basepath,"Pictures","3.jpg"),
@@ -458,11 +457,12 @@ namespace JourneyX
                 Path.Combine(basepath,"Pictures","8.jpg"),
                 Path.Combine(basepath,"Pictures","9.jpg"),
                 Path.Combine(basepath,"Pictures","10.jpg")
-            }
+            };
 
             Image[] images = new Image[imagePaths.Length];
 
             imageindex++;
+
             if (imageindex >= images.Length)
             {
                 imageindex = 0; 

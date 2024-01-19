@@ -231,10 +231,10 @@
             this.guna2CustomGradientPanel1.Controls.Add(this.Label_LPError);
             this.guna2CustomGradientPanel1.Controls.Add(this.Label_LoginPassword);
             this.guna2CustomGradientPanel1.Controls.Add(this.TextBox_LoginPassword);
-            this.guna2CustomGradientPanel1.FillColor = System.Drawing.Color.Cyan;
-            this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.Color.SpringGreen;
-            this.guna2CustomGradientPanel1.FillColor3 = System.Drawing.Color.Fuchsia;
-            this.guna2CustomGradientPanel1.FillColor4 = System.Drawing.Color.SkyBlue;
+            this.guna2CustomGradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
+            this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
+            this.guna2CustomGradientPanel1.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
+            this.guna2CustomGradientPanel1.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
             this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(364, 167);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(356, 424);
@@ -286,6 +286,7 @@
             this.Label_LoginError.Name = "Label_LoginError";
             this.Label_LoginError.Size = new System.Drawing.Size(3, 2);
             this.Label_LoginError.TabIndex = 3;
+            this.Label_LoginError.Text = null;
             // 
             // Label_LUNError
             // 
@@ -385,8 +386,8 @@
             // 
             this.Label_Journey.BackColor = System.Drawing.Color.Transparent;
             this.Label_Journey.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label_Journey.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.Label_Journey.Location = new System.Drawing.Point(558, 94);
+            this.Label_Journey.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
+            this.Label_Journey.Location = new System.Drawing.Point(724, 94);
             this.Label_Journey.Name = "Label_Journey";
             this.Label_Journey.Size = new System.Drawing.Size(71, 26);
             this.Label_Journey.TabIndex = 4;
@@ -396,8 +397,8 @@
             // 
             this.Label_X.BackColor = System.Drawing.Color.Transparent;
             this.Label_X.Font = new System.Drawing.Font("Segoe Script", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label_X.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.Label_X.Location = new System.Drawing.Point(636, 89);
+            this.Label_X.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
+            this.Label_X.Location = new System.Drawing.Point(802, 89);
             this.Label_X.Name = "Label_X";
             this.Label_X.Size = new System.Drawing.Size(21, 40);
             this.Label_X.TabIndex = 4;
@@ -1172,10 +1173,10 @@
             this.GradientPanel_PopularPlace.Controls.Add(this.GradientPanel_GalleFort);
             this.GradientPanel_PopularPlace.Controls.Add(this.GradientPanel_Sigiriya);
             this.GradientPanel_PopularPlace.Dock = System.Windows.Forms.DockStyle.Left;
-            this.GradientPanel_PopularPlace.FillColor = System.Drawing.Color.Cyan;
-            this.GradientPanel_PopularPlace.FillColor2 = System.Drawing.Color.SpringGreen;
-            this.GradientPanel_PopularPlace.FillColor3 = System.Drawing.Color.Fuchsia;
-            this.GradientPanel_PopularPlace.FillColor4 = System.Drawing.Color.SkyBlue;
+            this.GradientPanel_PopularPlace.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
+            this.GradientPanel_PopularPlace.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
+            this.GradientPanel_PopularPlace.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
+            this.GradientPanel_PopularPlace.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
             this.GradientPanel_PopularPlace.Location = new System.Drawing.Point(0, 0);
             this.GradientPanel_PopularPlace.MaximumSize = new System.Drawing.Size(358, 611);
             this.GradientPanel_PopularPlace.Name = "GradientPanel_PopularPlace";
@@ -1185,10 +1186,11 @@
             // Label_PopularPlace
             // 
             this.Label_PopularPlace.BackColor = System.Drawing.Color.Transparent;
-            this.Label_PopularPlace.Font = new System.Drawing.Font("Segoe Print", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label_PopularPlace.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label_PopularPlace.ForeColor = System.Drawing.Color.White;
             this.Label_PopularPlace.Location = new System.Drawing.Point(116, 26);
             this.Label_PopularPlace.Name = "Label_PopularPlace";
-            this.Label_PopularPlace.Size = new System.Drawing.Size(134, 35);
+            this.Label_PopularPlace.Size = new System.Drawing.Size(148, 29);
             this.Label_PopularPlace.TabIndex = 1;
             this.Label_PopularPlace.Text = "Popular Place";
             // 
@@ -1489,7 +1491,8 @@
             // 
             this.Label_welcome.BackColor = System.Drawing.Color.Transparent;
             this.Label_welcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label_welcome.Location = new System.Drawing.Point(523, 47);
+            this.Label_welcome.ForeColor = System.Drawing.Color.White;
+            this.Label_welcome.Location = new System.Drawing.Point(679, 47);
             this.Label_welcome.Name = "Label_welcome";
             this.Label_welcome.Size = new System.Drawing.Size(182, 41);
             this.Label_welcome.TabIndex = 3;
@@ -1499,8 +1502,8 @@
             // 
             this.guna2GradientPanel1.Controls.Add(this.Button_Exit);
             this.guna2GradientPanel1.Controls.Add(this.Button_Minimize);
-            this.guna2GradientPanel1.FillColor = System.Drawing.Color.Aqua;
-            this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.DarkViolet;
+            this.guna2GradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
+            this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
             this.guna2GradientPanel1.Location = new System.Drawing.Point(358, 0);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.Size = new System.Drawing.Size(843, 40);
@@ -1558,7 +1561,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.ClientSize = new System.Drawing.Size(1201, 611);
             this.Controls.Add(this.guna2GradientPanel1);
             this.Controls.Add(this.PictureBox_LoginPage);
