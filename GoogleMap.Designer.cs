@@ -62,7 +62,7 @@
             this.Button_Minimize.FillColor = System.Drawing.Color.Transparent;
             this.Button_Minimize.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.Button_Minimize.ForeColor = System.Drawing.Color.White;
-            this.Button_Minimize.Image = global::JourneyX.Properties.Resources.minus__1_;
+            
             this.Button_Minimize.ImageSize = new System.Drawing.Size(15, 15);
             this.Button_Minimize.Location = new System.Drawing.Point(4, 0);
             this.Button_Minimize.Name = "Button_Minimize";
@@ -79,7 +79,7 @@
             this.Button_Exit.FillColor = System.Drawing.Color.Transparent;
             this.Button_Exit.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.Button_Exit.ForeColor = System.Drawing.Color.White;
-            this.Button_Exit.Image = global::JourneyX.Properties.Resources.cancel__1_;
+            
             this.Button_Exit.ImageSize = new System.Drawing.Size(15, 15);
             this.Button_Exit.Location = new System.Drawing.Point(56, 0);
             this.Button_Exit.Name = "Button_Exit";

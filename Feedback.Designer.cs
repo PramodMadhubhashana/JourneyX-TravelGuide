@@ -146,7 +146,7 @@
             this.Button_poor.FillColor = System.Drawing.Color.Transparent;
             this.Button_poor.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.Button_poor.ForeColor = System.Drawing.Color.White;
-            this.Button_poor.Image = global::JourneyX.Properties.Resources.sad_face;
+            
             this.Button_poor.ImageSize = new System.Drawing.Size(50, 50);
             this.Button_poor.Location = new System.Drawing.Point(309, 129);
             this.Button_poor.Name = "Button_poor";

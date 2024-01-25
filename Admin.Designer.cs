@@ -474,7 +474,7 @@
             this.guna2Button8.FillColor = System.Drawing.Color.Transparent;
             this.guna2Button8.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button8.ForeColor = System.Drawing.Color.White;
-            this.guna2Button8.Image = global::JourneyX.Properties.Resources.minus__1_;
+            
             this.guna2Button8.ImageSize = new System.Drawing.Size(16, 16);
             this.guna2Button8.Location = new System.Drawing.Point(969, 7);
             this.guna2Button8.Name = "guna2Button8";

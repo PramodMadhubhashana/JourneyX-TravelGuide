@@ -95,7 +95,7 @@
             // 
             // PictureBox_van
             // 
-            this.PictureBox_van.Image = global::JourneyX.Properties.Resources.mini_van;
+            
             this.PictureBox_van.ImageRotate = 0F;
             this.PictureBox_van.Location = new System.Drawing.Point(295, 109);
             this.PictureBox_van.Name = "PictureBox_van";
@@ -106,7 +106,7 @@
             // 
             // PictureBox_car
             // 
-            this.PictureBox_car.Image = global::JourneyX.Properties.Resources.sport_car;
+            
             this.PictureBox_car.ImageRotate = 0F;
             this.PictureBox_car.Location = new System.Drawing.Point(175, 109);
             this.PictureBox_car.Name = "PictureBox_car";

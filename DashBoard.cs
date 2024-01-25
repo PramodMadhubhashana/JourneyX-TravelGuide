@@ -19,7 +19,6 @@ namespace JourneyX
         {            
             InitializeComponent();
             Email= email;
-           
         }
         private void DashBoard_Load(object sender, EventArgs e)
         {

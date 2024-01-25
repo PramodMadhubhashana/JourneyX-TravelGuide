@@ -286,14 +286,13 @@ namespace JourneyX
         }
         private void Button_Login_Click(object sender, EventArgs e)
         {
-           
-            string Email = TextBox_LoginUserName.ToString();
-            string Password = TextBox_LoginPassword.ToString();
+
+            string Email = TextBox_LoginUserName.Text.ToString();
+            string Password = TextBox_LoginPassword.Text.ToString();
             Guna2TextBox[] LtextBoxes = {TextBox_LoginUserName, TextBox_LoginPassword};
             Guna2HtmlLabel[] Llabels = { Label_LUNError, Label_LPError };
 
-            int null1stPageTextboxCount = LtextBoxes.Count(tb => string.IsNullOrEmpty(tb.Text));
-
+            int null1stPageTextboxCount = LtextBoxes.Count(tb => string.IsNullOrEmpty(tb.Text));            
      
 
            if (null1stPageTextboxCount == 0)
@@ -301,12 +300,13 @@ namespace JourneyX
                 timer_login.Start();
                 SQL sQL = new SQL();
                 string A = sQL.Login(Email, Password);
+                
               
-                if(Email == "AA0000")
+                if(A == "AA0000")
                 {
                     Form1 form = new Form1();
                     form.Close();
-                    DashBoard dashBoard = new DashBoard(Email);
+                    DashBoard dashBoard = new DashBoard(Email);                    
                     dashBoard.Show();                 
                     
                 }               
@@ -339,12 +339,12 @@ namespace JourneyX
             if(TextBox_LoginPassword.UseSystemPasswordChar == true)
             {
                 TextBox_LoginPassword.UseSystemPasswordChar = false;
-                Button_LPHiden.Image = Image.FromFile("Icons\\eye.png");
+                Button_LPHiden.Image = Properties.Resources.eye;
             }
             else
             {
                 TextBox_LoginPassword.UseSystemPasswordChar = true;
-                Button_LPHiden.Image = Image.FromFile("Icons\\hidden.png");
+                Button_LPHiden.Image = Properties.Resources.hidden;
             }
         }
         private void Button_SHiddenPassword_Click(object sender, EventArgs e)
@@ -352,12 +352,12 @@ namespace JourneyX
             if (TextBox_Password.UseSystemPasswordChar == true)
             {
                 TextBox_Password.UseSystemPasswordChar = false;
-                Button_LPHiden.Image = Image.FromFile("Icons\\eye.png");
+                Button_LPHiden.Image = Properties.Resources.eye;
             }
             else
             {
                 TextBox_Password.UseSystemPasswordChar = true;
-                Button_LPHiden.Image = Image.FromFile("Icons\\hidden.png");
+                Button_LPHiden.Image = Properties.Resources.hidden;
             }
         }
         private void Button_SCHidden_Click(object sender, EventArgs e)
@@ -365,12 +365,12 @@ namespace JourneyX
             if (TextBox_ConfirmPassword.UseSystemPasswordChar == true)
             {
                 TextBox_ConfirmPassword.UseSystemPasswordChar = false;
-                Button_LPHiden.Image = Image.FromFile("Icons\\eye.png");
+                Button_LPHiden.Image = Properties.Resources.eye;
             }
             else
             {
                 TextBox_ConfirmPassword.UseSystemPasswordChar = true;
-                Button_LPHiden.Image = Image.FromFile("Icons\\hidden.png");
+                Button_LPHiden.Image = Properties.Resources.hidden;
             }
         } 
         private void TextBox_Password_TextChanged(object sender, EventArgs e)
@@ -517,5 +517,7 @@ namespace JourneyX
             dashBoard.Show();
 
         }
+
+       
     }
 }

@@ -168,6 +168,7 @@
             this.Label_LoginUserName.Size = new System.Drawing.Size(72, 18);
             this.Label_LoginUserName.TabIndex = 0;
             this.Label_LoginUserName.Text = "User Name";
+            
             // 
             // Label_LoginPassword
             // 

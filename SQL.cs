@@ -44,45 +44,48 @@ namespace JourneyX
             }
             return null;
         }
-        public string Login(string Email, String password)
-        {
+        public string Login(string Email, string password)        {
+            
             try
             {
-                using(SqlConnection sqlConnection = new SqlConnection(connection))
+                using (SqlConnection sqlConnection = new SqlConnection(connection))
                 {
                     sqlConnection.Open();
                     string login = "SELECT * FROM Users WHERE Email=@Email AND Password=@password";
+
                     using (SqlCommand sqlCommand = new SqlCommand(login, sqlConnection))
                     {
                         sqlCommand.Parameters.AddWithValue("@Email", Email);
                         sqlCommand.Parameters.AddWithValue("@Password", password);
-                        SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
-                        sqlDataReader.Close();
-                        sqlConnection.Close();
 
-                        if(sqlDataReader.HasRows)
+                        using (SqlDataReader sqlDataReader = sqlCommand.ExecuteReader())
                         {
-                            if(Email == "ADMIN3550")
+                            if (sqlDataReader.HasRows)
                             {
-                                return "ADMIN3550";
+                                if (Email == "ADMIN3550")
+                                {
+                                    return "ADMIN3550";
+                                }
+                                else
+                                {
+                                    return "AA1111";
+                                }
                             }
                             else
                             {
-                                return "AA1111";
-                            }                                                      
+                                return "AA0000";
+                            }
                         }
-                        else
-                        {
-                            return "AA0000";
-                        }                       
-                    }                    
+                    }
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                return ex.ToString();
-            }            
+                Console.WriteLine(ex.ToString());
+                return "--Error--";
+            }
         }
+
 
         public string Dashboard(string Email)
         {
@@ -140,8 +143,7 @@ namespace JourneyX
                             string UGender = sqlDataReader.GetInt32(5).ToString();
                             string UPhoneNumber = sqlDataReader.GetString(6);
                             string UProfilePicture = sqlDataReader.GetInt32(8).ToString();
-                            sqlDataReader.Close();
-                            sqlConnection.Close();
+                           
 
                             string Textjoin = string.Join("+", UEmail, UFirstName, ULastName, UAdress, Birthday, UGender, UPhoneNumber, UProfilePicture);
                             return Textjoin;

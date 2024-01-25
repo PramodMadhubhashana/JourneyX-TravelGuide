@@ -195,7 +195,7 @@
             this.Button_Taxi.FocusedColor = System.Drawing.Color.Lime;
             this.Button_Taxi.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.Button_Taxi.ForeColor = System.Drawing.Color.White;
-            this.Button_Taxi.Image = global::JourneyX.Properties.Resources.mobile_application;
+            
             this.Button_Taxi.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.Button_Taxi.ImageSize = new System.Drawing.Size(16, 16);
             this.Button_Taxi.Location = new System.Drawing.Point(0, 381);
@@ -240,7 +240,7 @@
             this.Button_OffersAndNews.FocusedColor = System.Drawing.Color.Lime;
             this.Button_OffersAndNews.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.Button_OffersAndNews.ForeColor = System.Drawing.Color.White;
-            this.Button_OffersAndNews.Image = global::JourneyX.Properties.Resources.price_tag;
+            
             this.Button_OffersAndNews.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.Button_OffersAndNews.Location = new System.Drawing.Point(0, 231);
             this.Button_OffersAndNews.Name = "Button_OffersAndNews";
@@ -367,7 +367,7 @@
             this.Button_Minimize.FillColor = System.Drawing.Color.Transparent;
             this.Button_Minimize.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.Button_Minimize.ForeColor = System.Drawing.Color.White;
-            this.Button_Minimize.Image = global::JourneyX.Properties.Resources.minus__1_;
+            
             this.Button_Minimize.ImageSize = new System.Drawing.Size(15, 15);
             this.Button_Minimize.Location = new System.Drawing.Point(3, 6);
             this.Button_Minimize.Name = "Button_Minimize";
@@ -606,7 +606,7 @@
             this.TextBox_SearchBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TextBox_SearchBox.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.TextBox_SearchBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TextBox_SearchBox.IconLeft = global::JourneyX.Properties.Resources.search_interface_symbol;
+            
             this.TextBox_SearchBox.Location = new System.Drawing.Point(516, 26);
             this.TextBox_SearchBox.Name = "TextBox_SearchBox";
             this.TextBox_SearchBox.PasswordChar = '\0';
@@ -827,7 +827,7 @@
             // 
             this.PictureBox_News.BackColor = System.Drawing.Color.Transparent;
             this.PictureBox_News.FillColor = System.Drawing.Color.Transparent;
-            this.PictureBox_News.Image = global::JourneyX.Properties.Resources.explore_exploit_tradeoff;
+            
             this.PictureBox_News.ImageRotate = 0F;
             this.PictureBox_News.Location = new System.Drawing.Point(28, 14);
             this.PictureBox_News.Name = "PictureBox_News";
