@@ -45,9 +45,11 @@
             // 
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Sylfaen", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(12, 12);
+            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.White;
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(16, 15);
+            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(87, 21);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(112, 27);
             this.guna2HtmlLabel1.TabIndex = 0;
             this.guna2HtmlLabel1.Text = "Notification";
             // 
@@ -63,21 +65,23 @@
             this.Button_exit.ForeColor = System.Drawing.Color.White;
             this.Button_exit.Image = global::JourneyX.Properties.Resources.cancel;
             this.Button_exit.ImageSize = new System.Drawing.Size(16, 16);
-            this.Button_exit.Location = new System.Drawing.Point(242, 7);
+            this.Button_exit.Location = new System.Drawing.Point(323, 9);
+            this.Button_exit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Button_exit.Name = "Button_exit";
-            this.Button_exit.Size = new System.Drawing.Size(26, 26);
+            this.Button_exit.Size = new System.Drawing.Size(35, 32);
             this.Button_exit.TabIndex = 1;
             this.Button_exit.Click += new System.EventHandler(this.Button_exit_Click);
             // 
             // Notification
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(280, 431);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.ClientSize = new System.Drawing.Size(373, 530);
             this.Controls.Add(this.Button_exit);
             this.Controls.Add(this.guna2HtmlLabel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Notification";
             this.Text = "Notification";
             this.ResumeLayout(false);

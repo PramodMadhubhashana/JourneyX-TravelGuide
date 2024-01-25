@@ -50,7 +50,14 @@ namespace JourneyX
         {
             this.Close();
         }
+        private void guna2PictureBox4_Click(object sender, EventArgs e)
+        {
 
+        }
+        private void guna2PictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
         private void Button_Feedback_Click(object sender, EventArgs e)
         {
             Feedback feedback = Application.OpenForms.OfType<Feedback>().FirstOrDefault();
@@ -66,7 +73,7 @@ namespace JourneyX
         }
         private void Button_Logout_Click(object sender, EventArgs e)
         {
-            Form1 login = new Form1();
+            Form_JourneyX login = new Form_JourneyX();
             login.Show();
             DashBoard dashBoard = new DashBoard(Email);
             dashBoard.Close();            
