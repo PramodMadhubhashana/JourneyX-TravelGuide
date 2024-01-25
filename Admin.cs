@@ -61,5 +61,10 @@ namespace JourneyX
         {
 
         }
+
+        private void Label_BestDestination_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -304,12 +304,16 @@ namespace JourneyX
               
                 if(Email == "AA0000")
                 {
-                    Form1 form = new Form1();
+                    Form_JourneyX form = new Form_JourneyX();
                     form.Close();
                     DashBoard dashBoard = new DashBoard(Email);
                     dashBoard.Show();                 
                     
-                }               
+                }
+                else if( A == "ADMIN3550")
+                {
+
+                }
                 else
                 {
                     Label_LoginError.Text = "Email or Password wrong Please check again.";
@@ -429,7 +433,7 @@ namespace JourneyX
         }
         private void Button_Minimize_Click(object sender, EventArgs e)
         {
-            Form1 form = new Form1();
+            Form_JourneyX form = new Form_JourneyX();
             form.Close();
             DashBoard dashBoard = new DashBoard("pramod");
             dashBoard.Show();   
@@ -511,7 +515,7 @@ namespace JourneyX
         private void loginpageMinimize_Click(object sender, EventArgs e)
         {
 
-            Form1 form = new Form1();
+            Form_JourneyX form = new Form_JourneyX();
             form.Close();
             DashBoard dashBoard = new DashBoard("pramod");
             dashBoard.Show();

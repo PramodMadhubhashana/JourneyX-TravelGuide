@@ -49,7 +49,6 @@ namespace JourneyX
             TextBox_BirthDay.Enabled = false;
             TextBox_Email.Enabled = false;
             TextBox_PhoneNumber.Enabled = false;
-            
 
             SQL sQL = new SQL();
             string TextJoin = sQL.PDetails(Email);
@@ -139,11 +138,6 @@ namespace JourneyX
 
                 }
             }
-        }
-
-        private void TextBox_FirstName_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

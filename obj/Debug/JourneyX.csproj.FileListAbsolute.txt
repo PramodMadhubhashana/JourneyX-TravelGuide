@@ -81,3 +81,25 @@ E:\Final Project\JourneyX-TravelGuide\obj\Debug\JourneyX.csproj.CoreCompileInput
 E:\Final Project\JourneyX-TravelGuide\obj\Debug\JourneyX.csproj.CopyComplete
 E:\Final Project\JourneyX-TravelGuide\obj\Debug\JourneyX.exe
 E:\Final Project\JourneyX-TravelGuide\obj\Debug\JourneyX.pdb
+D:\Diploma Final Project\JourneyX-TravelGuide\bin\Debug\JourneyX.exe.config
+D:\Diploma Final Project\JourneyX-TravelGuide\bin\Debug\JourneyX.exe
+D:\Diploma Final Project\JourneyX-TravelGuide\bin\Debug\JourneyX.pdb
+D:\Diploma Final Project\JourneyX-TravelGuide\bin\Debug\Guna.UI2.dll
+D:\Diploma Final Project\JourneyX-TravelGuide\obj\Debug\JourneyX.csproj.AssemblyReference.cache
+D:\Diploma Final Project\JourneyX-TravelGuide\obj\Debug\JourneyX.Admin.resources
+D:\Diploma Final Project\JourneyX-TravelGuide\obj\Debug\JourneyX.AdminProfile.resources
+D:\Diploma Final Project\JourneyX-TravelGuide\obj\Debug\JourneyX.DashBoard.resources
+D:\Diploma Final Project\JourneyX-TravelGuide\obj\Debug\JourneyX.Feedback.resources
+D:\Diploma Final Project\JourneyX-TravelGuide\obj\Debug\JourneyX.Form_JourneyX.resources
+D:\Diploma Final Project\JourneyX-TravelGuide\obj\Debug\JourneyX.GoogleMap.resources
+D:\Diploma Final Project\JourneyX-TravelGuide\obj\Debug\JourneyX.Notification.resources
+D:\Diploma Final Project\JourneyX-TravelGuide\obj\Debug\JourneyX.OffersAndNews.resources
+D:\Diploma Final Project\JourneyX-TravelGuide\obj\Debug\JourneyX.Profile.resources
+D:\Diploma Final Project\JourneyX-TravelGuide\obj\Debug\JourneyX.Properties.Resources.resources
+D:\Diploma Final Project\JourneyX-TravelGuide\obj\Debug\JourneyX.Schedule.resources
+D:\Diploma Final Project\JourneyX-TravelGuide\obj\Debug\JourneyX.Taxi.resources
+D:\Diploma Final Project\JourneyX-TravelGuide\obj\Debug\JourneyX.csproj.GenerateResource.cache
+D:\Diploma Final Project\JourneyX-TravelGuide\obj\Debug\JourneyX.csproj.CoreCompileInputs.cache
+D:\Diploma Final Project\JourneyX-TravelGuide\obj\Debug\JourneyX.csproj.CopyComplete
+D:\Diploma Final Project\JourneyX-TravelGuide\obj\Debug\JourneyX.exe
+D:\Diploma Final Project\JourneyX-TravelGuide\obj\Debug\JourneyX.pdb
