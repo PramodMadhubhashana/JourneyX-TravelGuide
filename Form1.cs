@@ -512,8 +512,13 @@ namespace JourneyX
             Google_Map("https://www.google.com/maps/place/nelligala+temple/@7.2905989,80.1063331,10z/data=!4m10!1m2!2m1!1snelligala+temple!3m6!1s0x3ae367f3bc9b0fbd:0x49071a392d33c66d!8m2!3d7.2906053!4d80.6336651!15sChBuZWxsaWdhbGEgdGVtcGxlkgEPYnVkZGhpc3RfdGVtcGxl4AEA!16s%2Fg%2F11k50cr8x2");
         }
 
-        private void Label_Sigiriya_Click(object sender, EventArgs e)
+        private void loginpageMinimize_Click(object sender, EventArgs e)
         {
+
+            Form1 form = new Form1();
+            form.Close();
+            DashBoard dashBoard = new DashBoard("pramod");
+            dashBoard.Show();
 
         }
     }

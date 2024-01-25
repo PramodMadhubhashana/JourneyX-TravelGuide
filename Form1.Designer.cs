@@ -127,9 +127,9 @@
             this.timer_PictureBox = new System.Windows.Forms.Timer(this.components);
             this.timer_login = new System.Windows.Forms.Timer(this.components);
             this.Label_welcome = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.PictureBox_LoginPage = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.PictureBox_LoginPage = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.GradientPanel_CreateAccount1st.SuspendLayout();
             this.GradientPanel_CreateAccount2nd.SuspendLayout();
@@ -360,6 +360,7 @@
             // 
             // TextBox_LoginPassword
             // 
+            this.TextBox_LoginPassword.Animated = true;
             this.TextBox_LoginPassword.BorderRadius = 10;
             this.TextBox_LoginPassword.BorderThickness = 0;
             this.TextBox_LoginPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -1525,7 +1526,6 @@
             this.Label_Sigiriya.Size = new System.Drawing.Size(56, 18);
             this.Label_Sigiriya.TabIndex = 0;
             this.Label_Sigiriya.Text = "Sigiriya";
-            this.Label_Sigiriya.Click += new System.EventHandler(this.Label_Sigiriya_Click);
             // 
             // timer_SidePanel
             // 
@@ -1555,18 +1555,6 @@
             this.Label_welcome.TabIndex = 3;
             this.Label_welcome.Text = "WELCOME";
             // 
-            // PictureBox_LoginPage
-            // 
-            this.PictureBox_LoginPage.BackColor = System.Drawing.Color.Transparent;
-            this.PictureBox_LoginPage.BorderRadius = 30;
-            this.PictureBox_LoginPage.ImageRotate = 0F;
-            this.PictureBox_LoginPage.Location = new System.Drawing.Point(735, 141);
-            this.PictureBox_LoginPage.Name = "PictureBox_LoginPage";
-            this.PictureBox_LoginPage.Size = new System.Drawing.Size(454, 424);
-            this.PictureBox_LoginPage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PictureBox_LoginPage.TabIndex = 6;
-            this.PictureBox_LoginPage.TabStop = false;
-            // 
             // guna2ControlBox1
             // 
             this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -1587,6 +1575,19 @@
             this.guna2ControlBox2.Name = "guna2ControlBox2";
             this.guna2ControlBox2.Size = new System.Drawing.Size(30, 30);
             this.guna2ControlBox2.TabIndex = 8;
+            this.guna2ControlBox2.Click += new System.EventHandler(this.loginpageMinimize_Click);
+            // 
+            // PictureBox_LoginPage
+            // 
+            this.PictureBox_LoginPage.BackColor = System.Drawing.Color.Transparent;
+            this.PictureBox_LoginPage.BorderRadius = 30;
+            this.PictureBox_LoginPage.ImageRotate = 0F;
+            this.PictureBox_LoginPage.Location = new System.Drawing.Point(735, 141);
+            this.PictureBox_LoginPage.Name = "PictureBox_LoginPage";
+            this.PictureBox_LoginPage.Size = new System.Drawing.Size(454, 424);
+            this.PictureBox_LoginPage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PictureBox_LoginPage.TabIndex = 6;
+            this.PictureBox_LoginPage.TabStop = false;
             // 
             // Form_JourneyX
             // 
