@@ -188,6 +188,57 @@ namespace JourneyX
             }
         }
 
+        public string[] MySchedule(string Email)
+        {
+            string[] placesAndDates = new string[6]; // Since you want the first three rows, and each row has two values (Place and Date)
+
+            try
+            {
+                using (SqlConnection sqlConnection = new SqlConnection(connection))
+                {
+                    sqlConnection.Open();
+                    using (SqlCommand sqlCommand = new SqlCommand("SELECT TOP 3 Place, Date FROM Schedule WHERE Email = @PrimaryKeyValue", sqlConnection))
+                    {
+                        sqlCommand.Parameters.AddWithValue("@PrimaryKeyValue", Email);
+
+                        using (SqlDataReader sqlDataReader = sqlCommand.ExecuteReader())
+                        {
+                            int index = 0;
+                            while (sqlDataReader.Read())
+                            {
+                                string place = sqlDataReader["Place"].ToString();
+                                string date = sqlDataReader["Date"].ToString();
+
+                                // Concatenate place and date and store in the array
+                                placesAndDates[index] = place + " - " + date;
+                                index++;
+                            }
+
+                            // If fewer than three rows were retrieved, fill the remaining array elements with "--No Data--"
+                            while (index < 3)
+                            {
+                                placesAndDates[index] = "--No Data--";
+                                index++;
+                            }
+                        }
+                    }
+                }
+
+                return placesAndDates;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.ToString());
+                return new string[] { "--Error--" };
+            }
+        }
+
+
+
+
+
+
+
 
 
     }

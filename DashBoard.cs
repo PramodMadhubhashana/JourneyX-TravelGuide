@@ -33,7 +33,30 @@ namespace JourneyX
                 else
                 {
                     Label_HName.Text = Name;
+
+                    string[] mySchedule =  sQL.MySchedule(Email);
+                    
+                    for(int i=0; i<mySchedule.Length; i++)
+                    {
+                        string[] splitResult = mySchedule[i].Split(new string[] { " - " }, StringSplitOptions.None);
+
+                        if (splitResult.Length == 2)
+                        {                           
+                            Label_ML1.Text = splitResult[0];
+                            Label_MD1.Text = splitResult[1];
+                            Label_ML2.Text = splitResult[2];
+                            Label_MD2.Text = splitResult[3];
+                            Label_ML3.Text = splitResult[4];
+                            Label_MD3.Text = splitResult[5];
+                        }
+                        else
+                        {
+                            continue;
+                        }
+                        
+                    }
                 }
+
             }
             catch (Exception)
             {
