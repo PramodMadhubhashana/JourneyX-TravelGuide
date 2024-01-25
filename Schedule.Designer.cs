@@ -45,10 +45,8 @@
             this.Label_proviceError = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Label_PlaceError = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // BorderlessForm_Schedule
@@ -89,7 +87,7 @@
             // 
             // monthCalendar1
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(608, 233);
+            this.monthCalendar1.Location = new System.Drawing.Point(916, 70);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 1;
             this.monthCalendar1.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateChanged);
@@ -183,7 +181,7 @@
             this.Button_Add.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.Button_Add.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button_Add.ForeColor = System.Drawing.Color.Black;
-            this.Button_Add.Location = new System.Drawing.Point(455, 270);
+            this.Button_Add.Location = new System.Drawing.Point(676, 270);
             this.Button_Add.Name = "Button_Add";
             this.Button_Add.Size = new System.Drawing.Size(119, 42);
             this.Button_Add.TabIndex = 7;
@@ -199,7 +197,7 @@
             this.Button_Taxi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.Button_Taxi.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button_Taxi.ForeColor = System.Drawing.Color.Black;
-            this.Button_Taxi.Location = new System.Drawing.Point(315, 270);
+            this.Button_Taxi.Location = new System.Drawing.Point(440, 270);
             this.Button_Taxi.Name = "Button_Taxi";
             this.Button_Taxi.Size = new System.Drawing.Size(119, 42);
             this.Button_Taxi.TabIndex = 7;
@@ -237,15 +235,6 @@
             this.guna2PictureBox2.TabIndex = 4;
             this.guna2PictureBox2.TabStop = false;
             // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(847, 130);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(315, 227);
-            this.guna2PictureBox1.TabIndex = 2;
-            this.guna2PictureBox1.TabStop = false;
-            // 
             // Schedule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -262,7 +251,6 @@
             this.Controls.Add(this.guna2PictureBox2);
             this.Controls.Add(this.Label_place);
             this.Controls.Add(this.Label_Province);
-            this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.guna2GradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -271,7 +259,6 @@
             this.Load += new System.EventHandler(this.Schedule_Load);
             this.guna2GradientPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -286,7 +273,6 @@
         private Guna.UI2.WinForms.Guna2ComboBox ComboBox_Province;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
         private Guna.UI2.WinForms.Guna2HtmlLabel Label_Province;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2ComboBox ComboBox_Place;
         private Guna.UI2.WinForms.Guna2HtmlLabel Label_place;
         private System.Windows.Forms.DateTimePicker dateTimePicker;

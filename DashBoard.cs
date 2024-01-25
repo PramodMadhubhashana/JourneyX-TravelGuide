@@ -144,7 +144,7 @@ namespace JourneyX
             }
             else
             {
-                schedule = new Schedule();
+                schedule = new Schedule(Email);
                 schedule.Show();
             }           
         }

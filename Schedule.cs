@@ -13,9 +13,11 @@ namespace JourneyX
 {
     public partial class Schedule : Form
     {
-        public Schedule()
+        public string Email;
+        public Schedule(string Email)
         {
             InitializeComponent();
+            Email = Email;
         }
 
         private void Button_exit_Click(object sender, EventArgs e)
@@ -50,11 +52,35 @@ namespace JourneyX
             Guna2ComboBox[] comboBoxes = { ComboBox_Province, ComboBox_Place };
             Guna2HtmlLabel[] labels = { Label_proviceError, Label_PlaceError };
             int nullCombobox = comboBoxes.Count(cb => cb.SelectedIndex == 0);
-           
+            string a = ComboBox_Province.SelectedItem.ToString();
+            string b = ComboBox_Province.SelectedText.ToString();
+          //  string c = ComboBox_Province.SelectedValue.ToString();
+            string d = ComboBox_Province.SelectedIndex.ToString();
+            Console.WriteLine(a.ToString());
+            Console.WriteLine(b.ToString());
+           // Console.WriteLine(c.ToString());
+            Console.WriteLine(d.ToString());
+            
 
-            if(nullCombobox == 0)
+            if (nullCombobox == 0)
             {
-
+                try
+                {
+                    SQL sQL = new SQL();
+                    string Name = sQL.Dashboard(Email);
+                    if (Name == "--Error--")
+                    {
+                        MessageBox.Show("An error has occurred. Please try again later.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                       
+                    }
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("An error has occurred. Please try again later.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
             {

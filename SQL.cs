@@ -156,7 +156,39 @@ namespace JourneyX
             {
                 return "--Error--";
             }
-        }     
+        }
+
+        public string InsertSchedule(string province, string place, string email, DateTime date)
+        {
+            try
+            {
+                using (SqlConnection sqlConnection = new SqlConnection(connection))
+                {
+                    sqlConnection.Open();
+
+                    string insertQuery = "INSERT INTO Schedule (Province, Place, Email, Date) " +
+                                         "VALUES (@Province, @Place, @Email, @Date)";
+
+                    using (SqlCommand sqlCommand = new SqlCommand(insertQuery, sqlConnection))
+                    {
+                        sqlCommand.Parameters.AddWithValue("@Province", province);
+                        sqlCommand.Parameters.AddWithValue("@Place", place);
+                        sqlCommand.Parameters.AddWithValue("@Email", email);
+                        sqlCommand.Parameters.AddWithValue("@Date", date);
+
+                        sqlCommand.ExecuteNonQuery();
+                    }
+
+                    return "Insert successful";
+                }
+            }
+            catch (Exception ex)
+            {
+                return $"Error: {ex.Message}";
+            }
+        }
+
+
 
     }
 }
