@@ -93,24 +93,31 @@ namespace JourneyX
                     sqlConnection.Open();
                     using (SqlCommand sqlCommand = new SqlCommand("SELECT FirstName FROM Users WHERE Email = @PrimaryKeyValue", sqlConnection))
                     {
-                        sqlCommand.Parameters.AddWithValue("@@PrimaryKeyValue", Email);
+                        sqlCommand.Parameters.AddWithValue("@PrimaryKeyValue", Email);
 
                         using (SqlDataReader sqlDataReader = sqlCommand.ExecuteReader())
                         {
-                            sqlDataReader.Read();
-                            string FistName = sqlDataReader.GetString(sqlDataReader.GetOrdinal("FirstName"));
-                            sqlDataReader.Close();
-                            sqlConnection.Close();
-                            return FistName;
+                            if (sqlDataReader.Read())
+                            {
+                                string FirstName = sqlDataReader.GetString(sqlDataReader.GetOrdinal("FirstName"));
+                                return FirstName;
+                            }
+                            else
+                            {
+                                // Handle the case where no rows are returned
+                                return "--No Data--";
+                            }
                         }
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                Console.WriteLine(e.ToString());
                 return "--Error--";
             }
-        }   
+        }
+
         public string PDetails(string Email)
         {
             try
