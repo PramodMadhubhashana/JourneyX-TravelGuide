@@ -44,7 +44,8 @@ namespace JourneyX
             }
             return null;
         }
-        public string Login(string Email, string password)        {
+        public string Login(string Email, string password)        
+        {
             
             try
             {

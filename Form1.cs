@@ -288,7 +288,7 @@ namespace JourneyX
         {
 
             string Email = TextBox_LoginUserName.Text.ToString();
-            string Password = TextBox_LoginPassword.Text.ToString();
+            string Password = TextBox_LoginPassword.ToString();
             Guna2TextBox[] LtextBoxes = {TextBox_LoginUserName, TextBox_LoginPassword};
             Guna2HtmlLabel[] Llabels = { Label_LUNError, Label_LPError };
 
