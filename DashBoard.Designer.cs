@@ -835,7 +835,7 @@
             this.PictureBox_News.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PictureBox_News.TabIndex = 0;
             this.PictureBox_News.TabStop = false;
-            this.PictureBox_News.Click += new System.EventHandler(this.guna2PictureBox4_Click);
+            
             // 
             // Label1_Fort
             // 

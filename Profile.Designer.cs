@@ -128,6 +128,7 @@
             this.TextBox_FirstName.SelectedText = "";
             this.TextBox_FirstName.Size = new System.Drawing.Size(260, 36);
             this.TextBox_FirstName.TabIndex = 2;
+            this.TextBox_FirstName.TextChanged += new System.EventHandler(this.TextBox_FirstName_TextChanged);
             // 
             // Label_PPicture
             // 
@@ -481,6 +482,7 @@
             this.Label_FError.Name = "Label_FError";
             this.Label_FError.Size = new System.Drawing.Size(3, 2);
             this.Label_FError.TabIndex = 10;
+            this.Label_FError.Text = null;
             // 
             // Label_LError
             // 
@@ -490,6 +492,7 @@
             this.Label_LError.Name = "Label_LError";
             this.Label_LError.Size = new System.Drawing.Size(3, 2);
             this.Label_LError.TabIndex = 10;
+            this.Label_LError.Text = null;
             // 
             // Label_AError
             // 
@@ -499,6 +502,7 @@
             this.Label_AError.Name = "Label_AError";
             this.Label_AError.Size = new System.Drawing.Size(3, 2);
             this.Label_AError.TabIndex = 10;
+            this.Label_AError.Text = null;
             // 
             // Profile
             // 

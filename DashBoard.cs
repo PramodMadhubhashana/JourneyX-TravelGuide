@@ -50,14 +50,7 @@ namespace JourneyX
         {
             this.Close();
         }
-        private void guna2PictureBox4_Click(object sender, EventArgs e)
-        {
 
-        }
-        private void guna2PictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
         private void Button_Feedback_Click(object sender, EventArgs e)
         {
             Feedback feedback = Application.OpenForms.OfType<Feedback>().FirstOrDefault();

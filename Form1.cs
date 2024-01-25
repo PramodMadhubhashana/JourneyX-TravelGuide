@@ -309,11 +309,7 @@ namespace JourneyX
                     DashBoard dashBoard = new DashBoard(Email);
                     dashBoard.Show();                 
                     
-                }
-                else if( A == "ADMIN3550")
-                {
-
-                }
+                }               
                 else
                 {
                     Label_LoginError.Text = "Email or Password wrong Please check again.";
