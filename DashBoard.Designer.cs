@@ -141,6 +141,7 @@
             // 
             // Button_Logout
             // 
+            this.Button_Logout.Animated = true;
             this.Button_Logout.BorderRadius = 10;
             this.Button_Logout.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.Button_Logout.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -149,19 +150,20 @@
             this.Button_Logout.FillColor = System.Drawing.Color.Transparent;
             this.Button_Logout.FocusedColor = System.Drawing.Color.Lime;
             this.Button_Logout.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.Button_Logout.ForeColor = System.Drawing.Color.Black;
+            this.Button_Logout.ForeColor = System.Drawing.Color.White;
             this.Button_Logout.Image = global::JourneyX.Properties.Resources.exit;
             this.Button_Logout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.Button_Logout.Location = new System.Drawing.Point(12, 656);
+            this.Button_Logout.Location = new System.Drawing.Point(0, 656);
             this.Button_Logout.Name = "Button_Logout";
             this.Button_Logout.PressedColor = System.Drawing.Color.Lime;
-            this.Button_Logout.Size = new System.Drawing.Size(180, 52);
+            this.Button_Logout.Size = new System.Drawing.Size(212, 52);
             this.Button_Logout.TabIndex = 1;
             this.Button_Logout.Text = "Logout";
             this.Button_Logout.Click += new System.EventHandler(this.Button_Logout_Click);
             // 
             // Button_Feedback
             // 
+            this.Button_Feedback.Animated = true;
             this.Button_Feedback.BorderRadius = 10;
             this.Button_Feedback.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.Button_Feedback.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -170,19 +172,20 @@
             this.Button_Feedback.FillColor = System.Drawing.Color.Transparent;
             this.Button_Feedback.FocusedColor = System.Drawing.Color.Lime;
             this.Button_Feedback.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.Button_Feedback.ForeColor = System.Drawing.Color.Black;
+            this.Button_Feedback.ForeColor = System.Drawing.Color.White;
             this.Button_Feedback.Image = global::JourneyX.Properties.Resources.feedback;
             this.Button_Feedback.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.Button_Feedback.Location = new System.Drawing.Point(12, 457);
+            this.Button_Feedback.Location = new System.Drawing.Point(0, 457);
             this.Button_Feedback.Name = "Button_Feedback";
             this.Button_Feedback.PressedColor = System.Drawing.Color.Lime;
-            this.Button_Feedback.Size = new System.Drawing.Size(180, 52);
+            this.Button_Feedback.Size = new System.Drawing.Size(212, 52);
             this.Button_Feedback.TabIndex = 1;
             this.Button_Feedback.Text = "Feedback";
             this.Button_Feedback.Click += new System.EventHandler(this.Button_Feedback_Click);
             // 
             // Button_Taxi
             // 
+            this.Button_Taxi.Animated = true;
             this.Button_Taxi.BorderRadius = 10;
             this.Button_Taxi.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.Button_Taxi.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -191,20 +194,21 @@
             this.Button_Taxi.FillColor = System.Drawing.Color.Transparent;
             this.Button_Taxi.FocusedColor = System.Drawing.Color.Lime;
             this.Button_Taxi.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.Button_Taxi.ForeColor = System.Drawing.Color.Black;
+            this.Button_Taxi.ForeColor = System.Drawing.Color.White;
             this.Button_Taxi.Image = global::JourneyX.Properties.Resources.mobile_application;
             this.Button_Taxi.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.Button_Taxi.ImageSize = new System.Drawing.Size(16, 16);
-            this.Button_Taxi.Location = new System.Drawing.Point(12, 381);
+            this.Button_Taxi.Location = new System.Drawing.Point(0, 381);
             this.Button_Taxi.Name = "Button_Taxi";
             this.Button_Taxi.PressedColor = System.Drawing.Color.Lime;
-            this.Button_Taxi.Size = new System.Drawing.Size(180, 52);
+            this.Button_Taxi.Size = new System.Drawing.Size(212, 52);
             this.Button_Taxi.TabIndex = 1;
             this.Button_Taxi.Text = "Booking Taxi";
             this.Button_Taxi.Click += new System.EventHandler(this.Button_Taxi_Click);
             // 
             // Button_Profile
             // 
+            this.Button_Profile.Animated = true;
             this.Button_Profile.BorderRadius = 10;
             this.Button_Profile.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.Button_Profile.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -213,19 +217,20 @@
             this.Button_Profile.FillColor = System.Drawing.Color.Transparent;
             this.Button_Profile.FocusedColor = System.Drawing.Color.Lime;
             this.Button_Profile.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.Button_Profile.ForeColor = System.Drawing.Color.Black;
+            this.Button_Profile.ForeColor = System.Drawing.Color.White;
             this.Button_Profile.Image = global::JourneyX.Properties.Resources.user;
             this.Button_Profile.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.Button_Profile.Location = new System.Drawing.Point(12, 306);
+            this.Button_Profile.Location = new System.Drawing.Point(0, 306);
             this.Button_Profile.Name = "Button_Profile";
             this.Button_Profile.PressedColor = System.Drawing.Color.Lime;
-            this.Button_Profile.Size = new System.Drawing.Size(180, 52);
+            this.Button_Profile.Size = new System.Drawing.Size(212, 52);
             this.Button_Profile.TabIndex = 1;
             this.Button_Profile.Text = "Profile";
             this.Button_Profile.Click += new System.EventHandler(this.Button_Profile_Click);
             // 
             // Button_OffersAndNews
             // 
+            this.Button_OffersAndNews.Animated = true;
             this.Button_OffersAndNews.BorderRadius = 10;
             this.Button_OffersAndNews.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.Button_OffersAndNews.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -234,19 +239,20 @@
             this.Button_OffersAndNews.FillColor = System.Drawing.Color.Transparent;
             this.Button_OffersAndNews.FocusedColor = System.Drawing.Color.Lime;
             this.Button_OffersAndNews.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.Button_OffersAndNews.ForeColor = System.Drawing.Color.Black;
+            this.Button_OffersAndNews.ForeColor = System.Drawing.Color.White;
             this.Button_OffersAndNews.Image = global::JourneyX.Properties.Resources.price_tag;
             this.Button_OffersAndNews.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.Button_OffersAndNews.Location = new System.Drawing.Point(12, 231);
+            this.Button_OffersAndNews.Location = new System.Drawing.Point(0, 231);
             this.Button_OffersAndNews.Name = "Button_OffersAndNews";
             this.Button_OffersAndNews.PressedColor = System.Drawing.Color.Lime;
-            this.Button_OffersAndNews.Size = new System.Drawing.Size(180, 52);
+            this.Button_OffersAndNews.Size = new System.Drawing.Size(212, 52);
             this.Button_OffersAndNews.TabIndex = 1;
             this.Button_OffersAndNews.Text = "            Offers And News";
             this.Button_OffersAndNews.Click += new System.EventHandler(this.Button_OffersAndNews_Click_1);
             // 
             // Button_Schedule
             // 
+            this.Button_Schedule.Animated = true;
             this.Button_Schedule.BorderRadius = 10;
             this.Button_Schedule.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.Button_Schedule.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -255,19 +261,20 @@
             this.Button_Schedule.FillColor = System.Drawing.Color.Transparent;
             this.Button_Schedule.FocusedColor = System.Drawing.Color.Lime;
             this.Button_Schedule.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.Button_Schedule.ForeColor = System.Drawing.Color.Black;
+            this.Button_Schedule.ForeColor = System.Drawing.Color.White;
             this.Button_Schedule.Image = global::JourneyX.Properties.Resources.calendar;
             this.Button_Schedule.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.Button_Schedule.Location = new System.Drawing.Point(12, 160);
+            this.Button_Schedule.Location = new System.Drawing.Point(0, 160);
             this.Button_Schedule.Name = "Button_Schedule";
             this.Button_Schedule.PressedColor = System.Drawing.Color.Lime;
-            this.Button_Schedule.Size = new System.Drawing.Size(180, 52);
+            this.Button_Schedule.Size = new System.Drawing.Size(212, 52);
             this.Button_Schedule.TabIndex = 1;
             this.Button_Schedule.Text = "Schedule";
             this.Button_Schedule.Click += new System.EventHandler(this.Button_Schedule_Click);
             // 
             // Button_Dashboard
             // 
+            this.Button_Dashboard.Animated = true;
             this.Button_Dashboard.BackColor = System.Drawing.Color.Transparent;
             this.Button_Dashboard.BorderRadius = 10;
             this.Button_Dashboard.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -277,13 +284,13 @@
             this.Button_Dashboard.FillColor = System.Drawing.Color.Transparent;
             this.Button_Dashboard.FocusedColor = System.Drawing.Color.Lime;
             this.Button_Dashboard.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.Button_Dashboard.ForeColor = System.Drawing.Color.Black;
+            this.Button_Dashboard.ForeColor = System.Drawing.Color.White;
             this.Button_Dashboard.Image = global::JourneyX.Properties.Resources.dashboard;
             this.Button_Dashboard.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.Button_Dashboard.Location = new System.Drawing.Point(12, 91);
+            this.Button_Dashboard.Location = new System.Drawing.Point(0, 91);
             this.Button_Dashboard.Name = "Button_Dashboard";
             this.Button_Dashboard.PressedColor = System.Drawing.Color.Lime;
-            this.Button_Dashboard.Size = new System.Drawing.Size(180, 52);
+            this.Button_Dashboard.Size = new System.Drawing.Size(212, 52);
             this.Button_Dashboard.TabIndex = 1;
             this.Button_Dashboard.Text = "Dashboard";
             this.Button_Dashboard.Click += new System.EventHandler(this.Button_Dashboard_Click);
@@ -292,7 +299,7 @@
             // 
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe Script", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.Purple;
+            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(120, 12);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(26, 53);
@@ -303,7 +310,7 @@
             // 
             this.Label_LogoJ.BackColor = System.Drawing.Color.Transparent;
             this.Label_LogoJ.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label_LogoJ.ForeColor = System.Drawing.Color.Black;
+            this.Label_LogoJ.ForeColor = System.Drawing.Color.White;
             this.Label_LogoJ.Location = new System.Drawing.Point(23, 23);
             this.Label_LogoJ.Name = "Label_LogoJ";
             this.Label_LogoJ.Size = new System.Drawing.Size(80, 27);
@@ -314,8 +321,8 @@
             // 
             this.Panel1_Top.Controls.Add(this.guna2Panel1);
             this.Panel1_Top.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Panel1_Top.FillColor = System.Drawing.Color.Cyan;
-            this.Panel1_Top.FillColor2 = System.Drawing.Color.Fuchsia;
+            this.Panel1_Top.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
+            this.Panel1_Top.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
             this.Panel1_Top.Location = new System.Drawing.Point(212, 0);
             this.Panel1_Top.Name = "Panel1_Top";
             this.Panel1_Top.Size = new System.Drawing.Size(1088, 40);
@@ -370,7 +377,7 @@
             // 
             // Panel_RightSide
             // 
-            this.Panel_RightSide.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Panel_RightSide.BackColor = System.Drawing.Color.Transparent;
             this.Panel_RightSide.Controls.Add(this.guna2GradientPanel3);
             this.Panel_RightSide.Controls.Add(this.monthCalendar);
             this.Panel_RightSide.Controls.Add(this.Button_Edit);
@@ -398,8 +405,8 @@
             // 
             this.Panel_M3.Controls.Add(this.Label_MD3);
             this.Panel_M3.Controls.Add(this.Label_ML3);
-            this.Panel_M3.FillColor = System.Drawing.Color.Cyan;
-            this.Panel_M3.FillColor2 = System.Drawing.Color.Fuchsia;
+            this.Panel_M3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
+            this.Panel_M3.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
             this.Panel_M3.Location = new System.Drawing.Point(19, 245);
             this.Panel_M3.Name = "Panel_M3";
             this.Panel_M3.Size = new System.Drawing.Size(261, 75);
@@ -409,6 +416,7 @@
             // 
             this.Label_MD3.BackColor = System.Drawing.Color.Transparent;
             this.Label_MD3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label_MD3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.Label_MD3.Location = new System.Drawing.Point(10, 46);
             this.Label_MD3.Name = "Label_MD3";
             this.Label_MD3.Size = new System.Drawing.Size(108, 18);
@@ -419,6 +427,7 @@
             // 
             this.Label_ML3.BackColor = System.Drawing.Color.Transparent;
             this.Label_ML3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label_ML3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.Label_ML3.Location = new System.Drawing.Point(10, 10);
             this.Label_ML3.Name = "Label_ML3";
             this.Label_ML3.Size = new System.Drawing.Size(108, 18);
@@ -429,8 +438,8 @@
             // 
             this.Panel_M2.Controls.Add(this.Label_MD2);
             this.Panel_M2.Controls.Add(this.Label_ML2);
-            this.Panel_M2.FillColor = System.Drawing.Color.Cyan;
-            this.Panel_M2.FillColor2 = System.Drawing.Color.Fuchsia;
+            this.Panel_M2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
+            this.Panel_M2.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
             this.Panel_M2.Location = new System.Drawing.Point(19, 153);
             this.Panel_M2.Name = "Panel_M2";
             this.Panel_M2.Size = new System.Drawing.Size(261, 75);
@@ -440,6 +449,7 @@
             // 
             this.Label_MD2.BackColor = System.Drawing.Color.Transparent;
             this.Label_MD2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label_MD2.ForeColor = System.Drawing.Color.White;
             this.Label_MD2.Location = new System.Drawing.Point(10, 53);
             this.Label_MD2.Name = "Label_MD2";
             this.Label_MD2.Size = new System.Drawing.Size(108, 18);
@@ -450,6 +460,7 @@
             // 
             this.Label_ML2.BackColor = System.Drawing.Color.Transparent;
             this.Label_ML2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label_ML2.ForeColor = System.Drawing.Color.White;
             this.Label_ML2.Location = new System.Drawing.Point(10, 14);
             this.Label_ML2.Name = "Label_ML2";
             this.Label_ML2.Size = new System.Drawing.Size(108, 18);
@@ -460,8 +471,8 @@
             // 
             this.Panel_M1.Controls.Add(this.Label_MD1);
             this.Panel_M1.Controls.Add(this.Label_ML1);
-            this.Panel_M1.FillColor = System.Drawing.Color.Cyan;
-            this.Panel_M1.FillColor2 = System.Drawing.Color.Fuchsia;
+            this.Panel_M1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
+            this.Panel_M1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
             this.Panel_M1.Location = new System.Drawing.Point(19, 54);
             this.Panel_M1.Name = "Panel_M1";
             this.Panel_M1.Size = new System.Drawing.Size(261, 75);
@@ -471,6 +482,7 @@
             // 
             this.Label_MD1.BackColor = System.Drawing.Color.Transparent;
             this.Label_MD1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label_MD1.ForeColor = System.Drawing.Color.White;
             this.Label_MD1.Location = new System.Drawing.Point(10, 47);
             this.Label_MD1.Name = "Label_MD1";
             this.Label_MD1.Size = new System.Drawing.Size(108, 18);
@@ -481,6 +493,7 @@
             // 
             this.Label_ML1.BackColor = System.Drawing.Color.Transparent;
             this.Label_ML1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label_ML1.ForeColor = System.Drawing.Color.White;
             this.Label_ML1.Location = new System.Drawing.Point(5, 12);
             this.Label_ML1.Name = "Label_ML1";
             this.Label_ML1.Size = new System.Drawing.Size(108, 18);
@@ -491,6 +504,7 @@
             // 
             this.Label_Myschedule.BackColor = System.Drawing.Color.Transparent;
             this.Label_Myschedule.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label_Myschedule.ForeColor = System.Drawing.Color.White;
             this.Label_Myschedule.Location = new System.Drawing.Point(19, 3);
             this.Label_Myschedule.Name = "Label_Myschedule";
             this.Label_Myschedule.Size = new System.Drawing.Size(105, 22);
@@ -516,7 +530,7 @@
             this.Button_Edit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.Button_Edit.FillColor = System.Drawing.Color.Transparent;
             this.Button_Edit.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.Button_Edit.ForeColor = System.Drawing.Color.Black;
+            this.Button_Edit.ForeColor = System.Drawing.Color.White;
             this.Button_Edit.Image = global::JourneyX.Properties.Resources.edit;
             this.Button_Edit.ImageSize = new System.Drawing.Size(16, 16);
             this.Button_Edit.Location = new System.Drawing.Point(112, 51);
@@ -530,6 +544,7 @@
             // 
             this.Label_Name.BackColor = System.Drawing.Color.Transparent;
             this.Label_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label_Name.ForeColor = System.Drawing.Color.White;
             this.Label_Name.Location = new System.Drawing.Point(102, 17);
             this.Label_Name.Name = "Label_Name";
             this.Label_Name.Size = new System.Drawing.Size(40, 18);
@@ -548,7 +563,7 @@
             // 
             // Panel2_Top
             // 
-            this.Panel2_Top.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Panel2_Top.BackColor = System.Drawing.Color.Transparent;
             this.Panel2_Top.BorderRadius = 30;
             this.Panel2_Top.Controls.Add(this.Button_notification);
             this.Panel2_Top.Controls.Add(this.TextBox_SearchBox);
@@ -604,6 +619,7 @@
             // 
             this.Label_welcome.BackColor = System.Drawing.Color.Transparent;
             this.Label_welcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label_welcome.ForeColor = System.Drawing.Color.White;
             this.Label_welcome.Location = new System.Drawing.Point(43, 61);
             this.Label_welcome.Name = "Label_welcome";
             this.Label_welcome.Size = new System.Drawing.Size(189, 15);
@@ -614,6 +630,7 @@
             // 
             this.Label_HName.BackColor = System.Drawing.Color.Transparent;
             this.Label_HName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label_HName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.Label_HName.Location = new System.Drawing.Point(122, 17);
             this.Label_HName.Name = "Label_HName";
             this.Label_HName.Size = new System.Drawing.Size(63, 27);
@@ -625,6 +642,7 @@
             // 
             this.Label_Hello.BackColor = System.Drawing.Color.Transparent;
             this.Label_Hello.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label_Hello.ForeColor = System.Drawing.Color.White;
             this.Label_Hello.Location = new System.Drawing.Point(43, 17);
             this.Label_Hello.Name = "Label_Hello";
             this.Label_Hello.Size = new System.Drawing.Size(57, 27);
@@ -633,7 +651,7 @@
             // 
             // Panel_DownSide
             // 
-            this.Panel_DownSide.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Panel_DownSide.BackColor = System.Drawing.Color.Transparent;
             this.Panel_DownSide.Controls.Add(this.guna2GradientPanel2);
             this.Panel_DownSide.Controls.Add(this.guna2GradientPanel1);
             this.Panel_DownSide.Controls.Add(this.Label_BestDestination);
@@ -649,8 +667,8 @@
             this.guna2GradientPanel2.Controls.Add(this.Label_BDL2);
             this.guna2GradientPanel2.Controls.Add(this.PictureBox_BD2);
             this.guna2GradientPanel2.Controls.Add(this.guna2Button3);
-            this.guna2GradientPanel2.FillColor = System.Drawing.Color.Cyan;
-            this.guna2GradientPanel2.FillColor2 = System.Drawing.Color.Fuchsia;
+            this.guna2GradientPanel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
+            this.guna2GradientPanel2.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
             this.guna2GradientPanel2.Location = new System.Drawing.Point(46, 174);
             this.guna2GradientPanel2.Name = "guna2GradientPanel2";
             this.guna2GradientPanel2.Size = new System.Drawing.Size(370, 79);
@@ -659,6 +677,7 @@
             // Label_BDL2
             // 
             this.Label_BDL2.BackColor = System.Drawing.Color.Transparent;
+            this.Label_BDL2.ForeColor = System.Drawing.Color.White;
             this.Label_BDL2.Location = new System.Drawing.Point(100, 35);
             this.Label_BDL2.Name = "Label_BDL2";
             this.Label_BDL2.Size = new System.Drawing.Size(86, 15);
@@ -696,8 +715,8 @@
             this.guna2GradientPanel1.Controls.Add(this.Label_BDL1);
             this.guna2GradientPanel1.Controls.Add(this.PictureBox_BD1);
             this.guna2GradientPanel1.Controls.Add(this.guna2Button2);
-            this.guna2GradientPanel1.FillColor = System.Drawing.Color.Cyan;
-            this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.Fuchsia;
+            this.guna2GradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
+            this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
             this.guna2GradientPanel1.Location = new System.Drawing.Point(46, 74);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.Size = new System.Drawing.Size(370, 79);
@@ -706,6 +725,7 @@
             // Label_BDL1
             // 
             this.Label_BDL1.BackColor = System.Drawing.Color.Transparent;
+            this.Label_BDL1.ForeColor = System.Drawing.Color.White;
             this.Label_BDL1.Location = new System.Drawing.Point(100, 30);
             this.Label_BDL1.Name = "Label_BDL1";
             this.Label_BDL1.Size = new System.Drawing.Size(86, 15);
@@ -742,6 +762,7 @@
             // 
             this.Label_BestDestination.BackColor = System.Drawing.Color.Transparent;
             this.Label_BestDestination.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label_BestDestination.ForeColor = System.Drawing.Color.White;
             this.Label_BestDestination.Location = new System.Drawing.Point(13, 14);
             this.Label_BestDestination.Name = "Label_BestDestination";
             this.Label_BestDestination.Size = new System.Drawing.Size(137, 22);
@@ -755,8 +776,8 @@
             this.Panel2_DownSide.Controls.Add(this.Label_News);
             this.Panel2_DownSide.Controls.Add(this.PictureBox_News);
             this.Panel2_DownSide.Dock = System.Windows.Forms.DockStyle.Right;
-            this.Panel2_DownSide.FillColor = System.Drawing.Color.Cyan;
-            this.Panel2_DownSide.FillColor2 = System.Drawing.Color.Fuchsia;
+            this.Panel2_DownSide.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
+            this.Panel2_DownSide.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
             this.Panel2_DownSide.Location = new System.Drawing.Point(497, 0);
             this.Panel2_DownSide.Name = "Panel2_DownSide";
             this.Panel2_DownSide.Size = new System.Drawing.Size(299, 307);
@@ -772,7 +793,7 @@
             this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2Button1.FillColor = System.Drawing.Color.Transparent;
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.Black;
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
             this.guna2Button1.Location = new System.Drawing.Point(87, 223);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(92, 45);
@@ -784,6 +805,7 @@
             // 
             this.Label_Offer.BackColor = System.Drawing.Color.Transparent;
             this.Label_Offer.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label_Offer.ForeColor = System.Drawing.Color.White;
             this.Label_Offer.Location = new System.Drawing.Point(75, 193);
             this.Label_Offer.Name = "Label_Offer";
             this.Label_Offer.Size = new System.Drawing.Size(136, 15);
@@ -794,6 +816,7 @@
             // 
             this.Label_News.BackColor = System.Drawing.Color.Transparent;
             this.Label_News.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label_News.ForeColor = System.Drawing.Color.White;
             this.Label_News.Location = new System.Drawing.Point(15, 156);
             this.Label_News.Name = "Label_News";
             this.Label_News.Size = new System.Drawing.Size(267, 27);
@@ -817,6 +840,7 @@
             // Label1_Fort
             // 
             this.Label1_Fort.BackColor = System.Drawing.Color.Transparent;
+            this.Label1_Fort.ForeColor = System.Drawing.Color.White;
             this.Label1_Fort.Location = new System.Drawing.Point(256, 384);
             this.Label1_Fort.Name = "Label1_Fort";
             this.Label1_Fort.Size = new System.Drawing.Size(48, 15);
@@ -826,6 +850,7 @@
             // Label2_HKBeach
             // 
             this.Label2_HKBeach.BackColor = System.Drawing.Color.Transparent;
+            this.Label2_HKBeach.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.Label2_HKBeach.Location = new System.Drawing.Point(526, 384);
             this.Label2_HKBeach.Name = "Label2_HKBeach";
             this.Label2_HKBeach.Size = new System.Drawing.Size(91, 15);
@@ -835,6 +860,7 @@
             // Label3_NuwraEliya
             // 
             this.Label3_NuwraEliya.BackColor = System.Drawing.Color.Transparent;
+            this.Label3_NuwraEliya.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.Label3_NuwraEliya.Location = new System.Drawing.Point(790, 388);
             this.Label3_NuwraEliya.Name = "Label3_NuwraEliya";
             this.Label3_NuwraEliya.Size = new System.Drawing.Size(65, 15);
@@ -943,6 +969,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.ClientSize = new System.Drawing.Size(1300, 720);
             this.Controls.Add(this.Button3_PLocation);
             this.Controls.Add(this.Button2_PLocation);

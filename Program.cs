@@ -17,6 +17,7 @@ namespace JourneyX
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form_JourneyX());
+            //Application.Run(new DashBoard());
         }
 
         

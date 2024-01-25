@@ -442,34 +442,34 @@ namespace JourneyX
 
            // this.WindowState = FormWindowState.Minimized;
         }
+
+        private int imageindex = 0;      
         private void timer_PictureBox_Tick(object sender, EventArgs e)
         {
-            string basepath = Application.StartupPath;
-
-            string[] imagePaths = {
-                Path.Combine(basepath,"Pictures","1.jpg"),
-                Path.Combine(basepath,"Pictures","2.jpg"),
-                Path.Combine(basepath,"Pictures","3.jpg"),
-                Path.Combine(basepath,"Pictures","4.jpg"),
-                Path.Combine(basepath,"Pictures","5.jpg"),
-                Path.Combine(basepath,"Pictures","6.jpg"),
-                Path.Combine(basepath,"Pictures","7.jpg"),
-                Path.Combine(basepath,"Pictures","8.jpg"),
-                Path.Combine(basepath,"Pictures","9.jpg"),
-                Path.Combine(basepath,"Pictures","10.jpg")
+  
+            Image[]  images = new Image[]
+            {
+                Properties.Resources._1,
+                Properties.Resources._2,
+                Properties.Resources._3,
+                Properties.Resources._4,
+                Properties.Resources._5,
+                Properties.Resources._6,
+                Properties.Resources._7,
+                Properties.Resources._8,
+                Properties.Resources._9,
+                Properties.Resources._10
             };
-
-            Image[] images = new Image[imagePaths.Length];
 
             imageindex++;
 
             if (imageindex >= images.Length)
             {
-                imageindex = 0; 
+                imageindex = 0;
             }
             PictureBox_LoginPage.Image = images[imageindex];
         }
-        private int imageindex = 0;
+
         private void Form_JourneyX_Load(object sender, EventArgs e)
         {
             timer_PictureBox.Start();

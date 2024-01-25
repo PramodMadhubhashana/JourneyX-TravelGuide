@@ -128,6 +128,8 @@
             this.timer_login = new System.Windows.Forms.Timer(this.components);
             this.Label_welcome = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.PictureBox_LoginPage = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.GradientPanel_CreateAccount1st.SuspendLayout();
             this.GradientPanel_CreateAccount2nd.SuspendLayout();
@@ -149,7 +151,8 @@
             // 
             this.Label_Login.BackColor = System.Drawing.Color.Transparent;
             this.Label_Login.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label_Login.Location = new System.Drawing.Point(124, 14);
+            this.Label_Login.ForeColor = System.Drawing.Color.White;
+            this.Label_Login.Location = new System.Drawing.Point(139, 14);
             this.Label_Login.Name = "Label_Login";
             this.Label_Login.Size = new System.Drawing.Size(47, 22);
             this.Label_Login.TabIndex = 0;
@@ -159,6 +162,7 @@
             // 
             this.Label_LoginUserName.BackColor = System.Drawing.Color.Transparent;
             this.Label_LoginUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label_LoginUserName.ForeColor = System.Drawing.Color.White;
             this.Label_LoginUserName.Location = new System.Drawing.Point(18, 61);
             this.Label_LoginUserName.Name = "Label_LoginUserName";
             this.Label_LoginUserName.Size = new System.Drawing.Size(72, 18);
@@ -169,6 +173,7 @@
             // 
             this.Label_LoginPassword.BackColor = System.Drawing.Color.Transparent;
             this.Label_LoginPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label_LoginPassword.ForeColor = System.Drawing.Color.White;
             this.Label_LoginPassword.Location = new System.Drawing.Point(18, 152);
             this.Label_LoginPassword.Name = "Label_LoginPassword";
             this.Label_LoginPassword.Size = new System.Drawing.Size(63, 18);
@@ -185,7 +190,7 @@
             this.Button_LForgotPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.Button_LForgotPassword.FillColor = System.Drawing.Color.Transparent;
             this.Button_LForgotPassword.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.Button_LForgotPassword.ForeColor = System.Drawing.Color.Black;
+            this.Button_LForgotPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.Button_LForgotPassword.Location = new System.Drawing.Point(226, 218);
             this.Button_LForgotPassword.Name = "Button_LForgotPassword";
             this.Button_LForgotPassword.Size = new System.Drawing.Size(115, 23);
@@ -194,15 +199,20 @@
             // 
             // Button_Login
             // 
+            this.Button_Login.Animated = true;
             this.Button_Login.BackColor = System.Drawing.Color.Transparent;
-            this.Button_Login.BorderRadius = 10;
+            this.Button_Login.BorderColor = System.Drawing.Color.White;
+            this.Button_Login.BorderRadius = 5;
+            this.Button_Login.BorderThickness = 2;
             this.Button_Login.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.Button_Login.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.Button_Login.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.Button_Login.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.Button_Login.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Button_Login.FillColor = System.Drawing.Color.Transparent;
+            this.Button_Login.FillColor2 = System.Drawing.Color.Transparent;
             this.Button_Login.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.Button_Login.ForeColor = System.Drawing.Color.Black;
+            this.Button_Login.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.Button_Login.Location = new System.Drawing.Point(72, 286);
             this.Button_Login.Name = "Button_Login";
             this.Button_Login.Size = new System.Drawing.Size(180, 43);
@@ -241,7 +251,7 @@
             this.ProgressIndicator_Login.BackColor = System.Drawing.Color.Transparent;
             this.ProgressIndicator_Login.Location = new System.Drawing.Point(276, 274);
             this.ProgressIndicator_Login.Name = "ProgressIndicator_Login";
-            this.ProgressIndicator_Login.ProgressColor = System.Drawing.Color.DarkViolet;
+            this.ProgressIndicator_Login.ProgressColor = System.Drawing.Color.White;
             this.ProgressIndicator_Login.Size = new System.Drawing.Size(65, 58);
             this.ProgressIndicator_Login.TabIndex = 4;
             // 
@@ -255,8 +265,8 @@
             this.Button_SignUp.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.Button_SignUp.FillColor = System.Drawing.Color.Transparent;
             this.Button_SignUp.Font = new System.Drawing.Font("Segoe UI", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-            this.Button_SignUp.ForeColor = System.Drawing.Color.Black;
-            this.Button_SignUp.Location = new System.Drawing.Point(110, 378);
+            this.Button_SignUp.ForeColor = System.Drawing.Color.White;
+            this.Button_SignUp.Location = new System.Drawing.Point(124, 378);
             this.Button_SignUp.Name = "Button_SignUp";
             this.Button_SignUp.Size = new System.Drawing.Size(76, 28);
             this.Button_SignUp.TabIndex = 2;
@@ -267,8 +277,8 @@
             // 
             this.Label_OrSignUp.BackColor = System.Drawing.Color.Transparent;
             this.Label_OrSignUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label_OrSignUp.ForeColor = System.Drawing.Color.Black;
-            this.Label_OrSignUp.Location = new System.Drawing.Point(115, 348);
+            this.Label_OrSignUp.ForeColor = System.Drawing.Color.White;
+            this.Label_OrSignUp.Location = new System.Drawing.Point(128, 348);
             this.Label_OrSignUp.Name = "Label_OrSignUp";
             this.Label_OrSignUp.Size = new System.Drawing.Size(68, 18);
             this.Label_OrSignUp.TabIndex = 3;
@@ -427,11 +437,11 @@
             this.GradientPanel_CreateAccount1st.Controls.Add(this.TextBox_Address);
             this.GradientPanel_CreateAccount1st.Controls.Add(this.TextBox_LastName);
             this.GradientPanel_CreateAccount1st.Controls.Add(this.Label_BirthDay);
-            this.GradientPanel_CreateAccount1st.FillColor = System.Drawing.Color.Cyan;
-            this.GradientPanel_CreateAccount1st.FillColor2 = System.Drawing.Color.SpringGreen;
-            this.GradientPanel_CreateAccount1st.FillColor3 = System.Drawing.Color.Fuchsia;
-            this.GradientPanel_CreateAccount1st.FillColor4 = System.Drawing.Color.SkyBlue;
-            this.GradientPanel_CreateAccount1st.Location = new System.Drawing.Point(1041, 71);
+            this.GradientPanel_CreateAccount1st.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
+            this.GradientPanel_CreateAccount1st.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
+            this.GradientPanel_CreateAccount1st.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
+            this.GradientPanel_CreateAccount1st.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
+            this.GradientPanel_CreateAccount1st.Location = new System.Drawing.Point(838, 53);
             this.GradientPanel_CreateAccount1st.MaximumSize = new System.Drawing.Size(358, 611);
             this.GradientPanel_CreateAccount1st.Name = "GradientPanel_CreateAccount1st";
             this.GradientPanel_CreateAccount1st.Size = new System.Drawing.Size(358, 611);
@@ -450,23 +460,25 @@
             // RadioButton_Female
             // 
             this.RadioButton_Female.BackColor = System.Drawing.Color.Transparent;
-            this.RadioButton_Female.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.RadioButton_Female.CheckedState.BorderThickness = 0;
+            this.RadioButton_Female.CheckedState.BorderColor = System.Drawing.Color.Transparent;
+            this.RadioButton_Female.CheckedState.BorderThickness = 1;
             this.RadioButton_Female.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.RadioButton_Female.CheckedState.InnerColor = System.Drawing.Color.White;
             this.RadioButton_Female.Location = new System.Drawing.Point(267, 447);
             this.RadioButton_Female.Name = "RadioButton_Female";
             this.RadioButton_Female.Size = new System.Drawing.Size(20, 20);
             this.RadioButton_Female.TabIndex = 5;
-            this.RadioButton_Female.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.RadioButton_Female.UncheckedState.BorderColor = System.Drawing.Color.White;
             this.RadioButton_Female.UncheckedState.BorderThickness = 2;
             this.RadioButton_Female.UncheckedState.FillColor = System.Drawing.Color.Transparent;
             this.RadioButton_Female.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.RadioButton_Female.UseTransparentBackground = true;
             this.RadioButton_Female.Enter += new System.EventHandler(this.RadioButton_Female_Enter);
             // 
             // Button_CA1stPageExit
             // 
             this.Button_CA1stPageExit.BackColor = System.Drawing.Color.Transparent;
+            this.Button_CA1stPageExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.Button_CA1stPageExit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.Button_CA1stPageExit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.Button_CA1stPageExit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -485,18 +497,19 @@
             // RadioButton_Male
             // 
             this.RadioButton_Male.BackColor = System.Drawing.Color.Transparent;
-            this.RadioButton_Male.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.RadioButton_Male.CheckedState.BorderThickness = 0;
-            this.RadioButton_Male.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.RadioButton_Male.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.RadioButton_Male.CheckedState.BorderColor = System.Drawing.Color.Transparent;
+            this.RadioButton_Male.CheckedState.BorderThickness = 1;
+            this.RadioButton_Male.CheckedState.FillColor = System.Drawing.Color.White;
+            this.RadioButton_Male.CheckedState.InnerColor = System.Drawing.Color.Transparent;
             this.RadioButton_Male.Location = new System.Drawing.Point(138, 448);
             this.RadioButton_Male.Name = "RadioButton_Male";
             this.RadioButton_Male.Size = new System.Drawing.Size(20, 20);
             this.RadioButton_Male.TabIndex = 5;
-            this.RadioButton_Male.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.RadioButton_Male.UncheckedState.BorderColor = System.Drawing.Color.White;
             this.RadioButton_Male.UncheckedState.BorderThickness = 2;
             this.RadioButton_Male.UncheckedState.FillColor = System.Drawing.Color.Transparent;
             this.RadioButton_Male.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.RadioButton_Male.UseTransparentBackground = true;
             this.RadioButton_Male.Enter += new System.EventHandler(this.RadioButton_Male_Enter);
             // 
             // ProgressBar_1stPage
@@ -513,6 +526,7 @@
             // 
             this.Label_CreateAccount.BackColor = System.Drawing.Color.Transparent;
             this.Label_CreateAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label_CreateAccount.ForeColor = System.Drawing.Color.White;
             this.Label_CreateAccount.Location = new System.Drawing.Point(124, 14);
             this.Label_CreateAccount.Name = "Label_CreateAccount";
             this.Label_CreateAccount.Size = new System.Drawing.Size(128, 22);
@@ -538,15 +552,20 @@
             // 
             // GradientButton_Next
             // 
+            this.GradientButton_Next.Animated = true;
             this.GradientButton_Next.BackColor = System.Drawing.Color.Transparent;
-            this.GradientButton_Next.BorderRadius = 10;
+            this.GradientButton_Next.BorderColor = System.Drawing.Color.White;
+            this.GradientButton_Next.BorderRadius = 5;
+            this.GradientButton_Next.BorderThickness = 2;
             this.GradientButton_Next.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.GradientButton_Next.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.GradientButton_Next.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.GradientButton_Next.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.GradientButton_Next.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.GradientButton_Next.FillColor = System.Drawing.Color.Transparent;
+            this.GradientButton_Next.FillColor2 = System.Drawing.Color.Transparent;
             this.GradientButton_Next.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.GradientButton_Next.ForeColor = System.Drawing.Color.Black;
+            this.GradientButton_Next.ForeColor = System.Drawing.Color.White;
             this.GradientButton_Next.Location = new System.Drawing.Point(72, 521);
             this.GradientButton_Next.Name = "GradientButton_Next";
             this.GradientButton_Next.Size = new System.Drawing.Size(180, 43);
@@ -558,6 +577,7 @@
             // 
             this.Label_FirstName.BackColor = System.Drawing.Color.Transparent;
             this.Label_FirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label_FirstName.ForeColor = System.Drawing.Color.White;
             this.Label_FirstName.Location = new System.Drawing.Point(14, 74);
             this.Label_FirstName.Name = "Label_FirstName";
             this.Label_FirstName.Size = new System.Drawing.Size(68, 18);
@@ -592,6 +612,7 @@
             // 
             this.Label_Female.BackColor = System.Drawing.Color.Transparent;
             this.Label_Female.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label_Female.ForeColor = System.Drawing.Color.White;
             this.Label_Female.Location = new System.Drawing.Point(204, 449);
             this.Label_Female.Name = "Label_Female";
             this.Label_Female.Size = new System.Drawing.Size(49, 18);
@@ -602,6 +623,7 @@
             // 
             this.Label_Male.BackColor = System.Drawing.Color.Transparent;
             this.Label_Male.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label_Male.ForeColor = System.Drawing.Color.White;
             this.Label_Male.Location = new System.Drawing.Point(72, 449);
             this.Label_Male.Name = "Label_Male";
             this.Label_Male.Size = new System.Drawing.Size(33, 18);
@@ -634,6 +656,7 @@
             // 
             this.Label_Gender.BackColor = System.Drawing.Color.Transparent;
             this.Label_Gender.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label_Gender.ForeColor = System.Drawing.Color.White;
             this.Label_Gender.Location = new System.Drawing.Point(14, 423);
             this.Label_Gender.Name = "Label_Gender";
             this.Label_Gender.Size = new System.Drawing.Size(48, 18);
@@ -655,6 +678,7 @@
             // 
             this.Label_Address.BackColor = System.Drawing.Color.Transparent;
             this.Label_Address.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label_Address.ForeColor = System.Drawing.Color.White;
             this.Label_Address.Location = new System.Drawing.Point(14, 241);
             this.Label_Address.Name = "Label_Address";
             this.Label_Address.Size = new System.Drawing.Size(54, 18);
@@ -676,6 +700,7 @@
             // 
             this.Label_LastName.BackColor = System.Drawing.Color.Transparent;
             this.Label_LastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label_LastName.ForeColor = System.Drawing.Color.White;
             this.Label_LastName.Location = new System.Drawing.Point(14, 157);
             this.Label_LastName.Name = "Label_LastName";
             this.Label_LastName.Size = new System.Drawing.Size(68, 18);
@@ -734,6 +759,7 @@
             // 
             this.Label_BirthDay.BackColor = System.Drawing.Color.Transparent;
             this.Label_BirthDay.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label_BirthDay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.Label_BirthDay.Location = new System.Drawing.Point(14, 331);
             this.Label_BirthDay.Name = "Label_BirthDay";
             this.Label_BirthDay.Size = new System.Drawing.Size(54, 18);
@@ -773,11 +799,11 @@
             this.GradientPanel_CreateAccount2nd.Controls.Add(this.TextBox_ConfirmPassword);
             this.GradientPanel_CreateAccount2nd.Controls.Add(this.TextBox_Password);
             this.GradientPanel_CreateAccount2nd.Controls.Add(this.TextBox_PhoneNumber);
-            this.GradientPanel_CreateAccount2nd.FillColor = System.Drawing.Color.Cyan;
-            this.GradientPanel_CreateAccount2nd.FillColor2 = System.Drawing.Color.SpringGreen;
-            this.GradientPanel_CreateAccount2nd.FillColor3 = System.Drawing.Color.Fuchsia;
-            this.GradientPanel_CreateAccount2nd.FillColor4 = System.Drawing.Color.SkyBlue;
-            this.GradientPanel_CreateAccount2nd.Location = new System.Drawing.Point(907, 58);
+            this.GradientPanel_CreateAccount2nd.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
+            this.GradientPanel_CreateAccount2nd.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
+            this.GradientPanel_CreateAccount2nd.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
+            this.GradientPanel_CreateAccount2nd.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
+            this.GradientPanel_CreateAccount2nd.Location = new System.Drawing.Point(792, 59);
             this.GradientPanel_CreateAccount2nd.MaximumSize = new System.Drawing.Size(358, 611);
             this.GradientPanel_CreateAccount2nd.Name = "GradientPanel_CreateAccount2nd";
             this.GradientPanel_CreateAccount2nd.Size = new System.Drawing.Size(358, 611);
@@ -788,7 +814,7 @@
             this.ProgressIndicator_CreateAccount.BackColor = System.Drawing.Color.Transparent;
             this.ProgressIndicator_CreateAccount.Location = new System.Drawing.Point(260, 484);
             this.ProgressIndicator_CreateAccount.Name = "ProgressIndicator_CreateAccount";
-            this.ProgressIndicator_CreateAccount.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.ProgressIndicator_CreateAccount.ProgressColor = System.Drawing.Color.White;
             this.ProgressIndicator_CreateAccount.Size = new System.Drawing.Size(83, 68);
             this.ProgressIndicator_CreateAccount.TabIndex = 9;
             // 
@@ -870,6 +896,7 @@
             // 
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.White;
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(124, 14);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(128, 22);
@@ -878,15 +905,20 @@
             // 
             // Button_CreateAccount
             // 
+            this.Button_CreateAccount.Animated = true;
             this.Button_CreateAccount.BackColor = System.Drawing.Color.Transparent;
-            this.Button_CreateAccount.BorderRadius = 10;
+            this.Button_CreateAccount.BorderColor = System.Drawing.Color.White;
+            this.Button_CreateAccount.BorderRadius = 5;
+            this.Button_CreateAccount.BorderThickness = 2;
             this.Button_CreateAccount.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.Button_CreateAccount.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.Button_CreateAccount.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.Button_CreateAccount.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.Button_CreateAccount.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Button_CreateAccount.FillColor = System.Drawing.Color.Transparent;
+            this.Button_CreateAccount.FillColor2 = System.Drawing.Color.Transparent;
             this.Button_CreateAccount.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.Button_CreateAccount.ForeColor = System.Drawing.Color.Black;
+            this.Button_CreateAccount.ForeColor = System.Drawing.Color.White;
             this.Button_CreateAccount.Location = new System.Drawing.Point(61, 496);
             this.Button_CreateAccount.Name = "Button_CreateAccount";
             this.Button_CreateAccount.Size = new System.Drawing.Size(180, 43);
@@ -909,6 +941,7 @@
             // 
             this.Label_Email.BackColor = System.Drawing.Color.Transparent;
             this.Label_Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label_Email.ForeColor = System.Drawing.Color.White;
             this.Label_Email.Location = new System.Drawing.Point(14, 71);
             this.Label_Email.Name = "Label_Email";
             this.Label_Email.Size = new System.Drawing.Size(37, 18);
@@ -943,7 +976,7 @@
             // 
             this.Label_Strong.BackColor = System.Drawing.Color.Transparent;
             this.Label_Strong.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label_Strong.ForeColor = System.Drawing.Color.Green;
+            this.Label_Strong.ForeColor = System.Drawing.Color.LightGreen;
             this.Label_Strong.Location = new System.Drawing.Point(236, 308);
             this.Label_Strong.Name = "Label_Strong";
             this.Label_Strong.Size = new System.Drawing.Size(42, 18);
@@ -998,6 +1031,7 @@
             // 
             this.Label_ConfirmPassword.BackColor = System.Drawing.Color.Transparent;
             this.Label_ConfirmPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label_ConfirmPassword.ForeColor = System.Drawing.Color.White;
             this.Label_ConfirmPassword.Location = new System.Drawing.Point(14, 350);
             this.Label_ConfirmPassword.Name = "Label_ConfirmPassword";
             this.Label_ConfirmPassword.Size = new System.Drawing.Size(111, 18);
@@ -1019,6 +1053,7 @@
             // 
             this.Label_Password.BackColor = System.Drawing.Color.Transparent;
             this.Label_Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label_Password.ForeColor = System.Drawing.Color.White;
             this.Label_Password.Location = new System.Drawing.Point(14, 226);
             this.Label_Password.Name = "Label_Password";
             this.Label_Password.Size = new System.Drawing.Size(63, 18);
@@ -1040,6 +1075,7 @@
             // 
             this.Label_PhoneNumber.BackColor = System.Drawing.Color.Transparent;
             this.Label_PhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label_PhoneNumber.ForeColor = System.Drawing.Color.White;
             this.Label_PhoneNumber.Location = new System.Drawing.Point(14, 141);
             this.Label_PhoneNumber.Name = "Label_PhoneNumber";
             this.Label_PhoneNumber.Size = new System.Drawing.Size(93, 18);
@@ -1195,9 +1231,10 @@
             this.GradientPanel_NelligalaTemple.Controls.Add(this.guna2PictureBox5);
             this.GradientPanel_NelligalaTemple.Controls.Add(this.Button_NelligalaTemple);
             this.GradientPanel_NelligalaTemple.Controls.Add(this.Label_NelligalaTemple);
-            this.GradientPanel_NelligalaTemple.FillColor = System.Drawing.Color.Fuchsia;
-            this.GradientPanel_NelligalaTemple.FillColor2 = System.Drawing.Color.Cyan;
-            this.GradientPanel_NelligalaTemple.FillColor3 = System.Drawing.Color.DarkViolet;
+            this.GradientPanel_NelligalaTemple.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
+            this.GradientPanel_NelligalaTemple.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
+            this.GradientPanel_NelligalaTemple.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
+            this.GradientPanel_NelligalaTemple.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
             this.GradientPanel_NelligalaTemple.Location = new System.Drawing.Point(9, 485);
             this.GradientPanel_NelligalaTemple.Name = "GradientPanel_NelligalaTemple";
             this.GradientPanel_NelligalaTemple.Size = new System.Drawing.Size(341, 86);
@@ -1207,7 +1244,7 @@
             // 
             this.guna2PictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox5.Image")));
             this.guna2PictureBox5.ImageRotate = 0F;
-            this.guna2PictureBox5.Location = new System.Drawing.Point(0, 0);
+            this.guna2PictureBox5.Location = new System.Drawing.Point(21, 0);
             this.guna2PictureBox5.Name = "guna2PictureBox5";
             this.guna2PictureBox5.Size = new System.Drawing.Size(105, 86);
             this.guna2PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1216,18 +1253,21 @@
             // 
             // Button_NelligalaTemple
             // 
+            this.Button_NelligalaTemple.Animated = true;
             this.Button_NelligalaTemple.BackColor = System.Drawing.Color.Transparent;
-            this.Button_NelligalaTemple.BorderRadius = 10;
+            this.Button_NelligalaTemple.BorderColor = System.Drawing.Color.White;
+            this.Button_NelligalaTemple.BorderRadius = 5;
+            this.Button_NelligalaTemple.BorderThickness = 2;
             this.Button_NelligalaTemple.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.Button_NelligalaTemple.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.Button_NelligalaTemple.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.Button_NelligalaTemple.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.Button_NelligalaTemple.FillColor = System.Drawing.Color.Transparent;
             this.Button_NelligalaTemple.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.Button_NelligalaTemple.ForeColor = System.Drawing.Color.Black;
+            this.Button_NelligalaTemple.ForeColor = System.Drawing.Color.White;
             this.Button_NelligalaTemple.Image = ((System.Drawing.Image)(resources.GetObject("Button_NelligalaTemple.Image")));
             this.Button_NelligalaTemple.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.Button_NelligalaTemple.Location = new System.Drawing.Point(146, 35);
+            this.Button_NelligalaTemple.Location = new System.Drawing.Point(169, 35);
             this.Button_NelligalaTemple.Name = "Button_NelligalaTemple";
             this.Button_NelligalaTemple.Size = new System.Drawing.Size(125, 30);
             this.Button_NelligalaTemple.TabIndex = 3;
@@ -1239,7 +1279,8 @@
             // 
             this.Label_NelligalaTemple.BackColor = System.Drawing.Color.Transparent;
             this.Label_NelligalaTemple.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label_NelligalaTemple.Location = new System.Drawing.Point(173, 11);
+            this.Label_NelligalaTemple.ForeColor = System.Drawing.Color.White;
+            this.Label_NelligalaTemple.Location = new System.Drawing.Point(170, 11);
             this.Label_NelligalaTemple.Name = "Label_NelligalaTemple";
             this.Label_NelligalaTemple.Size = new System.Drawing.Size(123, 18);
             this.Label_NelligalaTemple.TabIndex = 0;
@@ -1250,9 +1291,10 @@
             this.GradientPane_NuwaraEliya.Controls.Add(this.guna2PictureBox4);
             this.GradientPane_NuwaraEliya.Controls.Add(this.Button_NuwaraEliya);
             this.GradientPane_NuwaraEliya.Controls.Add(this.Label_NuwaraEliya);
-            this.GradientPane_NuwaraEliya.FillColor = System.Drawing.Color.Fuchsia;
-            this.GradientPane_NuwaraEliya.FillColor2 = System.Drawing.Color.Cyan;
-            this.GradientPane_NuwaraEliya.FillColor3 = System.Drawing.Color.DarkViolet;
+            this.GradientPane_NuwaraEliya.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
+            this.GradientPane_NuwaraEliya.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
+            this.GradientPane_NuwaraEliya.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
+            this.GradientPane_NuwaraEliya.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
             this.GradientPane_NuwaraEliya.Location = new System.Drawing.Point(9, 382);
             this.GradientPane_NuwaraEliya.Name = "GradientPane_NuwaraEliya";
             this.GradientPane_NuwaraEliya.Size = new System.Drawing.Size(341, 86);
@@ -1262,7 +1304,7 @@
             // 
             this.guna2PictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox4.Image")));
             this.guna2PictureBox4.ImageRotate = 0F;
-            this.guna2PictureBox4.Location = new System.Drawing.Point(0, 0);
+            this.guna2PictureBox4.Location = new System.Drawing.Point(21, 0);
             this.guna2PictureBox4.Name = "guna2PictureBox4";
             this.guna2PictureBox4.Size = new System.Drawing.Size(105, 86);
             this.guna2PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1271,18 +1313,21 @@
             // 
             // Button_NuwaraEliya
             // 
+            this.Button_NuwaraEliya.Animated = true;
             this.Button_NuwaraEliya.BackColor = System.Drawing.Color.Transparent;
-            this.Button_NuwaraEliya.BorderRadius = 10;
+            this.Button_NuwaraEliya.BorderColor = System.Drawing.Color.White;
+            this.Button_NuwaraEliya.BorderRadius = 5;
+            this.Button_NuwaraEliya.BorderThickness = 2;
             this.Button_NuwaraEliya.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.Button_NuwaraEliya.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.Button_NuwaraEliya.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.Button_NuwaraEliya.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.Button_NuwaraEliya.FillColor = System.Drawing.Color.Transparent;
             this.Button_NuwaraEliya.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.Button_NuwaraEliya.ForeColor = System.Drawing.Color.Black;
+            this.Button_NuwaraEliya.ForeColor = System.Drawing.Color.White;
             this.Button_NuwaraEliya.Image = ((System.Drawing.Image)(resources.GetObject("Button_NuwaraEliya.Image")));
             this.Button_NuwaraEliya.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.Button_NuwaraEliya.Location = new System.Drawing.Point(146, 35);
+            this.Button_NuwaraEliya.Location = new System.Drawing.Point(169, 35);
             this.Button_NuwaraEliya.Name = "Button_NuwaraEliya";
             this.Button_NuwaraEliya.Size = new System.Drawing.Size(125, 30);
             this.Button_NuwaraEliya.TabIndex = 3;
@@ -1294,7 +1339,8 @@
             // 
             this.Label_NuwaraEliya.BackColor = System.Drawing.Color.Transparent;
             this.Label_NuwaraEliya.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label_NuwaraEliya.Location = new System.Drawing.Point(173, 11);
+            this.Label_NuwaraEliya.ForeColor = System.Drawing.Color.White;
+            this.Label_NuwaraEliya.Location = new System.Drawing.Point(184, 11);
             this.Label_NuwaraEliya.Name = "Label_NuwaraEliya";
             this.Label_NuwaraEliya.Size = new System.Drawing.Size(94, 18);
             this.Label_NuwaraEliya.TabIndex = 0;
@@ -1305,9 +1351,10 @@
             this.GradientPanel_JungleBeach.Controls.Add(this.guna2PictureBox3);
             this.GradientPanel_JungleBeach.Controls.Add(this.Button_JungleBeach);
             this.GradientPanel_JungleBeach.Controls.Add(this.Label_JungleBeach);
-            this.GradientPanel_JungleBeach.FillColor = System.Drawing.Color.Fuchsia;
-            this.GradientPanel_JungleBeach.FillColor2 = System.Drawing.Color.Cyan;
-            this.GradientPanel_JungleBeach.FillColor3 = System.Drawing.Color.DarkViolet;
+            this.GradientPanel_JungleBeach.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
+            this.GradientPanel_JungleBeach.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
+            this.GradientPanel_JungleBeach.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
+            this.GradientPanel_JungleBeach.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
             this.GradientPanel_JungleBeach.Location = new System.Drawing.Point(9, 282);
             this.GradientPanel_JungleBeach.Name = "GradientPanel_JungleBeach";
             this.GradientPanel_JungleBeach.Size = new System.Drawing.Size(341, 86);
@@ -1317,7 +1364,7 @@
             // 
             this.guna2PictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox3.Image")));
             this.guna2PictureBox3.ImageRotate = 0F;
-            this.guna2PictureBox3.Location = new System.Drawing.Point(0, 0);
+            this.guna2PictureBox3.Location = new System.Drawing.Point(21, 0);
             this.guna2PictureBox3.Name = "guna2PictureBox3";
             this.guna2PictureBox3.Size = new System.Drawing.Size(105, 86);
             this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1326,18 +1373,21 @@
             // 
             // Button_JungleBeach
             // 
+            this.Button_JungleBeach.Animated = true;
             this.Button_JungleBeach.BackColor = System.Drawing.Color.Transparent;
-            this.Button_JungleBeach.BorderRadius = 10;
+            this.Button_JungleBeach.BorderColor = System.Drawing.Color.White;
+            this.Button_JungleBeach.BorderRadius = 5;
+            this.Button_JungleBeach.BorderThickness = 2;
             this.Button_JungleBeach.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.Button_JungleBeach.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.Button_JungleBeach.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.Button_JungleBeach.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.Button_JungleBeach.FillColor = System.Drawing.Color.Transparent;
             this.Button_JungleBeach.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.Button_JungleBeach.ForeColor = System.Drawing.Color.Black;
+            this.Button_JungleBeach.ForeColor = System.Drawing.Color.White;
             this.Button_JungleBeach.Image = ((System.Drawing.Image)(resources.GetObject("Button_JungleBeach.Image")));
             this.Button_JungleBeach.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.Button_JungleBeach.Location = new System.Drawing.Point(146, 35);
+            this.Button_JungleBeach.Location = new System.Drawing.Point(169, 35);
             this.Button_JungleBeach.Name = "Button_JungleBeach";
             this.Button_JungleBeach.Size = new System.Drawing.Size(125, 30);
             this.Button_JungleBeach.TabIndex = 3;
@@ -1349,7 +1399,8 @@
             // 
             this.Label_JungleBeach.BackColor = System.Drawing.Color.Transparent;
             this.Label_JungleBeach.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label_JungleBeach.Location = new System.Drawing.Point(173, 11);
+            this.Label_JungleBeach.ForeColor = System.Drawing.Color.White;
+            this.Label_JungleBeach.Location = new System.Drawing.Point(183, 11);
             this.Label_JungleBeach.Name = "Label_JungleBeach";
             this.Label_JungleBeach.Size = new System.Drawing.Size(97, 18);
             this.Label_JungleBeach.TabIndex = 0;
@@ -1360,9 +1411,10 @@
             this.GradientPanel_GalleFort.Controls.Add(this.guna2PictureBox2);
             this.GradientPanel_GalleFort.Controls.Add(this.Button_GalleFrt);
             this.GradientPanel_GalleFort.Controls.Add(this.Label_GalleFort);
-            this.GradientPanel_GalleFort.FillColor = System.Drawing.Color.Fuchsia;
-            this.GradientPanel_GalleFort.FillColor2 = System.Drawing.Color.Cyan;
-            this.GradientPanel_GalleFort.FillColor3 = System.Drawing.Color.DarkViolet;
+            this.GradientPanel_GalleFort.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
+            this.GradientPanel_GalleFort.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
+            this.GradientPanel_GalleFort.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
+            this.GradientPanel_GalleFort.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
             this.GradientPanel_GalleFort.Location = new System.Drawing.Point(9, 185);
             this.GradientPanel_GalleFort.Name = "GradientPanel_GalleFort";
             this.GradientPanel_GalleFort.Size = new System.Drawing.Size(341, 86);
@@ -1372,7 +1424,7 @@
             // 
             this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
             this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.guna2PictureBox2.Location = new System.Drawing.Point(21, 0);
             this.guna2PictureBox2.Name = "guna2PictureBox2";
             this.guna2PictureBox2.Size = new System.Drawing.Size(105, 86);
             this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1381,18 +1433,21 @@
             // 
             // Button_GalleFrt
             // 
+            this.Button_GalleFrt.Animated = true;
             this.Button_GalleFrt.BackColor = System.Drawing.Color.Transparent;
-            this.Button_GalleFrt.BorderRadius = 10;
+            this.Button_GalleFrt.BorderColor = System.Drawing.Color.White;
+            this.Button_GalleFrt.BorderRadius = 5;
+            this.Button_GalleFrt.BorderThickness = 2;
             this.Button_GalleFrt.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.Button_GalleFrt.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.Button_GalleFrt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.Button_GalleFrt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.Button_GalleFrt.FillColor = System.Drawing.Color.Transparent;
             this.Button_GalleFrt.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.Button_GalleFrt.ForeColor = System.Drawing.Color.Black;
+            this.Button_GalleFrt.ForeColor = System.Drawing.Color.White;
             this.Button_GalleFrt.Image = ((System.Drawing.Image)(resources.GetObject("Button_GalleFrt.Image")));
             this.Button_GalleFrt.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.Button_GalleFrt.Location = new System.Drawing.Point(146, 35);
+            this.Button_GalleFrt.Location = new System.Drawing.Point(169, 35);
             this.Button_GalleFrt.Name = "Button_GalleFrt";
             this.Button_GalleFrt.Size = new System.Drawing.Size(125, 30);
             this.Button_GalleFrt.TabIndex = 3;
@@ -1404,7 +1459,8 @@
             // 
             this.Label_GalleFort.BackColor = System.Drawing.Color.Transparent;
             this.Label_GalleFort.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label_GalleFort.Location = new System.Drawing.Point(173, 11);
+            this.Label_GalleFort.ForeColor = System.Drawing.Color.White;
+            this.Label_GalleFort.Location = new System.Drawing.Point(196, 11);
             this.Label_GalleFort.Name = "Label_GalleFort";
             this.Label_GalleFort.Size = new System.Drawing.Size(71, 18);
             this.Label_GalleFort.TabIndex = 0;
@@ -1415,9 +1471,10 @@
             this.GradientPanel_Sigiriya.Controls.Add(this.guna2PictureBox1);
             this.GradientPanel_Sigiriya.Controls.Add(this.Button_Sigiriya);
             this.GradientPanel_Sigiriya.Controls.Add(this.Label_Sigiriya);
-            this.GradientPanel_Sigiriya.FillColor = System.Drawing.Color.Fuchsia;
-            this.GradientPanel_Sigiriya.FillColor2 = System.Drawing.Color.Cyan;
-            this.GradientPanel_Sigiriya.FillColor3 = System.Drawing.Color.DarkViolet;
+            this.GradientPanel_Sigiriya.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
+            this.GradientPanel_Sigiriya.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
+            this.GradientPanel_Sigiriya.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
+            this.GradientPanel_Sigiriya.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
             this.GradientPanel_Sigiriya.Location = new System.Drawing.Point(9, 86);
             this.GradientPanel_Sigiriya.Name = "GradientPanel_Sigiriya";
             this.GradientPanel_Sigiriya.Size = new System.Drawing.Size(341, 86);
@@ -1427,7 +1484,7 @@
             // 
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(21, 0);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.Size = new System.Drawing.Size(105, 86);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1436,18 +1493,21 @@
             // 
             // Button_Sigiriya
             // 
+            this.Button_Sigiriya.Animated = true;
             this.Button_Sigiriya.BackColor = System.Drawing.Color.Transparent;
-            this.Button_Sigiriya.BorderRadius = 10;
+            this.Button_Sigiriya.BorderColor = System.Drawing.Color.White;
+            this.Button_Sigiriya.BorderRadius = 5;
+            this.Button_Sigiriya.BorderThickness = 2;
             this.Button_Sigiriya.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.Button_Sigiriya.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.Button_Sigiriya.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.Button_Sigiriya.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.Button_Sigiriya.FillColor = System.Drawing.Color.Transparent;
             this.Button_Sigiriya.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.Button_Sigiriya.ForeColor = System.Drawing.Color.Black;
+            this.Button_Sigiriya.ForeColor = System.Drawing.Color.White;
             this.Button_Sigiriya.Image = ((System.Drawing.Image)(resources.GetObject("Button_Sigiriya.Image")));
             this.Button_Sigiriya.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.Button_Sigiriya.Location = new System.Drawing.Point(146, 35);
+            this.Button_Sigiriya.Location = new System.Drawing.Point(169, 35);
             this.Button_Sigiriya.Name = "Button_Sigiriya";
             this.Button_Sigiriya.Size = new System.Drawing.Size(125, 30);
             this.Button_Sigiriya.TabIndex = 3;
@@ -1459,7 +1519,8 @@
             // 
             this.Label_Sigiriya.BackColor = System.Drawing.Color.Transparent;
             this.Label_Sigiriya.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label_Sigiriya.Location = new System.Drawing.Point(173, 11);
+            this.Label_Sigiriya.ForeColor = System.Drawing.Color.White;
+            this.Label_Sigiriya.Location = new System.Drawing.Point(203, 11);
             this.Label_Sigiriya.Name = "Label_Sigiriya";
             this.Label_Sigiriya.Size = new System.Drawing.Size(56, 18);
             this.Label_Sigiriya.TabIndex = 0;
@@ -1506,12 +1567,35 @@
             this.PictureBox_LoginPage.TabIndex = 6;
             this.PictureBox_LoginPage.TabStop = false;
             // 
+            // guna2ControlBox1
+            // 
+            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
+            this.guna2ControlBox1.Location = new System.Drawing.Point(1170, 0);
+            this.guna2ControlBox1.Name = "guna2ControlBox1";
+            this.guna2ControlBox1.Size = new System.Drawing.Size(30, 30);
+            this.guna2ControlBox1.TabIndex = 7;
+            // 
+            // guna2ControlBox2
+            // 
+            this.guna2ControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
+            this.guna2ControlBox2.FillColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox2.IconColor = System.Drawing.Color.White;
+            this.guna2ControlBox2.Location = new System.Drawing.Point(1136, 0);
+            this.guna2ControlBox2.Name = "guna2ControlBox2";
+            this.guna2ControlBox2.Size = new System.Drawing.Size(30, 30);
+            this.guna2ControlBox2.TabIndex = 8;
+            // 
             // Form_JourneyX
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.ClientSize = new System.Drawing.Size(1201, 611);
+            this.Controls.Add(this.guna2ControlBox2);
+            this.Controls.Add(this.guna2ControlBox1);
             this.Controls.Add(this.PictureBox_LoginPage);
             this.Controls.Add(this.GradientPanel_CreateAccount1st);
             this.Controls.Add(this.GradientPanel_PopularPlace);
@@ -1653,6 +1737,8 @@
         private System.Windows.Forms.Timer timer_login;
         private Guna.UI2.WinForms.Guna2CustomRadioButton RadioButton_Female;
         private Guna.UI2.WinForms.Guna2CustomRadioButton RadioButton_Male;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
     }
 }
 
