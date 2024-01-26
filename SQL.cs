@@ -303,6 +303,40 @@ namespace JourneyX
         }
 
 
+        public bool InsertTaxiData(string pickup, string dropLocation, DateTime date, string email, int vehicle)
+        {
+            try
+            {
+                using (SqlConnection sqlConnection = new SqlConnection(connection))
+                {
+                    sqlConnection.Open();
+
+                    string insertQuery = "INSERT INTO Taxi (pickup, droplocation, date, Email, vehical) " +
+                                         "VALUES (@Pickup, @DropLocation, @Date, @Email, @Vehicle)";
+
+                    using (SqlCommand sqlCommand = new SqlCommand(insertQuery, sqlConnection))
+                    {
+                        sqlCommand.Parameters.AddWithValue("@Pickup", pickup);
+                        sqlCommand.Parameters.AddWithValue("@DropLocation", dropLocation);
+                        sqlCommand.Parameters.AddWithValue("@Date", date);
+                        sqlCommand.Parameters.AddWithValue("@Email", email);
+                        sqlCommand.Parameters.AddWithValue("@Vehicle", vehicle);
+
+                        int rowsAffected = sqlCommand.ExecuteNonQuery();
+
+                        return rowsAffected > 0; 
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                return false; 
+            }
+        }
+
+
+
+
 
 
 

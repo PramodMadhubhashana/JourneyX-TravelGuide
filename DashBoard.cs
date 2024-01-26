@@ -237,7 +237,7 @@ namespace JourneyX
             }
             else
             {
-                taxi = new Taxi();
+                taxi = new Taxi(Email);
                 taxi.Show();
             }
         }      

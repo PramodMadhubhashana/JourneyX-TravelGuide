@@ -13,9 +13,11 @@ namespace JourneyX
 {
     public partial class Taxi : Form
     {
-        public Taxi()
+        public string Email;
+        public Taxi(string email)
         {
             InitializeComponent();
+            Email= email;
         }        
         private void Button_Exit_Click(object sender, EventArgs e)
         {
@@ -26,11 +28,38 @@ namespace JourneyX
         {
             Guna2TextBox[] textBoxes = { TextBox_Pickup, TextBox_Drop };
             Guna2HtmlLabel[] labls = { Label_PError, Label_DError };
-            int nullselectTextBox = textBoxes.Count(tb => tb.Text== string.Empty);           
-            
-            if(nullselectTextBox == 0)
+            int nullselectTextBox = textBoxes.Count(tb => tb.Text== string.Empty);
+            string pickup = TextBox_Pickup.Text.ToString();
+            string drop = TextBox_Drop.Text.ToString();
+            DateTime date = dateTimePicker1.Value.Date;
+            int vehical= 1;
+
+            if (RadioButton_TukTuk.Checked)
             {
-                
+                vehical = 1;
+            }
+            else if (RadioButton_car.Checked)
+            {
+                vehical = 2;
+            }
+            else if (RadioButton_van.Checked)
+            {
+                vehical = 3;
+            }
+
+            if (nullselectTextBox == 0)
+            {
+                SQL sql = new SQL();
+                bool taxiDataInserted = sql.InsertTaxiData(pickup,  drop, date, Email, vehical );
+
+                if (taxiDataInserted)
+                {
+                    MessageBox.Show("Taxi data submitted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Failed to submit taxi data.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
             {
