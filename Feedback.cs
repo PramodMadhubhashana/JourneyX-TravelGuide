@@ -12,9 +12,11 @@ namespace JourneyX
 {
     public partial class Feedback : Form
     {
-        public Feedback()
+        public string Email;
+        public Feedback(string email)
         {
             InitializeComponent();
+            Email = email;
         }
         private void Button_Exit_Click(object sender, EventArgs e)
         {
@@ -30,40 +32,44 @@ namespace JourneyX
         {
             if (VeryBad == false)
             {
-                Button_verybad.Image = Image.FromFile("Icons\\angry color.png");
+                Button_verybad.Image = Properties.Resources.angry_color;
                 VeryBad = true;
             }
             else
             {
-                Button_verybad.Image = Image.FromFile("Icons\\angry.png");
+                Button_verybad.Image = Properties.Resources.angry;
                 VeryBad = false;
             }
         }
 
-        private void Button_poor_Click(object sender, EventArgs e)
+        private void Button_Submit_Click(object sender, EventArgs e)
         {
-            if (Poor == false)
+            String comment = TextBox_feedback.Text.ToString();
+
+            SQL sql = new SQL();
+           bool feedbackInserted = sql.InsertFeedback(comment, Email);
+            if (feedbackInserted)
             {
-                Button_poor.Image = Image.FromFile("Icons\\sad color.png");
-                Poor = true;
+                MessageBox.Show("Feedback submitted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                Button_poor.Image = Image.FromFile("Icons\\sad-face.png");
-                Poor = false;
+                MessageBox.Show("Failed to submit feedback.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        
 
         private void Button_medium_Click(object sender, EventArgs e)
         {
             if (Medium == false)
             {
-                Button_medium.Image = Image.FromFile("Icons\\neutral color.png");
+                Button_medium.Image = Properties.Resources.neutral_color;
                 Medium = true;
             }
             else
             {
-                Button_medium.Image = Image.FromFile("Icons\\neutral.png");
+                Button_medium.Image = Properties.Resources.neutral;
                 Medium = false;
             }
 
@@ -73,12 +79,12 @@ namespace JourneyX
         {
             if (Good == false)
             {
-                Button_Good.Image = Image.FromFile("Icons\\smile color.png");
+                Button_Good.Image = Properties.Resources.smile_color;
                 Good = true;
             }
             else
             {
-                Button_Good.Image = Image.FromFile("Icons\\smile.png");
+                Button_Good.Image = Properties.Resources.smile;
                 Good = false;
             }
         }
@@ -87,12 +93,12 @@ namespace JourneyX
         {
             if(Excellent == false)
             {
-                Button_Ecellent.Image = Image.FromFile("Icons\\happy color.png");
+                Button_Ecellent.Image = Properties.Resources.happy_color;
                 Excellent = true;
             }
             else
             {
-                Button_Ecellent.Image = Image.FromFile("Icons\\happy.png");
+                Button_Ecellent.Image = Properties.Resources.happy; 
                 Excellent = false;
             }
         }

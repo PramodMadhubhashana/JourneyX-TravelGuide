@@ -5,20 +5,23 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace JourneyX
 {
     public partial class Profile : Form
     {
         public string Email;
-        public Profile(string Email)
+        public Profile(string email)
         {
-            InitializeComponent();           
+            InitializeComponent();
+            Email = email;
         }       
         private void Button_Exit_Click(object sender, EventArgs e)
         {
@@ -52,9 +55,10 @@ namespace JourneyX
 
             SQL sQL = new SQL();
             string TextJoin = sQL.PDetails(Email);
-            if (TextJoin == "--Error--")
+            Console.WriteLine(TextJoin.ToString());
+            if (TextJoin != "--Error--")
             {
-                string[] parts = TextJoin.ToString().Split('+');
+               string[] parts = TextJoin.ToString().Split('+');
 
                 TextBox_FirstName.Text = parts[1];
                 TextBox_lastName.Text = parts[2];
@@ -62,8 +66,9 @@ namespace JourneyX
                 TextBox_BirthDay.Text = parts[4];
                 TextBox_Email.Text = parts[1];
                 TextBox_PhoneNumber.Text = parts[6];
-                int PPID = Int32.Parse(parts[8]);
-                PPID = ppID;
+                int PPID = Int32.Parse(parts[7]);
+                 PPID = ppID;
+                
             }
             else
             {
@@ -126,6 +131,10 @@ namespace JourneyX
         {
             Guna2TextBox[] textBoxes = { TextBox_FirstName, TextBox_lastName, TextBox_Address };
             Guna2HtmlLabel[] labels = { Label_FError, Label_LError, Label_AError };
+            String firstname = TextBox_FirstName.Text.ToString();
+            string lastname = TextBox_lastName.Text.ToString();
+            string address = TextBox_Address.Text.ToString();
+            int pp = ComboBox_PPicture.SelectedIndex;
 
             for(int i=0; i<textBoxes.Length; i++)
             {
@@ -135,6 +144,23 @@ namespace JourneyX
                 }
                 else
                 {
+                    SQL sql = new SQL();
+                    bool result = sql.UpdateUserProfile(Email, firstname, lastname, address, pp);
+                    if (result)
+                    {
+                        TextBox_FirstName.Enabled = false;
+                        TextBox_lastName.Enabled = false;
+                        TextBox_Address.Enabled = false;
+                        TextBox_BirthDay.Enabled = false;
+                        TextBox_Email.Enabled = false;
+                        TextBox_PhoneNumber.Enabled = false;
+                        MessageBox.Show("Profile updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed to update profile.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    break;
 
                 }
             }

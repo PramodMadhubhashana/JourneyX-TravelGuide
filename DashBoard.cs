@@ -18,15 +18,16 @@ namespace JourneyX
         public DashBoard(string email)
         {            
             InitializeComponent();
-            Email= email;
+            Email= email;            
         }
+
         private void DashBoard_Load(object sender, EventArgs e)
-        {            
+        {
             try
             {
                 SQL sQL = new SQL();
                 string Name = sQL.Dashboard(Email);
-                Console.WriteLine(Name);
+
                 if (Name == "--Error--")
                 {
                     MessageBox.Show("An error has occurred. Please try again later.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -34,44 +35,43 @@ namespace JourneyX
                 else
                 {
                     Label_HName.Text = Name;
+                    Label_Name.Text = Name;
+                    string[] placesAndDates = sQL.MySchedule(Email);
+                    List<string[]> partsList = new List<string[]>();  // Initialize a list to store parts arrays
 
-                    string[] mySchedule =  sQL.MySchedule(Email);
-                    
-                    for(int i=0; i<mySchedule.Length; i++)
+                    foreach (string combinedString in placesAndDates)
                     {
-                        string[] splitResult = mySchedule[i].Split(new string[] { " - " }, StringSplitOptions.None);
-
-                        if (splitResult.Length == 2)
+                        if (string.IsNullOrWhiteSpace(combinedString))
                         {
-                            /* Label_ML1.Text = splitResult[0];
-                             Label_MD1.Text = splitResult[1];
-                             Label_ML2.Text = splitResult[2];
-                             Label_MD2.Text = splitResult[3];
-                             Label_ML3.Text = splitResult[4];
-                             Label_MD3.Text = splitResult[5];*/
+                            break;
+                        }
 
-                            Console.WriteLine(splitResult[0]);
-                            Console.WriteLine(splitResult[1]);
-                            Console.WriteLine(splitResult[2]);
-                            Console.WriteLine(splitResult[3]);
-                            Console.WriteLine(splitResult[4]);
-                            Console.WriteLine(splitResult[5]);
-                        }
-                        else
-                        {
-                            continue;
-                        }
-                        
+                        string[] parts = combinedString.Split(new[] { " - " }, StringSplitOptions.None);
+                        partsList.Add(parts);
+                    }
+
+                    // Access parts from the list based on your requirements
+                    if (partsList.Count > 0)
+                    {
+                        Label_ML1.Text = partsList[0][0];
+                        Label_MD1.Text = partsList[0][1];
+                        Label_ML2.Text = partsList[1][0];
+                        Label_MD2.Text = partsList[1][1];
+                        Label_ML3.Text = partsList[2][0];
+                        Label_MD3.Text = partsList[2][1];
+                        Console.WriteLine(partsList[0][0]);
+                        Console.WriteLine(partsList[0][1]);
+                        // Access additional parts as needed
                     }
                 }
-
             }
             catch (Exception)
             {
                 MessageBox.Show("An error has occurred. Please try again later.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
+
+
         private void Button_Minimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -97,7 +97,7 @@ namespace JourneyX
             }
             else
             {
-                feedback = new Feedback();
+                feedback = new Feedback(Email);
                 feedback.Show();
             }   
         }

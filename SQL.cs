@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Web;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace JourneyX
 {
@@ -95,26 +96,32 @@ namespace JourneyX
                 using (SqlConnection sqlConnection = new SqlConnection(connection))
                 {
                     sqlConnection.Open();
-                    using (SqlCommand sqlCommand = new SqlCommand("SELECT FirstName FROM MyTable WHERE Email = @PrimaryKeyValue", sqlConnection))
+                    using (SqlCommand sqlCommand = new SqlCommand("SELECT FirstName FROM Users WHERE Email = @PrimaryKeyValue", sqlConnection))
                     {
-                        sqlCommand.Parameters.AddWithValue("@@PrimaryKeyValue", Email);
+                        sqlCommand.Parameters.AddWithValue("@PrimaryKeyValue", Email);
 
                         using (SqlDataReader sqlDataReader = sqlCommand.ExecuteReader())
                         {
-                            sqlDataReader.Read();
-                            string FistName = sqlDataReader.GetString(sqlDataReader.GetOrdinal("FirstName"));
-                            sqlDataReader.Close();
-                            sqlConnection.Close();
-                            return FistName;
+                            if (sqlDataReader.Read())
+                            {
+                                string FirstName = sqlDataReader.GetString(sqlDataReader.GetOrdinal("FirstName"));
+                                return FirstName;
+                            }
+                            else
+                            {                                
+                                return "--No Data--";
+                            }
                         }
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                Console.WriteLine(e.ToString());
                 return "--Error--";
             }
-        }   
+        }
+
         public string PDetails(string Email)
         {
             try
@@ -123,33 +130,42 @@ namespace JourneyX
                 {
                     sqlConnection.Open();
 
-                    using (SqlCommand sqlCommand = new SqlCommand("SELECT * FROM <table_name> WHERE email=@Email", sqlConnection))
+                    using (SqlCommand sqlCommand = new SqlCommand("SELECT * FROM Users WHERE Email=@Email", sqlConnection))
                     {
                         sqlCommand.Parameters.AddWithValue("@Email", Email);
 
                         using (SqlDataReader sqlDataReader = sqlCommand.ExecuteReader())
                         {
-                            string UEmail = sqlDataReader.GetString(0);
-                            string UFirstName = sqlDataReader.GetString(1);
-                            string ULastName = sqlDataReader.GetString(2);
-                            string UAdress = sqlDataReader.GetString(3);
-                            string Birthday = sqlDataReader.GetDateTime(4).ToString();
-                            string UGender = sqlDataReader.GetInt32(5).ToString();
-                            string UPhoneNumber = sqlDataReader.GetString(6);
-                            string UProfilePicture = sqlDataReader.GetInt32(8).ToString();
-                           
+                            if (sqlDataReader.Read())
+                            {
+                                string UEmail = sqlDataReader.GetString(sqlDataReader.GetOrdinal("Email"));
+                                string UFirstName = sqlDataReader.GetString(sqlDataReader.GetOrdinal("FirstName"));
+                                string ULastName = sqlDataReader.GetString(sqlDataReader.GetOrdinal("LastName"));
+                                string UAddress = sqlDataReader.GetString(sqlDataReader.GetOrdinal("Address"));
+                                DateTime Birthday = sqlDataReader.GetDateTime(sqlDataReader.GetOrdinal("BirthDay"));
+                                int UGender = sqlDataReader.GetInt32(sqlDataReader.GetOrdinal("Gender"));
+                                string UPhoneNumber = sqlDataReader.GetString(sqlDataReader.GetOrdinal("PhoneNumber"));
+                                int UProfilePicture = sqlDataReader.GetInt32(sqlDataReader.GetOrdinal("PPicture"));
 
-                            string Textjoin = string.Join("+", UEmail, UFirstName, ULastName, UAdress, Birthday, UGender, UPhoneNumber, UProfilePicture);
-                            return Textjoin;
+                                string Textjoin = string.Join("+", UEmail, UFirstName, ULastName, UAddress, Birthday, UGender, UPhoneNumber, UProfilePicture);
+                                return Textjoin;
+                            }
+                            else
+                            {
+                                
+                                return "--No Data--";
+                            }
                         }
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                Console.WriteLine(ex.ToString());
                 return "--Error--";
             }
         }
+
 
         public string InsertSchedule(string province, string place, string email, DateTime date)
         {
@@ -216,7 +232,6 @@ namespace JourneyX
                         }
                     }
                 }
-
                 return placesAndDates;
             }
             catch (Exception e)
@@ -225,6 +240,68 @@ namespace JourneyX
                 return new string[] { "--Error--" };
             }
         }
+
+        public bool UpdateUserProfile(string email, string firstName, string lastName, string address, int profilePicture)
+        {
+            
+            try
+            {
+                using (SqlConnection sqlConnection = new SqlConnection(connection))
+                {
+                    sqlConnection.Open();
+
+                    string updateQuery = "UPDATE Users SET FirstName = @FirstName, LastName = @LastName, Address = @Address, PPicture = @ProfilePicture WHERE Email = @Email";
+
+                    using (SqlCommand sqlCommand = new SqlCommand(updateQuery, sqlConnection))
+                    {
+                        sqlCommand.Parameters.AddWithValue("@FirstName", firstName);
+                        sqlCommand.Parameters.AddWithValue("@LastName", lastName);
+                        sqlCommand.Parameters.AddWithValue("@Address", address);
+                        sqlCommand.Parameters.AddWithValue("@ProfilePicture", profilePicture);
+                        sqlCommand.Parameters.AddWithValue("@Email", email);
+
+                        int rowsAffected = sqlCommand.ExecuteNonQuery();
+                        
+                        return rowsAffected > 0;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return false;
+            }
+        }
+
+
+        public bool InsertFeedback(string comment, string email)
+        {
+            try
+            {
+                using (SqlConnection sqlConnection = new SqlConnection(connection))
+                {
+                    sqlConnection.Open();
+
+                    string insertQuery = "INSERT INTO Feedback (Comment, Email) VALUES (@Comment, @Email)";
+
+                    using (SqlCommand sqlCommand = new SqlCommand(insertQuery, sqlConnection))
+                    {
+                      
+                        sqlCommand.Parameters.AddWithValue("@Comment", comment);
+                        sqlCommand.Parameters.AddWithValue("@Email", email);
+
+                        int rowsAffected = sqlCommand.ExecuteNonQuery();
+
+                        return rowsAffected > 0;
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                return false; 
+            }
+        }
+
 
 
 
