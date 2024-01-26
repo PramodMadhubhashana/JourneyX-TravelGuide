@@ -48,9 +48,10 @@
             this.Panel_ControlPanel.Controls.Add(this.Button_Exit);
             this.Panel_ControlPanel.Controls.Add(this.Button_Maximize);
             this.Panel_ControlPanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.Panel_ControlPanel.Location = new System.Drawing.Point(735, 0);
+            this.Panel_ControlPanel.Location = new System.Drawing.Point(980, 0);
+            this.Panel_ControlPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Panel_ControlPanel.Name = "Panel_ControlPanel";
-            this.Panel_ControlPanel.Size = new System.Drawing.Size(86, 38);
+            this.Panel_ControlPanel.Size = new System.Drawing.Size(115, 47);
             this.Panel_ControlPanel.TabIndex = 0;
             // 
             // Button_Minimize
@@ -64,9 +65,10 @@
             this.Button_Minimize.ForeColor = System.Drawing.Color.White;
             
             this.Button_Minimize.ImageSize = new System.Drawing.Size(15, 15);
-            this.Button_Minimize.Location = new System.Drawing.Point(4, 0);
+            this.Button_Minimize.Location = new System.Drawing.Point(5, 0);
+            this.Button_Minimize.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Button_Minimize.Name = "Button_Minimize";
-            this.Button_Minimize.Size = new System.Drawing.Size(26, 26);
+            this.Button_Minimize.Size = new System.Drawing.Size(35, 32);
             this.Button_Minimize.TabIndex = 1;
             this.Button_Minimize.Click += new System.EventHandler(this.Button_Minimize_Click);
             // 
@@ -81,9 +83,10 @@
             this.Button_Exit.ForeColor = System.Drawing.Color.White;
             
             this.Button_Exit.ImageSize = new System.Drawing.Size(15, 15);
-            this.Button_Exit.Location = new System.Drawing.Point(56, 0);
+            this.Button_Exit.Location = new System.Drawing.Point(75, 0);
+            this.Button_Exit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Button_Exit.Name = "Button_Exit";
-            this.Button_Exit.Size = new System.Drawing.Size(26, 26);
+            this.Button_Exit.Size = new System.Drawing.Size(35, 32);
             this.Button_Exit.TabIndex = 1;
             this.Button_Exit.Click += new System.EventHandler(this.Button_Exit_Click);
             // 
@@ -98,9 +101,10 @@
             this.Button_Maximize.ForeColor = System.Drawing.Color.White;
             this.Button_Maximize.Image = global::JourneyX.Properties.Resources.maximize;
             this.Button_Maximize.ImageSize = new System.Drawing.Size(15, 15);
-            this.Button_Maximize.Location = new System.Drawing.Point(30, 0);
+            this.Button_Maximize.Location = new System.Drawing.Point(40, 0);
+            this.Button_Maximize.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Button_Maximize.Name = "Button_Maximize";
-            this.Button_Maximize.Size = new System.Drawing.Size(26, 26);
+            this.Button_Maximize.Size = new System.Drawing.Size(35, 32);
             this.Button_Maximize.TabIndex = 3;
             this.Button_Maximize.Click += new System.EventHandler(this.Button_Maximize_Click);
             // 
@@ -108,11 +112,14 @@
             // 
             this.guna2CustomGradientPanel1.Controls.Add(this.Panel_ControlPanel);
             this.guna2CustomGradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2CustomGradientPanel1.FillColor = System.Drawing.Color.Cyan;
-            this.guna2CustomGradientPanel1.FillColor4 = System.Drawing.Color.DarkOrchid;
+            this.guna2CustomGradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
+            this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
+            this.guna2CustomGradientPanel1.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
+            this.guna2CustomGradientPanel1.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
             this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2CustomGradientPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
-            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(821, 38);
+            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1095, 47);
             this.guna2CustomGradientPanel1.TabIndex = 1;
             // 
             // Form_GoogleMap
@@ -124,33 +131,36 @@
             // guna2WinProgressIndicator
             // 
             this.guna2WinProgressIndicator.BackColor = System.Drawing.Color.White;
-            this.guna2WinProgressIndicator.Location = new System.Drawing.Point(364, 157);
+            this.guna2WinProgressIndicator.Location = new System.Drawing.Point(485, 193);
+            this.guna2WinProgressIndicator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2WinProgressIndicator.Name = "guna2WinProgressIndicator";
-            this.guna2WinProgressIndicator.ProgressColor = System.Drawing.Color.DarkOrchid;
-            this.guna2WinProgressIndicator.Size = new System.Drawing.Size(110, 90);
+            this.guna2WinProgressIndicator.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
+            this.guna2WinProgressIndicator.Size = new System.Drawing.Size(147, 111);
             this.guna2WinProgressIndicator.TabIndex = 3;
             this.guna2WinProgressIndicator.Click += new System.EventHandler(this.guna2WinProgressIndicator_Click);
             // 
             // webBrowser_GoogleMap
             // 
             this.webBrowser_GoogleMap.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.webBrowser_GoogleMap.Location = new System.Drawing.Point(0, 38);
-            this.webBrowser_GoogleMap.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser_GoogleMap.Location = new System.Drawing.Point(0, 47);
+            this.webBrowser_GoogleMap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.webBrowser_GoogleMap.MinimumSize = new System.Drawing.Size(27, 25);
             this.webBrowser_GoogleMap.Name = "webBrowser_GoogleMap";
-            this.webBrowser_GoogleMap.Size = new System.Drawing.Size(821, 443);
+            this.webBrowser_GoogleMap.Size = new System.Drawing.Size(1095, 545);
             this.webBrowser_GoogleMap.TabIndex = 2;
             this.webBrowser_GoogleMap.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.webBrowser_GoogleMap_DocumentCompleted);
             // 
             // GoogleMap
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(821, 481);
+            this.ClientSize = new System.Drawing.Size(1095, 592);
             this.Controls.Add(this.guna2WinProgressIndicator);
             this.Controls.Add(this.webBrowser_GoogleMap);
             this.Controls.Add(this.guna2CustomGradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MinimumSize = new System.Drawing.Size(821, 481);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MinimumSize = new System.Drawing.Size(1095, 592);
             this.Name = "GoogleMap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GoogleMap";

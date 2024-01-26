@@ -21,11 +21,12 @@ namespace JourneyX
             Email= email;
         }
         private void DashBoard_Load(object sender, EventArgs e)
-        {
+        {            
             try
             {
                 SQL sQL = new SQL();
                 string Name = sQL.Dashboard(Email);
+                Console.WriteLine(Name);
                 if (Name == "--Error--")
                 {
                     MessageBox.Show("An error has occurred. Please try again later.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -41,13 +42,20 @@ namespace JourneyX
                         string[] splitResult = mySchedule[i].Split(new string[] { " - " }, StringSplitOptions.None);
 
                         if (splitResult.Length == 2)
-                        {                           
-                            Label_ML1.Text = splitResult[0];
-                            Label_MD1.Text = splitResult[1];
-                            Label_ML2.Text = splitResult[2];
-                            Label_MD2.Text = splitResult[3];
-                            Label_ML3.Text = splitResult[4];
-                            Label_MD3.Text = splitResult[5];
+                        {
+                            /* Label_ML1.Text = splitResult[0];
+                             Label_MD1.Text = splitResult[1];
+                             Label_ML2.Text = splitResult[2];
+                             Label_MD2.Text = splitResult[3];
+                             Label_ML3.Text = splitResult[4];
+                             Label_MD3.Text = splitResult[5];*/
+
+                            Console.WriteLine(splitResult[0]);
+                            Console.WriteLine(splitResult[1]);
+                            Console.WriteLine(splitResult[2]);
+                            Console.WriteLine(splitResult[3]);
+                            Console.WriteLine(splitResult[4]);
+                            Console.WriteLine(splitResult[5]);
                         }
                         else
                         {
@@ -72,7 +80,14 @@ namespace JourneyX
         {
             this.Close();
         }
+        private void guna2PictureBox4_Click(object sender, EventArgs e)
+        {
 
+        }
+        private void guna2PictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
         private void Button_Feedback_Click(object sender, EventArgs e)
         {
             Feedback feedback = Application.OpenForms.OfType<Feedback>().FirstOrDefault();
@@ -88,7 +103,7 @@ namespace JourneyX
         }
         private void Button_Logout_Click(object sender, EventArgs e)
         {
-            Form1 login = new Form1();
+            Form_JourneyX login = new Form_JourneyX();
             login.Show();
             DashBoard dashBoard = new DashBoard(Email);
             dashBoard.Close();            

@@ -10,8 +10,8 @@ namespace JourneyX
 {
     internal class SQL
     { 
-        //string connection = @"data source = PRAMOD_MADHUBHA\SQLEXPRESS; Initial Catalog = JourneyX; User ID = admin; Password = pramod1234";
-        string connection = @"Data Source=PRAMOD_MADHUBHA\SQLEXPRESS;Initial Catalog=JourneyX;Integrated Security=True;";
+        //string connection = @"data source = DESKTOP-1H91E26\SQLEXPRESS; Initial Catalog = JourneyX; User ID = admin; Password = pramod1234";
+        string connection = @"Data Source=PRAMOD_MADHUBHA\SQLEXPRESS; Initial Catalog=JourneyX; Integrated Security=True;";
 
         public string ProfileDetails(string FirstName, string LastName, string Address, DateTime BirthDay, int Gender, string Email, string PhoneNumber, string Password)
         {            
@@ -45,7 +45,7 @@ namespace JourneyX
             return null;
         }
         public string Login(string Email, string password)        
-        {
+        {      
             
             try
             {
@@ -95,33 +95,26 @@ namespace JourneyX
                 using (SqlConnection sqlConnection = new SqlConnection(connection))
                 {
                     sqlConnection.Open();
-                    using (SqlCommand sqlCommand = new SqlCommand("SELECT FirstName FROM Users WHERE Email = @PrimaryKeyValue", sqlConnection))
+                    using (SqlCommand sqlCommand = new SqlCommand("SELECT FirstName FROM MyTable WHERE Email = @PrimaryKeyValue", sqlConnection))
                     {
-                        sqlCommand.Parameters.AddWithValue("@PrimaryKeyValue", Email);
+                        sqlCommand.Parameters.AddWithValue("@@PrimaryKeyValue", Email);
 
                         using (SqlDataReader sqlDataReader = sqlCommand.ExecuteReader())
                         {
-                            if (sqlDataReader.Read())
-                            {
-                                string FirstName = sqlDataReader.GetString(sqlDataReader.GetOrdinal("FirstName"));
-                                return FirstName;
-                            }
-                            else
-                            {
-                                // Handle the case where no rows are returned
-                                return "--No Data--";
-                            }
+                            sqlDataReader.Read();
+                            string FistName = sqlDataReader.GetString(sqlDataReader.GetOrdinal("FirstName"));
+                            sqlDataReader.Close();
+                            sqlConnection.Close();
+                            return FistName;
                         }
                     }
                 }
             }
-            catch (Exception e)
+            catch (Exception)
             {
-                Console.WriteLine(e.ToString());
                 return "--Error--";
             }
-        }
-
+        }   
         public string PDetails(string Email)
         {
             try

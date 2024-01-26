@@ -288,7 +288,7 @@ namespace JourneyX
         {
 
             string Email = TextBox_LoginUserName.Text.ToString();
-            string Password = TextBox_LoginPassword.ToString();
+            string Password = TextBox_LoginPassword.Text.ToString();
             Guna2TextBox[] LtextBoxes = {TextBox_LoginUserName, TextBox_LoginPassword};
             Guna2HtmlLabel[] Llabels = { Label_LUNError, Label_LPError };
 
@@ -299,17 +299,20 @@ namespace JourneyX
             {
                 timer_login.Start();
                 SQL sQL = new SQL();
-                string A = sQL.Login(Email, Password);
-                
+                string A = sQL.Login(Email, Password);                
               
-                if(A == "AA0000")
+                if(A == "AA1111")
                 {
-                    Form1 form = new Form1();
+                    Form_JourneyX form = new Form_JourneyX();
                     form.Close();
                     DashBoard dashBoard = new DashBoard(Email);                    
                     dashBoard.Show();                 
                     
-                }               
+                }
+                else if( A == "ADMIN3550")
+                {
+
+                }
                 else
                 {
                     Label_LoginError.Text = "Email or Password wrong Please check again.";
@@ -429,7 +432,7 @@ namespace JourneyX
         }
         private void Button_Minimize_Click(object sender, EventArgs e)
         {
-            Form1 form = new Form1();
+            Form_JourneyX form = new Form_JourneyX();
             form.Close();
             DashBoard dashBoard = new DashBoard("pramod");
             dashBoard.Show();   
@@ -511,7 +514,7 @@ namespace JourneyX
         private void loginpageMinimize_Click(object sender, EventArgs e)
         {
 
-            Form1 form = new Form1();
+            Form_JourneyX form = new Form_JourneyX();
             form.Close();
             DashBoard dashBoard = new DashBoard("pramod");
             dashBoard.Show();
