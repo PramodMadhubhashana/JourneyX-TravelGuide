@@ -23,6 +23,7 @@ namespace JourneyX
 
         private void DashBoard_Load(object sender, EventArgs e)
         {
+            PictureBox_News.Image = Properties.Resources.explore_exploit_tradeoff1;
             try
             {
                 SQL sQL = new SQL();
