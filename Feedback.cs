@@ -26,7 +26,8 @@ namespace JourneyX
         {
 
         }
-        bool Excellent = false, Good = false, Medium = false , Poor = false , VeryBad = false ;
+        bool Excellent = false, Good = false, Medium = false , VeryBad = false ;
+        int face = 0;
 
         private void Button_verybad_Click(object sender, EventArgs e)
         {
@@ -46,8 +47,14 @@ namespace JourneyX
         {
             String comment = TextBox_feedback.Text.ToString();
 
+            if (Excellent) { face = 1; }
+            else if (Good) { face= 2; }
+            else if (Medium) { face= 3; }
+            else if (VeryBad) { face= 4; }
+            else {  face= 0; }
+
             SQL sql = new SQL();
-           bool feedbackInserted = sql.InsertFeedback(comment, Email);
+            bool feedbackInserted = sql.InsertFeedback(comment, Email, face);
             if (feedbackInserted)
             {
                 MessageBox.Show("Feedback submitted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);

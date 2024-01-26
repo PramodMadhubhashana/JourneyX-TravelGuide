@@ -274,7 +274,7 @@ namespace JourneyX
         }
 
 
-        public bool InsertFeedback(string comment, string email)
+        public bool InsertFeedback(string comment, string email, int face)
         {
             try
             {
@@ -282,13 +282,14 @@ namespace JourneyX
                 {
                     sqlConnection.Open();
 
-                    string insertQuery = "INSERT INTO Feedback (Comment, Email) VALUES (@Comment, @Email)";
+                    string insertQuery = "INSERT INTO Feedback (Comment, Email, face) VALUES (@Comment, @Email, @face)";
 
                     using (SqlCommand sqlCommand = new SqlCommand(insertQuery, sqlConnection))
                     {
                       
                         sqlCommand.Parameters.AddWithValue("@Comment", comment);
                         sqlCommand.Parameters.AddWithValue("@Email", email);
+                        sqlCommand.Parameters.AddWithValue("@face", face);
 
                         int rowsAffected = sqlCommand.ExecuteNonQuery();
 
