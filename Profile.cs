@@ -31,7 +31,7 @@ namespace JourneyX
         {
             ComboBox_PPicture.Visible = true;
         }
-
+     
         private void Profile_Load(object sender, EventArgs e)
         {
             ComboBox_PPicture.SelectedIndex = 0;
@@ -54,8 +54,11 @@ namespace JourneyX
             TextBox_PhoneNumber.Enabled = false;
 
             SQL sQL = new SQL();
-            string TextJoin = sQL.PDetails(Email);
-           
+            string TextJoin;
+
+            if (Email.Substring(0,3) == "AAA" && !TextBox_Email.Text.Contains("@")) { TextJoin = sQL.adminPDetails(Email); }
+            else { TextJoin = sQL.PDetails(Email); }
+
             if (TextJoin != "--Error--")
             {
                string[] parts = TextJoin.ToString().Split('+');
@@ -67,6 +70,7 @@ namespace JourneyX
                 TextBox_Email.Text = parts[1];
                 TextBox_PhoneNumber.Text = parts[6];
                 int PPID = Int32.Parse(parts[7]);
+
                 switch (PPID)
                 {
                     case 1:
@@ -93,7 +97,7 @@ namespace JourneyX
                         PictureBox_PPicture.Image = Properties.Resources.Picture061;
                         break;
                 }
-                
+
             }
             else
             {
