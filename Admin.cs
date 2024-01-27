@@ -15,6 +15,7 @@ namespace JourneyX
         public Admin()
         {
             InitializeComponent();
+            emtytextfeild.Visible = false;
         }
         private void Button_Exit_Click(object sender, EventArgs e)
         {
@@ -65,6 +66,34 @@ namespace JourneyX
         private void Label_BestDestination_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Button1_add_Click(object sender, EventArgs e)
+        {
+            string offers = tetboxoffers.Text.ToString();
+            if (!string.IsNullOrEmpty(tetboxoffers.Text))
+            {
+               SQL sQL= new SQL();
+               bool result = sQL.InsertOffer(offers);
+
+                if (result)
+                {
+                    MessageBox.Show("Feedback submitted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Failed to submit feedback.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                emtytextfeild.Text = "please add the offers ";
+            }
+        }
+
+        private void tetboxoffers_Click(object sender, EventArgs e)
+        {
+            emtytextfeild.Visible = false;
         }
     }
 }

@@ -168,7 +168,6 @@
             this.Label_LoginUserName.Size = new System.Drawing.Size(72, 18);
             this.Label_LoginUserName.TabIndex = 0;
             this.Label_LoginUserName.Text = "User Name";
-            
             // 
             // Label_LoginPassword
             // 
@@ -805,11 +804,12 @@
             this.GradientPanel_CreateAccount2nd.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
             this.GradientPanel_CreateAccount2nd.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
             this.GradientPanel_CreateAccount2nd.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
-            this.GradientPanel_CreateAccount2nd.Location = new System.Drawing.Point(792, 59);
+            this.GradientPanel_CreateAccount2nd.Location = new System.Drawing.Point(838, 12);
             this.GradientPanel_CreateAccount2nd.MaximumSize = new System.Drawing.Size(358, 611);
             this.GradientPanel_CreateAccount2nd.Name = "GradientPanel_CreateAccount2nd";
             this.GradientPanel_CreateAccount2nd.Size = new System.Drawing.Size(358, 611);
             this.GradientPanel_CreateAccount2nd.TabIndex = 1;
+            this.GradientPanel_CreateAccount2nd.Paint += new System.Windows.Forms.PaintEventHandler(this.GradientPanel_CreateAccount2nd_Paint);
             // 
             // ProgressIndicator_CreateAccount
             // 

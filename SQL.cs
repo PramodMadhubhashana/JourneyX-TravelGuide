@@ -62,21 +62,8 @@ namespace JourneyX
 
                         using (SqlDataReader sqlDataReader = sqlCommand.ExecuteReader())
                         {
-                            if (sqlDataReader.HasRows)
-                            {
-                                if (Email == "ADMIN3550")
-                                {
-                                    return "ADMIN3550";
-                                }
-                                else
-                                {
-                                    return "AA1111";
-                                }
-                            }
-                            else
-                            {
-                                return "AA0000";
-                            }
+                            if (sqlDataReader.HasRows) { return "AA1111"; }
+                            else { return "AA0000"; }
                         }
                     }
                 }
@@ -334,6 +321,147 @@ namespace JourneyX
                 return false; 
             }
         }
+
+        public bool InsertOffer(string offerText)
+        {
+            try
+            {
+                using (SqlConnection sqlConnection = new SqlConnection(connection))
+                {
+                    sqlConnection.Open();
+                  
+                    string insertQuery = "INSERT INTO Offers (Offers, Date) OUTPUT INSERTED.OffersID VALUES (@Offers, GETDATE())";
+
+                    using (SqlCommand sqlCommand = new SqlCommand(insertQuery, sqlConnection))
+                    {
+                        sqlCommand.Parameters.AddWithValue("@Offers", offerText);
+                       
+                        int offersID = (int)sqlCommand.ExecuteScalar();
+                       
+                        Console.WriteLine($"Offer inserted with OffersID: {offersID}");
+
+                        return true;
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.ToString());
+                return false;
+            }
+        }
+
+
+        public string AdmineDetails(string FirstName, string LastName, string Address, DateTime BirthDay, int Gender, string Email, string PhoneNumber, string Password)
+        {
+            try
+            {
+                using (SqlConnection sqlConnection = new SqlConnection(connection))
+                {
+                    sqlConnection.Open();
+                    string UserDetails = "INSERT INTO Admin (FirstName, LastName, Address, BirthDay, Gender, Email, phone_Number, Password ) VALUES(@FirstName, @LastName, @Address, @BirthDay, @Gender, @Email, @PhoneNumber, @Password)";
+
+                    using (SqlCommand sqlCommand = new SqlCommand(UserDetails, sqlConnection))
+                    {
+                        sqlCommand.Parameters.AddWithValue("@FirstName", FirstName);
+                        sqlCommand.Parameters.AddWithValue("@LastName", LastName);
+                        sqlCommand.Parameters.AddWithValue("@Address", Address);
+                        sqlCommand.Parameters.AddWithValue("@BirthDay", BirthDay);
+                        sqlCommand.Parameters.AddWithValue("@Gender", Gender);
+                        sqlCommand.Parameters.AddWithValue("@Email", Email);
+                        sqlCommand.Parameters.AddWithValue("@PhoneNumber", PhoneNumber);
+                        sqlCommand.Parameters.AddWithValue("@Password", Password);
+
+                        sqlCommand.ExecuteNonQuery();
+                    }
+                    sqlConnection.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                return ex.ToString();
+            }
+            return null;
+        }
+
+
+        public string ReadAdminData(string email)
+        {
+            try
+            {
+                string result = string.Empty;
+
+                using (SqlConnection sqlConnection = new SqlConnection(connection))
+                {
+                    sqlConnection.Open();
+
+                    string selectQuery = "SELECT Email, FirstName, LastName, Address, BirthDay, Gender, PhoneNumber, Password, PPicture FROM Admin WHERE Email = @Email";
+
+                    using (SqlCommand sqlCommand = new SqlCommand(selectQuery, sqlConnection))
+                    {
+                        sqlCommand.Parameters.AddWithValue("@Email", email);
+
+                        using (SqlDataReader sqlDataReader = sqlCommand.ExecuteReader())
+                        {
+                            if (sqlDataReader.Read())
+                            {
+                                // Read data and concatenate with '+'
+                                result = string.Join("+",
+                                    sqlDataReader["Email"],
+                                    sqlDataReader["FirstName"],
+                                    sqlDataReader["LastName"],
+                                    sqlDataReader["Address"],
+                                    sqlDataReader["BirthDay"],
+                                    sqlDataReader["Gender"],
+                                    sqlDataReader["PhoneNumber"],
+                                    sqlDataReader["Password"],
+                                    sqlDataReader["PPicture"]);
+                            }
+                        }
+                    }
+                }
+
+                return result;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.ToString());
+                // Handle the exception as needed
+                return string.Empty; // Return an empty string in case of an error
+            }
+        }
+
+        public string AdminLogin(string Email, string password)
+        {
+
+            try
+            {
+                using (SqlConnection sqlConnection = new SqlConnection(connection))
+                {
+                    sqlConnection.Open();
+                    string login = "SELECT * FROM Admin WHERE Email=@Email AND Password=@password";
+
+                    using (SqlCommand sqlCommand = new SqlCommand(login, sqlConnection))
+                    {
+                        sqlCommand.Parameters.AddWithValue("@Email", Email);
+                        sqlCommand.Parameters.AddWithValue("@Password", password);
+
+                        using (SqlDataReader sqlDataReader = sqlCommand.ExecuteReader())
+                        {
+                            if (sqlDataReader.HasRows) { return "ADMIN3550"; }
+                            else { return "AA0000"; }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return "--Error--";
+            }
+        }
+
+
 
 
 

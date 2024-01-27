@@ -237,16 +237,34 @@ namespace JourneyX
                     else
                     {
                         timer_ProgressBar.Start();
-                        SQL sql = new SQL();
-                        if (RadioButton_Female.Checked == true)
-                        {                            
-                            string Error =  sql.ProfileDetails(FirstName, LastName, Address, Birthday, 0, Email, PhoneNumber, Password);
-                            MessageBox.Show(Error, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                        else if (RadioButton_Male.Checked == true)
+                        
+                        if(TextBox_Email.Text.Substring(0,3) == "AAA" && !TextBox_Email.Text.Contains("@"))
                         {
-                            string Error = sql.ProfileDetails(FirstName, LastName, Address, Birthday, 1, Email, PhoneNumber, Password);
-                            MessageBox.Show(Error, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            SQL sql = new SQL();
+                            if (RadioButton_Female.Checked == true)
+                            {
+                                string Error = sql.AdmineDetails(FirstName, LastName, Address, Birthday, 0, Email, PhoneNumber, Password);
+                                MessageBox.Show(Error, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                            else if (RadioButton_Male.Checked == true)
+                            {
+                                string Error = sql.AdmineDetails(FirstName, LastName, Address, Birthday, 1, Email, PhoneNumber, Password);
+                                MessageBox.Show(Error, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
+                        else
+                        {
+                            SQL sql = new SQL();
+                            if (RadioButton_Female.Checked == true)
+                            {
+                                string Error = sql.ProfileDetails(FirstName, LastName, Address, Birthday, 0, Email, PhoneNumber, Password);
+                                MessageBox.Show(Error, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                            else if (RadioButton_Male.Checked == true)
+                            {
+                                string Error = sql.ProfileDetails(FirstName, LastName, Address, Birthday, 1, Email, PhoneNumber, Password);
+                                MessageBox.Show(Error, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                         }
                     }
                 }
@@ -300,7 +318,7 @@ namespace JourneyX
                 timer_login.Start();
                 SQL sQL = new SQL();
                 string A = sQL.Login(Email, Password);                
-              
+
                 if(A == "AA1111")
                 {
                     Form_JourneyX form = new Form_JourneyX();
@@ -311,7 +329,10 @@ namespace JourneyX
                 }
                 else if( A == "ADMIN3550")
                 {
-
+                    Form_JourneyX form = new Form_JourneyX();
+                    form.Close();
+                    Admin admin = new Admin(Email);
+                    admin.Show();
                 }
                 else
                 {
@@ -521,6 +542,9 @@ namespace JourneyX
 
         }
 
-       
+        private void GradientPanel_CreateAccount2nd_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
