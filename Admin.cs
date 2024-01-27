@@ -12,10 +12,12 @@ namespace JourneyX
 {
     public partial class Admin : Form
     {
-        public Admin()
+        public string Email;
+        public Admin( string email)
         {
             InitializeComponent();
             emtytextfeild.Visible = false;
+            Email= email;
         }
         private void Button_Exit_Click(object sender, EventArgs e)
         {
@@ -39,7 +41,7 @@ namespace JourneyX
             }
             else
             {
-                admin = new Admin();
+                admin = new Admin(Email);
                 admin.Show();
             }
         }
@@ -53,8 +55,8 @@ namespace JourneyX
             }
             else
             {
-                admin = new AdminProfile();
-                admin.Show();
+                Profile profile = new Profile(Email);
+                profile.Show();
             }
         }
 

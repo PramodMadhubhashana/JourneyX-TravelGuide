@@ -442,7 +442,7 @@
             this.GradientPanel_CreateAccount1st.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
             this.GradientPanel_CreateAccount1st.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
             this.GradientPanel_CreateAccount1st.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
-            this.GradientPanel_CreateAccount1st.Location = new System.Drawing.Point(838, 53);
+            this.GradientPanel_CreateAccount1st.Location = new System.Drawing.Point(823, 105);
             this.GradientPanel_CreateAccount1st.MaximumSize = new System.Drawing.Size(358, 611);
             this.GradientPanel_CreateAccount1st.Name = "GradientPanel_CreateAccount1st";
             this.GradientPanel_CreateAccount1st.Size = new System.Drawing.Size(358, 611);
@@ -804,7 +804,7 @@
             this.GradientPanel_CreateAccount2nd.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
             this.GradientPanel_CreateAccount2nd.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
             this.GradientPanel_CreateAccount2nd.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
-            this.GradientPanel_CreateAccount2nd.Location = new System.Drawing.Point(838, 12);
+            this.GradientPanel_CreateAccount2nd.Location = new System.Drawing.Point(424, 12);
             this.GradientPanel_CreateAccount2nd.MaximumSize = new System.Drawing.Size(358, 611);
             this.GradientPanel_CreateAccount2nd.Name = "GradientPanel_CreateAccount2nd";
             this.GradientPanel_CreateAccount2nd.Size = new System.Drawing.Size(358, 611);

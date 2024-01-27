@@ -55,12 +55,9 @@
             this.Label_myname = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.TextBox_Address = new Guna.UI2.WinForms.Guna2TextBox();
             this.Panel_Top = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.Button_Exit = new Guna.UI2.WinForms.Guna2Button();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.PictureBox_PPicture = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.Button04 = new Guna.UI2.WinForms.Guna2Button();
-            this.Button05 = new Guna.UI2.WinForms.Guna2Button();
-            this.Button07 = new Guna.UI2.WinForms.Guna2Button();
+            this.Button_Exit = new Guna.UI2.WinForms.Guna2Button();
             this.Panel_Top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox_PPicture)).BeginInit();
             this.SuspendLayout();
@@ -494,23 +491,6 @@
             this.Panel_Top.Size = new System.Drawing.Size(800, 40);
             this.Panel_Top.TabIndex = 9;
             // 
-            // Button_Exit
-            // 
-            this.Button_Exit.BackColor = System.Drawing.Color.Transparent;
-            this.Button_Exit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.Button_Exit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.Button_Exit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Button_Exit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Button_Exit.FillColor = System.Drawing.Color.Transparent;
-            this.Button_Exit.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.Button_Exit.ForeColor = System.Drawing.Color.White;
-            this.Button_Exit.Image = global::JourneyX.Properties.Resources.cancel;
-            this.Button_Exit.ImageSize = new System.Drawing.Size(16, 16);
-            this.Button_Exit.Location = new System.Drawing.Point(762, 6);
-            this.Button_Exit.Name = "Button_Exit";
-            this.Button_Exit.Size = new System.Drawing.Size(26, 26);
-            this.Button_Exit.TabIndex = 1;
-            // 
             // guna2BorderlessForm1
             // 
             this.guna2BorderlessForm1.ContainerControl = this;
@@ -531,56 +511,22 @@
             this.PictureBox_PPicture.TabIndex = 25;
             this.PictureBox_PPicture.TabStop = false;
             // 
-            // Button04
+            // Button_Exit
             // 
-            this.Button04.BorderRadius = 10;
-            this.Button04.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.Button04.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.Button04.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Button04.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Button04.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
-            this.Button04.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.Button04.ForeColor = System.Drawing.Color.White;
-            this.Button04.Location = new System.Drawing.Point(654, 234);
-            this.Button04.Name = "Button04";
-            this.Button04.Size = new System.Drawing.Size(74, 27);
-            this.Button04.TabIndex = 29;
-            this.Button04.Text = "Edit";
-            this.Button04.Click += new System.EventHandler(this.guna2Button1_Click);
-            // 
-            // Button05
-            // 
-            this.Button05.BorderRadius = 10;
-            this.Button05.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.Button05.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.Button05.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Button05.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Button05.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
-            this.Button05.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.Button05.ForeColor = System.Drawing.Color.White;
-            this.Button05.Location = new System.Drawing.Point(654, 286);
-            this.Button05.Name = "Button05";
-            this.Button05.Size = new System.Drawing.Size(74, 27);
-            this.Button05.TabIndex = 29;
-            this.Button05.Text = "Edit";
-            this.Button05.Click += new System.EventHandler(this.guna2Button1_Click);
-            // 
-            // Button07
-            // 
-            this.Button07.BorderRadius = 10;
-            this.Button07.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.Button07.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.Button07.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Button07.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Button07.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
-            this.Button07.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.Button07.ForeColor = System.Drawing.Color.White;
-            this.Button07.Location = new System.Drawing.Point(654, 328);
-            this.Button07.Name = "Button07";
-            this.Button07.Size = new System.Drawing.Size(74, 27);
-            this.Button07.TabIndex = 29;
-            this.Button07.Text = "Edit";
-            this.Button07.Click += new System.EventHandler(this.guna2Button1_Click);
+            this.Button_Exit.BackColor = System.Drawing.Color.Transparent;
+            this.Button_Exit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Button_Exit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Button_Exit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Button_Exit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Button_Exit.FillColor = System.Drawing.Color.Transparent;
+            this.Button_Exit.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Button_Exit.ForeColor = System.Drawing.Color.White;
+            this.Button_Exit.Image = global::JourneyX.Properties.Resources.cancel;
+            this.Button_Exit.ImageSize = new System.Drawing.Size(16, 16);
+            this.Button_Exit.Location = new System.Drawing.Point(762, 6);
+            this.Button_Exit.Name = "Button_Exit";
+            this.Button_Exit.Size = new System.Drawing.Size(26, 26);
+            this.Button_Exit.TabIndex = 1;
             // 
             // AdminProfile
             // 
@@ -593,9 +539,6 @@
             this.Controls.Add(this.RadionButton_Male);
             this.Controls.Add(this.ComboBox_PPicture);
             this.Controls.Add(this.Button08);
-            this.Controls.Add(this.Button07);
-            this.Controls.Add(this.Button05);
-            this.Controls.Add(this.Button04);
             this.Controls.Add(this.Button03);
             this.Controls.Add(this.Button02);
             this.Controls.Add(this.Button01);
@@ -659,8 +602,5 @@
         private Guna.UI2.WinForms.Guna2GradientPanel Panel_Top;
         private Guna.UI2.WinForms.Guna2Button Button_Exit;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
-        private Guna.UI2.WinForms.Guna2Button Button04;
-        private Guna.UI2.WinForms.Guna2Button Button07;
-        private Guna.UI2.WinForms.Guna2Button Button05;
     }
 }

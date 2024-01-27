@@ -31,7 +31,7 @@ namespace JourneyX
         {
             ComboBox_PPicture.Visible = true;
         }
-        int ppID = 0;
+
         private void Profile_Load(object sender, EventArgs e)
         {
             ComboBox_PPicture.SelectedIndex = 0;
@@ -55,7 +55,7 @@ namespace JourneyX
 
             SQL sQL = new SQL();
             string TextJoin = sQL.PDetails(Email);
-            Console.WriteLine(TextJoin.ToString());
+           
             if (TextJoin != "--Error--")
             {
                string[] parts = TextJoin.ToString().Split('+');
@@ -67,7 +67,32 @@ namespace JourneyX
                 TextBox_Email.Text = parts[1];
                 TextBox_PhoneNumber.Text = parts[6];
                 int PPID = Int32.Parse(parts[7]);
-                 PPID = ppID;
+                switch (PPID)
+                {
+                    case 1:
+                        PictureBox_PPicture.Image = Properties.Resources.Picture011;
+                        break;
+
+                    case 2:
+                        PictureBox_PPicture.Image = Properties.Resources.Picture021;
+                        break;
+
+                    case 3:
+                        PictureBox_PPicture.Image = Properties.Resources.Picture031;
+                        break;
+
+                    case 4:
+                        PictureBox_PPicture.Image = Properties.Resources.Picture041;
+                        break;
+
+                    case 5:
+                        PictureBox_PPicture.Image = Properties.Resources.Picture051;
+                        break;
+
+                    case 6:
+                        PictureBox_PPicture.Image = Properties.Resources.Picture061;
+                        break;
+                }
                 
             }
             else
@@ -80,27 +105,27 @@ namespace JourneyX
             switch(ComboBox_PPicture.SelectedIndex)
             {
                 case 1:
-                    PictureBox_PPicture.Image = Image.FromFile("C:\\Users\\PRAMOD MADHUBHASHANA\\Documents\\Visual Studio 2022\\GUI\\JourneyX\\Icons\\Picture01.png");
+                    PictureBox_PPicture.Image = Properties.Resources.Picture011;
                     break;
 
                     case 2:
-                        PictureBox_PPicture.Image = Image.FromFile("C:\\Users\\PRAMOD MADHUBHASHANA\\Documents\\Visual Studio 2022\\GUI\\JourneyX\\Icons\\Picture02.png");
+                    PictureBox_PPicture.Image = Properties.Resources.Picture021;
                         break;
 
                         case 3:
-                             PictureBox_PPicture.Image = Image.FromFile("C:\\Users\\PRAMOD MADHUBHASHANA\\Documents\\Visual Studio 2022\\GUI\\JourneyX\\Icons\\Picture03.png");
+                    PictureBox_PPicture.Image = Properties.Resources.Picture031;
                              break;
 
                         case 4:
-                            PictureBox_PPicture.Image = Image.FromFile("C:\\Users\\PRAMOD MADHUBHASHANA\\Documents\\Visual Studio 2022\\GUI\\JourneyX\\Icons\\Picture04.png");
+                    PictureBox_PPicture.Image = Properties.Resources.Picture041;
                             break;
 
                     case 5:
-                        PictureBox_PPicture.Image = Image.FromFile("C:\\Users\\PRAMOD MADHUBHASHANA\\Documents\\Visual Studio 2022\\GUI\\JourneyX\\Icons\\Picture05.png");
+                    PictureBox_PPicture.Image = Properties.Resources.Picture051;
                         break;
 
                 case 6:
-                    PictureBox_PPicture.Image = Image.FromFile("C:\\Users\\PRAMOD MADHUBHASHANA\\Documents\\Visual Studio 2022\\GUI\\JourneyX\\Icons\\Picture06.png");
+                    PictureBox_PPicture.Image = Properties.Resources.Picture061;
                     break;
             }
         }

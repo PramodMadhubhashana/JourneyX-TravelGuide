@@ -152,6 +152,49 @@ namespace JourneyX
                 return "--Error--";
             }
         }
+        public string adminPDetails(string Email)
+        {
+            try
+            {
+                using (SqlConnection sqlConnection = new SqlConnection(connection))
+                {
+                    sqlConnection.Open();
+
+                    using (SqlCommand sqlCommand = new SqlCommand("SELECT * FROM Admin WHERE Email=@Email", sqlConnection))
+                    {
+                        sqlCommand.Parameters.AddWithValue("@Email", Email);
+
+                        using (SqlDataReader sqlDataReader = sqlCommand.ExecuteReader())
+                        {
+                            if (sqlDataReader.Read())
+                            {
+                                string UEmail = sqlDataReader.GetString(sqlDataReader.GetOrdinal("Email"));
+                                string UFirstName = sqlDataReader.GetString(sqlDataReader.GetOrdinal("FirstName"));
+                                string ULastName = sqlDataReader.GetString(sqlDataReader.GetOrdinal("LastName"));
+                                string UAddress = sqlDataReader.GetString(sqlDataReader.GetOrdinal("Address"));
+                                DateTime Birthday = sqlDataReader.GetDateTime(sqlDataReader.GetOrdinal("BirthDay"));
+                                int UGender = sqlDataReader.GetInt32(sqlDataReader.GetOrdinal("Gender"));
+                                string UPhoneNumber = sqlDataReader.GetString(sqlDataReader.GetOrdinal("PhoneNumber"));
+                                int UProfilePicture = sqlDataReader.GetInt32(sqlDataReader.GetOrdinal("PPicture"));
+
+                                string Textjoin = string.Join("+", UEmail, UFirstName, ULastName, UAddress, Birthday, UGender, UPhoneNumber, UProfilePicture);
+                                return Textjoin;
+                            }
+                            else
+                            {
+
+                                return "--No Data--";
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return "--Error--";
+            }
+        }
 
 
         public string InsertSchedule(string province, string place, string email, DateTime date)
@@ -382,54 +425,7 @@ namespace JourneyX
                 return ex.ToString();
             }
             return null;
-        }
-
-
-        public string ReadAdminData(string email)
-        {
-            try
-            {
-                string result = string.Empty;
-
-                using (SqlConnection sqlConnection = new SqlConnection(connection))
-                {
-                    sqlConnection.Open();
-
-                    string selectQuery = "SELECT Email, FirstName, LastName, Address, BirthDay, Gender, PhoneNumber, Password, PPicture FROM Admin WHERE Email = @Email";
-
-                    using (SqlCommand sqlCommand = new SqlCommand(selectQuery, sqlConnection))
-                    {
-                        sqlCommand.Parameters.AddWithValue("@Email", email);
-
-                        using (SqlDataReader sqlDataReader = sqlCommand.ExecuteReader())
-                        {
-                            if (sqlDataReader.Read())
-                            {
-                                // Read data and concatenate with '+'
-                                result = string.Join("+",
-                                    sqlDataReader["Email"],
-                                    sqlDataReader["FirstName"],
-                                    sqlDataReader["LastName"],
-                                    sqlDataReader["Address"],
-                                    sqlDataReader["BirthDay"],
-                                    sqlDataReader["Gender"],
-                                    sqlDataReader["PhoneNumber"],
-                                    sqlDataReader["Password"],
-                                    sqlDataReader["PPicture"]);
-                            }
-                        }
-                    }
-                }
-
-                return result;
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.ToString());
-                // Handle the exception as needed
-                return string.Empty; // Return an empty string in case of an error
-            }
-        }
+        }       
 
         public string AdminLogin(string Email, string password)
         {
