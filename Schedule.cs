@@ -68,7 +68,7 @@ namespace JourneyX
                     }
                     else
                     {
-                       
+                        MessageBox.Show("Add Sechedule Success", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
                 catch (Exception)

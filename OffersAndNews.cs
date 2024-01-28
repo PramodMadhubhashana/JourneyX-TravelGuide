@@ -27,8 +27,16 @@ namespace JourneyX
             SQL sQL = new SQL();            
 
             string firstThreeOffersDetails = sQL.GetFirstThreeOffersDetails();
+            Console.WriteLine(firstThreeOffersDetails);
 
-            if (!firstThreeOffersDetails.Equals("--Error--") && !firstThreeOffersDetails.Equals("--No Data--"))
+            if(firstThreeOffersDetails == "--No Data--" || firstThreeOffersDetails == "--Error--") 
+            {
+                panel1.Visible = false;
+                panel2.Visible =false;
+                panel3.Visible =false;
+                panel4.Visible =false;
+            }
+            else
             {
                 string[] offerComponents = firstThreeOffersDetails.Split('+');
                 int a = offerComponents.Length;
@@ -81,14 +89,8 @@ namespace JourneyX
                     Label4Offers.Text = offerComponents[7];
                     Label4Date.Text = offerComponents[8];
                 }
-
             }
-            else
-            {
-                MessageBox.Show("An error has occurred. Please try again later.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-
+           
         }
     }
 }

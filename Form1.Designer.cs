@@ -36,6 +36,7 @@
             this.Button_LForgotPassword = new Guna.UI2.WinForms.Guna2Button();
             this.Button_Login = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.pawrdShowbtn = new Guna.UI2.WinForms.Guna2Button();
             this.ProgressIndicator_Login = new Guna.UI2.WinForms.Guna2WinProgressIndicator();
             this.Button_SignUp = new Guna.UI2.WinForms.Guna2Button();
             this.Label_OrSignUp = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -72,6 +73,7 @@
             this.TextBox_LastName = new Guna.UI2.WinForms.Guna2TextBox();
             this.Label_BirthDay = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.GradientPanel_CreateAccount2nd = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.ShowButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.ProgressIndicator_CreateAccount = new Guna.UI2.WinForms.Guna2WinProgressIndicator();
             this.Label_SPasswordError = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Button_CA2ndPageExit = new Guna.UI2.WinForms.Guna2Button();
@@ -223,6 +225,7 @@
             // guna2CustomGradientPanel1
             // 
             this.guna2CustomGradientPanel1.BorderRadius = 30;
+            this.guna2CustomGradientPanel1.Controls.Add(this.pawrdShowbtn);
             this.guna2CustomGradientPanel1.Controls.Add(this.ProgressIndicator_Login);
             this.guna2CustomGradientPanel1.Controls.Add(this.Button_SignUp);
             this.guna2CustomGradientPanel1.Controls.Add(this.Label_OrSignUp);
@@ -245,6 +248,24 @@
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(356, 424);
             this.guna2CustomGradientPanel1.TabIndex = 1;
+            // 
+            // pawrdShowbtn
+            // 
+            this.pawrdShowbtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.pawrdShowbtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.pawrdShowbtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.pawrdShowbtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.pawrdShowbtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
+            this.pawrdShowbtn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.pawrdShowbtn.ForeColor = System.Drawing.Color.White;
+            this.pawrdShowbtn.Image = global::JourneyX.Properties.Resources.eye;
+            this.pawrdShowbtn.ImageOffset = new System.Drawing.Point(0, 12);
+            this.pawrdShowbtn.Location = new System.Drawing.Point(318, 183);
+            this.pawrdShowbtn.Name = "pawrdShowbtn";
+            this.pawrdShowbtn.Size = new System.Drawing.Size(22, 22);
+            this.pawrdShowbtn.TabIndex = 5;
+            this.pawrdShowbtn.Text = "guna2Button1";
+            this.pawrdShowbtn.Click += new System.EventHandler(this.pawrdShowbtn_Click);
             // 
             // ProgressIndicator_Login
             // 
@@ -341,7 +362,7 @@
             this.Button_LPHiden.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.Button_LPHiden.ForeColor = System.Drawing.Color.White;
             this.Button_LPHiden.Image = ((System.Drawing.Image)(resources.GetObject("Button_LPHiden.Image")));
-            this.Button_LPHiden.Location = new System.Drawing.Point(316, 184);
+            this.Button_LPHiden.Location = new System.Drawing.Point(318, 183);
             this.Button_LPHiden.Name = "Button_LPHiden";
             this.Button_LPHiden.Size = new System.Drawing.Size(25, 22);
             this.Button_LPHiden.TabIndex = 1;
@@ -442,7 +463,7 @@
             this.GradientPanel_CreateAccount1st.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
             this.GradientPanel_CreateAccount1st.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
             this.GradientPanel_CreateAccount1st.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
-            this.GradientPanel_CreateAccount1st.Location = new System.Drawing.Point(823, 105);
+            this.GradientPanel_CreateAccount1st.Location = new System.Drawing.Point(879, 66);
             this.GradientPanel_CreateAccount1st.MaximumSize = new System.Drawing.Size(358, 611);
             this.GradientPanel_CreateAccount1st.Name = "GradientPanel_CreateAccount1st";
             this.GradientPanel_CreateAccount1st.Size = new System.Drawing.Size(358, 611);
@@ -772,6 +793,7 @@
             this.GradientPanel_CreateAccount2nd.BackColor = System.Drawing.Color.Transparent;
             this.GradientPanel_CreateAccount2nd.BorderColor = System.Drawing.Color.Black;
             this.GradientPanel_CreateAccount2nd.BorderThickness = 1;
+            this.GradientPanel_CreateAccount2nd.Controls.Add(this.ShowButton1);
             this.GradientPanel_CreateAccount2nd.Controls.Add(this.ProgressIndicator_CreateAccount);
             this.GradientPanel_CreateAccount2nd.Controls.Add(this.Label_SPasswordError);
             this.GradientPanel_CreateAccount2nd.Controls.Add(this.Button_CA2ndPageExit);
@@ -804,12 +826,27 @@
             this.GradientPanel_CreateAccount2nd.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
             this.GradientPanel_CreateAccount2nd.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
             this.GradientPanel_CreateAccount2nd.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
-            this.GradientPanel_CreateAccount2nd.Location = new System.Drawing.Point(424, 12);
+            this.GradientPanel_CreateAccount2nd.Location = new System.Drawing.Point(460, 21);
             this.GradientPanel_CreateAccount2nd.MaximumSize = new System.Drawing.Size(358, 611);
             this.GradientPanel_CreateAccount2nd.Name = "GradientPanel_CreateAccount2nd";
             this.GradientPanel_CreateAccount2nd.Size = new System.Drawing.Size(358, 611);
             this.GradientPanel_CreateAccount2nd.TabIndex = 1;
             this.GradientPanel_CreateAccount2nd.Paint += new System.Windows.Forms.PaintEventHandler(this.GradientPanel_CreateAccount2nd_Paint);
+            // 
+            // ShowButton1
+            // 
+            this.ShowButton1.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.ShowButton1.HoverState.ImageSize = new System.Drawing.Size(64, 64);
+            this.ShowButton1.Image = ((System.Drawing.Image)(resources.GetObject("ShowButton1.Image")));
+            this.ShowButton1.ImageOffset = new System.Drawing.Point(0, 0);
+            this.ShowButton1.ImageRotate = 0F;
+            this.ShowButton1.ImageSize = new System.Drawing.Size(20, 20);
+            this.ShowButton1.Location = new System.Drawing.Point(313, 252);
+            this.ShowButton1.Name = "ShowButton1";
+            this.ShowButton1.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.ShowButton1.Size = new System.Drawing.Size(25, 22);
+            this.ShowButton1.TabIndex = 10;
+            this.ShowButton1.Click += new System.EventHandler(this.ShowButton1_Click);
             // 
             // ProgressIndicator_CreateAccount
             // 
@@ -1114,7 +1151,7 @@
             this.Button_SHiddenPassword.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.Button_SHiddenPassword.ForeColor = System.Drawing.Color.White;
             this.Button_SHiddenPassword.Image = ((System.Drawing.Image)(resources.GetObject("Button_SHiddenPassword.Image")));
-            this.Button_SHiddenPassword.Location = new System.Drawing.Point(312, 252);
+            this.Button_SHiddenPassword.Location = new System.Drawing.Point(313, 252);
             this.Button_SHiddenPassword.Name = "Button_SHiddenPassword";
             this.Button_SHiddenPassword.Size = new System.Drawing.Size(25, 22);
             this.Button_SHiddenPassword.TabIndex = 1;
@@ -1583,7 +1620,7 @@
             this.PictureBox_LoginPage.BackColor = System.Drawing.Color.Transparent;
             this.PictureBox_LoginPage.BorderRadius = 30;
             this.PictureBox_LoginPage.ImageRotate = 0F;
-            this.PictureBox_LoginPage.Location = new System.Drawing.Point(735, 141);
+            this.PictureBox_LoginPage.Location = new System.Drawing.Point(735, 145);
             this.PictureBox_LoginPage.Name = "PictureBox_LoginPage";
             this.PictureBox_LoginPage.Size = new System.Drawing.Size(454, 424);
             this.PictureBox_LoginPage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1741,6 +1778,8 @@
         private Guna.UI2.WinForms.Guna2CustomRadioButton RadioButton_Male;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
+        private Guna.UI2.WinForms.Guna2ImageButton ShowButton1;
+        private Guna.UI2.WinForms.Guna2Button pawrdShowbtn;
     }
 }
 

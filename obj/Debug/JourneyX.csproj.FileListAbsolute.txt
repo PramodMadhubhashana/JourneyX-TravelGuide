@@ -65,7 +65,6 @@ E:\Final Project\JourneyX-TravelGuide\bin\Debug\Guna.UI2.dll
 E:\Final Project\JourneyX-TravelGuide\obj\Debug\JourneyX.csproj.AssemblyReference.cache
 E:\Final Project\JourneyX-TravelGuide\obj\Debug\JourneyX.csproj.SuggestedBindingRedirects.cache
 E:\Final Project\JourneyX-TravelGuide\obj\Debug\JourneyX.Admin.resources
-E:\Final Project\JourneyX-TravelGuide\obj\Debug\JourneyX.AdminProfile.resources
 E:\Final Project\JourneyX-TravelGuide\obj\Debug\JourneyX.DashBoard.resources
 E:\Final Project\JourneyX-TravelGuide\obj\Debug\JourneyX.Feedback.resources
 E:\Final Project\JourneyX-TravelGuide\obj\Debug\JourneyX.Form_JourneyX.resources

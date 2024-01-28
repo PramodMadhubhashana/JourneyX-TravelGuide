@@ -50,7 +50,8 @@ namespace JourneyX
             if (nullselectTextBox == 0)
             {
                 SQL sql = new SQL();
-                bool taxiDataInserted = sql.InsertTaxiData(pickup,  drop, date, Email, vehical );
+                bool taxiDataInserted = sql.Insert(pickup,  drop, date, Email, vehical );
+                Console.WriteLine(taxiDataInserted);
 
                 if (taxiDataInserted)
                 {
@@ -87,6 +88,13 @@ namespace JourneyX
         private void TextBox_Drop_Enter(object sender, EventArgs e)
         {
             Label_DError.Text = string.Empty;
+        }
+
+        private void Taxi_Load(object sender, EventArgs e)
+        {
+            PictureBox_Tuk.Image = Properties.Resources.rickshaw;
+            PictureBox_car.Image = Properties.Resources.sport_car1;
+            PictureBox_van.Image = Properties.Resources.mini_van1;
         }
     }
 }

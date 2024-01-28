@@ -28,42 +28,102 @@ namespace JourneyX
             {
                 SQL sQL = new SQL();
                 string Name = sQL.Dashboard(Email);
+                string[] dataParts = Name.Split('+');
+                Console.WriteLine(dataParts[0]);
+                Console.WriteLine(dataParts[1]);
 
-                if (Name == "--Error--")
-                {
-                    MessageBox.Show("An error has occurred. Please try again later.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (Name == "--Error--" )
+                {                    
+                    MessageBox.Show("An error has occurred. Please try again later.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);                   
+                    
                 }
                 else
                 {
-                    Label_HName.Text = Name;
-                    Label_Name.Text = Name;
+                    Label_HName.Text = dataParts[0];
+                    Label_Name.Text = dataParts[0];
                     string[] placesAndDates = sQL.MySchedule(Email);
-                    List<string[]> partsList = new List<string[]>();  // Initialize a list to store parts arrays
-
-                    foreach (string combinedString in placesAndDates)
+                    List<string[]> partsList = new List<string[]>();
+                    int a = Int32.Parse(dataParts[1]);
+                    
+                    switch (a)
                     {
-                        if (string.IsNullOrWhiteSpace(combinedString))
-                        {
+                        case 1:
+                            Profilepicture.Image = Properties.Resources.Picture011;
                             break;
+
+                        case 2:
+                            Profilepicture.Image = Properties.Resources.Picture021;
+                            break;
+
+                        case 3:
+                            Profilepicture.Image = Properties.Resources.Picture031;
+                            break;
+
+                        case 4:
+                            Profilepicture.Image = Properties.Resources.Picture041;
+                            break;
+
+                        case 5:
+                            Profilepicture.Image = Properties.Resources.Picture051;
+                            break;
+
+                        case 6:
+                            Profilepicture.Image = Properties.Resources.Picture061;
+                            break;
+                    }
+
+
+                    if (placesAndDates[0] == "--No Data--")
+                    {
+                        panelmain.Visible = false;
+                    }
+                    else if (placesAndDates[1] == "--No Data--")
+                    {
+                        panelmain.Visible = true;
+                        Panel_M1.Visible = true;
+                        Panel_M2.Visible = false;
+                        Panel_M3.Visible = false;
+                    }
+                    else if (placesAndDates[3] == "--No Data--")
+                    {
+                        panelmain.Visible = true;
+                        Panel_M1.Visible = true;
+                        Panel_M2.Visible = true;
+                        Panel_M3.Visible = true;
+                    }
+
+                    try
+                    {
+                        foreach (string combinedString in placesAndDates)
+                        {
+                            if (string.IsNullOrWhiteSpace(combinedString))
+                            {
+                                break;
+                            }
+
+                            string[] parts = combinedString.Split(new[] { " - " }, StringSplitOptions.None);
+                            partsList.Add(parts);
                         }
 
-                        string[] parts = combinedString.Split(new[] { " - " }, StringSplitOptions.None);
-                        partsList.Add(parts);
+                        // Access parts from the list based on your requirements
+                        if (partsList.Count > 0)
+                        {
+                            Label_ML1.Text = partsList[0][0];
+                            Label_MD1.Text = partsList[0][1];
+                            Label_ML2.Text = partsList[1][0];
+                            Label_MD2.Text = partsList[1][1];
+                            Label_ML3.Text = partsList[2][0];
+                            Label_MD3.Text = partsList[2][1];
+                            Console.WriteLine(partsList[0][0]);
+                            Console.WriteLine(partsList[0][1]);
+                            // Access additional parts as needed
+                        }
                     }
-
-                    // Access parts from the list based on your requirements
-                    if (partsList.Count > 0)
+                    catch (Exception)
                     {
-                        Label_ML1.Text = partsList[0][0];
-                        Label_MD1.Text = partsList[0][1];
-                        Label_ML2.Text = partsList[1][0];
-                        Label_MD2.Text = partsList[1][1];
-                        Label_ML3.Text = partsList[2][0];
-                        Label_MD3.Text = partsList[2][1];
-                        Console.WriteLine(partsList[0][0]);
-                        Console.WriteLine(partsList[0][1]);
-                        // Access additional parts as needed
+                        return;
                     }
+                    
                 }
             }
             catch (Exception)
@@ -81,14 +141,7 @@ namespace JourneyX
         {
             this.Close();
         }
-        private void guna2PictureBox4_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void guna2PictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
+      
         private void Button_Feedback_Click(object sender, EventArgs e)
         {
             Feedback feedback = Application.OpenForms.OfType<Feedback>().FirstOrDefault();
@@ -246,6 +299,19 @@ namespace JourneyX
         private void Label_HName_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void timerload_Tick(object sender, EventArgs e)
+        {
+            timerload.Start();
+            DashBoard_Load(sender, e);
+            Console.WriteLine("swssssss");
+        }
+
+        private void unwatuna(object sender, EventArgs e)
+        {
+            Google_Map(" https://www.google.com/maps?q=unawatuna+beach&gs_lcrp=EgZjaHJvbWUyDwgAEEUYORiDARixAxiABDIHCAEQABiABDIHCAIQABiABDIHCAMQABiABDIHCAQQABiABDIHCAUQABiABDIHCAYQABiABDIHCAcQABiABDIGCAgQRRhA0gEINTU3OWowajGoAgCwAgA&um=1&ie=UTF-8");
+       
         }
     }
 }

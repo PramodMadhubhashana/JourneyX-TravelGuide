@@ -237,34 +237,44 @@ namespace JourneyX
                     else
                     {
                         timer_ProgressBar.Start();
-                        
-                        if(TextBox_Email.Text.Substring(0,3) == "AAA" && !TextBox_Email.Text.Contains("@"))
-                        {
+                       bool Error = false;
+
+                        if (TextBox_Email.Text.Substring(0,3) == "AAA" && !TextBox_Email.Text.Contains("@"))
+                        {                           
                             SQL sql = new SQL();
-                            if (RadioButton_Female.Checked == true)
+                            if (RadioButton_Female.Checked == true) 
                             {
-                                string Error = sql.AdmineDetails(FirstName, LastName, Address, Birthday, 0, Email, PhoneNumber, Password);
-                                MessageBox.Show(Error, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                Error = sql.AdmineDetails(FirstName, LastName, Address, Birthday, 0, Email, PhoneNumber, Password);
+                                
                             }
-                            else if (RadioButton_Male.Checked == true)
+                            else if (RadioButton_Male.Checked == true) 
                             {
-                                string Error = sql.AdmineDetails(FirstName, LastName, Address, Birthday, 1, Email, PhoneNumber, Password);
-                                MessageBox.Show(Error, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            }
+                                 Error = sql.AdmineDetails(FirstName, LastName, Address, Birthday, 1, Email, PhoneNumber, Password);
+                               
+                            }                            
                         }
                         else
                         {
                             SQL sql = new SQL();
+
                             if (RadioButton_Female.Checked == true)
                             {
-                                string Error = sql.ProfileDetails(FirstName, LastName, Address, Birthday, 0, Email, PhoneNumber, Password);
-                                MessageBox.Show(Error, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                Error = sql.ProfileDetails(FirstName, LastName, Address, Birthday, 0, Email, PhoneNumber, Password);
+
                             }
                             else if (RadioButton_Male.Checked == true)
                             {
-                                string Error = sql.ProfileDetails(FirstName, LastName, Address, Birthday, 1, Email, PhoneNumber, Password);
-                                MessageBox.Show(Error, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                Error = sql.ProfileDetails(FirstName, LastName, Address, Birthday, 1, Email, PhoneNumber, Password);
                             }
+                            
+                        }
+                        if (Error) 
+                        {
+                            MessageBox.Show("Data Adding Succes", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else 
+                        {
+                            MessageBox.Show("Data Adding Fail", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); 
                         }
                     }
                 }
@@ -317,7 +327,18 @@ namespace JourneyX
             {
                 timer_login.Start();
                 SQL sQL = new SQL();
-                string A = sQL.Login(Email, Password);                
+                string A;
+                if (Email.Substring(0,3) == "AAA" && !Password.Contains("@"))
+                {
+                    A = sQL.AdminLogin(Email, Password);
+                }
+                else
+                {
+                    A = sQL.Login(Email, Password);
+                }
+
+                   
+                             
 
                 if(A == "AA1111")
                 {
@@ -360,30 +381,36 @@ namespace JourneyX
         }       
         private void Button_LPHiden_Click(object sender, EventArgs e)
         {
-            if(TextBox_LoginPassword.UseSystemPasswordChar == true)
+            if (TextBox_LoginPassword.PasswordChar == '\0')
             {
-                TextBox_LoginPassword.UseSystemPasswordChar = false;
-                Button_LPHiden.Image = Properties.Resources.eye;
-            }
-            else
-            {
-                TextBox_LoginPassword.UseSystemPasswordChar = true;
-                Button_LPHiden.Image = Properties.Resources.hidden;
+                pawrdShowbtn.BringToFront();
+                TextBox_LoginPassword.PasswordChar = '●';
             }
         }
+
+        private void guna2ImageButton1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
         private void Button_SHiddenPassword_Click(object sender, EventArgs e)
         {
-            if (TextBox_Password.UseSystemPasswordChar == true)
+            if (TextBox_LoginPassword.UseSystemPasswordChar == false)
             {
-                TextBox_Password.UseSystemPasswordChar = false;
-                Button_LPHiden.Image = Properties.Resources.eye;
-            }
-            else
-            {
-                TextBox_Password.UseSystemPasswordChar = true;
-                Button_LPHiden.Image = Properties.Resources.hidden;
+                TextBox_LoginPassword.UseSystemPasswordChar = true;
+                ShowButton1.BringToFront();
             }
         }
+
+        private void ShowButton1_Click(object sender, EventArgs e)
+        {
+            if (TextBox_LoginPassword.UseSystemPasswordChar == true)
+            {
+                TextBox_LoginPassword.UseSystemPasswordChar = false;
+                Button_SHiddenPassword.BringToFront();
+            }
+        }
+
         private void Button_SCHidden_Click(object sender, EventArgs e)
         {
             if (TextBox_ConfirmPassword.UseSystemPasswordChar == true)
@@ -399,26 +426,49 @@ namespace JourneyX
         } 
         private void TextBox_Password_TextChanged(object sender, EventArgs e)
         {
-            if(TextBox_Password.Text.Length < 4)
+            if (TextBox_Password.Text.Length == 0)
+            {
+                ProgressBar_Weak.Hide();
+                ProgressBar_Short.Hide();
+                ProgressBar_Good.Hide();
+                ProgressBar_Strong.Hide();
+                Label_Weak.Hide();
+                Label_Short.Hide();
+                Label_Good.Hide();
+                Label_Strong.Hide();
+            }
+            else if(TextBox_Password.Text.Length < 4)
             {
                 ProgressBar_Weak.Show();
+                ProgressBar_Short.Hide();
+                ProgressBar_Good.Hide();
+                ProgressBar_Strong.Hide();
                 Label_Weak.Show();
+                Label_Short.Hide();
+                Label_Good.Hide();
+                Label_Strong.Hide();
             }
             else if(TextBox_Password.Text.Length < 8)
             {
                 ProgressBar_Weak.Show();
                 ProgressBar_Short.Show();
+                ProgressBar_Good.Hide();
+                ProgressBar_Strong.Hide();
                 Label_Short.Show();
                 Label_Short.Show();
+                Label_Good.Hide();
+                Label_Strong.Hide();
             }       
             else if(TextBox_Password.Text.Length < 12)
             {
                 ProgressBar_Weak.Show();
                 ProgressBar_Short.Show();
                 ProgressBar_Good.Show();
+                ProgressBar_Strong.Hide();
                 Label_Weak.Show();
                 Label_Short.Show();
                 Label_Good.Show();
+                Label_Strong.Hide();
             }
             else
             {
@@ -442,7 +492,7 @@ namespace JourneyX
             {
                 ProgressIndicator_CreateAccount.Stop();
                 timer_ProgressBar.Stop();
-                MessageBox.Show("Create Account  succsesfull...", "succsesfull", MessageBoxButtons.OK, MessageBoxIcon.Information);
+               // MessageBox.Show("Create Account  succsesfull...", "succsesfull", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 secound = 0;
                 timer_SidePanel.Start();
             }       
@@ -545,6 +595,15 @@ namespace JourneyX
         private void GradientPanel_CreateAccount2nd_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void pawrdShowbtn_Click(object sender, EventArgs e)
+        {
+            if (TextBox_LoginPassword.PasswordChar == '●')
+            {
+                Button_LPHiden.BringToFront();
+                TextBox_LoginPassword.PasswordChar = '\0';
+            }
         }
     }
 }

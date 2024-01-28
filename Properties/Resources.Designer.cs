@@ -593,6 +593,16 @@ namespace JourneyX.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap job_offer {
+            get {
+                object obj = ResourceManager.GetObject("job_offer", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap location {
             get {
                 object obj = ResourceManager.GetObject("location", resourceCulture);
@@ -626,6 +636,16 @@ namespace JourneyX.Properties {
         internal static System.Drawing.Bitmap maximize1 {
             get {
                 object obj = ResourceManager.GetObject("maximize1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mini_van1 {
+            get {
+                object obj = ResourceManager.GetObject("mini_van1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -873,6 +893,16 @@ namespace JourneyX.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap rent_a_car {
+            get {
+                object obj = ResourceManager.GetObject("rent_a_car", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap restore_down {
             get {
                 object obj = ResourceManager.GetObject("restore_down", resourceCulture);
@@ -896,6 +926,16 @@ namespace JourneyX.Properties {
         internal static System.Drawing.Bitmap rickshaw1 {
             get {
                 object obj = ResourceManager.GetObject("rickshaw1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap rickshaw2 {
+            get {
+                object obj = ResourceManager.GetObject("rickshaw2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -956,6 +996,16 @@ namespace JourneyX.Properties {
         internal static System.Drawing.Bitmap smile1 {
             get {
                 object obj = ResourceManager.GetObject("smile1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sport_car1 {
+            get {
+                object obj = ResourceManager.GetObject("sport_car1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

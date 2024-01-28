@@ -191,6 +191,7 @@
     <Content Include="Icons\happy.png" />
     <Content Include="Icons\hidden.png" />
     <Content Include="Icons\home.png" />
+    <None Include="Icons\job-offer.png" />
     <Content Include="Icons\location.png" />
     <Content Include="Icons\maximize.png" />
     <Content Include="Icons\mini-van.png" />
@@ -209,6 +210,7 @@
     <Content Include="Icons\Picture05.png" />
     <Content Include="Icons\Picture06.png" />
     <Content Include="Icons\price-tag.png" />
+    <None Include="Icons\rent-a-car.png" />
     <Content Include="Icons\restore-down.png" />
     <Content Include="Icons\rickshaw.png" />
     <Content Include="Icons\sad color.png" />

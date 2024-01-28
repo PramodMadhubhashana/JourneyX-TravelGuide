@@ -56,8 +56,16 @@ namespace JourneyX
             SQL sQL = new SQL();
             string TextJoin;
 
-            if (Email.Substring(0,3) == "AAA" && !TextBox_Email.Text.Contains("@")) { TextJoin = sQL.adminPDetails(Email); }
-            else { TextJoin = sQL.PDetails(Email); }
+            if (Email.Substring(0,3) == "AAA" && !Email.Contains("@"))
+            { 
+                TextJoin = sQL.adminPDetails(Email);
+                Console.WriteLine("1111");
+                Console.WriteLine(TextJoin);
+            }
+            else
+            { 
+                TextJoin = sQL.PDetails(Email); 
+            }
 
             if (TextJoin != "--Error--")
             {
@@ -174,7 +182,17 @@ namespace JourneyX
                 else
                 {
                     SQL sql = new SQL();
-                    bool result = sql.UpdateUserProfile(Email, firstname, lastname, address, pp);
+                    bool result = false;
+                    if (Email.Substring(0, 3) == "AAA" && !Email.Contains("@"))
+                    {
+                        result = sql.UpdateUserProfileAdmin(Email, firstname, lastname, address, pp);
+                    }
+                    else
+                    {
+                        result = sql.UpdateUserProfile(Email, firstname, lastname, address, pp);
+                    }
+                       
+                   
                     if (result)
                     {
                         TextBox_FirstName.Enabled = false;

@@ -14,14 +14,14 @@ namespace JourneyX
         //string connection = @"data source = DESKTOP-1H91E26\SQLEXPRESS; Initial Catalog = JourneyX; User ID = admin; Password = pramod1234";
         string connection = @"Data Source=PRAMOD_MADHUBHA\SQLEXPRESS; Initial Catalog=JourneyX; Integrated Security=True;";
 
-        public string ProfileDetails(string FirstName, string LastName, string Address, DateTime BirthDay, int Gender, string Email, string PhoneNumber, string Password)
+        public bool ProfileDetails(string FirstName, string LastName, string Address, DateTime BirthDay, int Gender, string Email, string PhoneNumber, string Password)
         {            
             try
             {
                 using (SqlConnection sqlConnection = new SqlConnection(connection))
                 {
                     sqlConnection.Open();
-                    string UserDetails = "INSERT INTO Users (FirstName, LastName, Address, BirthDay, Gender, Email, phone_Number, Password ) VALUES(@FirstName, @LastName, @Address, @BirthDay, @Gender, @Email, @PhoneNumber, @Password)";
+                    string UserDetails = "INSERT INTO Users (FirstName, LastName, Address, BirthDay, Gender, Email, PhoneNumber, Password ) VALUES(@FirstName, @LastName, @Address, @BirthDay, @Gender, @Email, @PhoneNumber, @Password)";
 
                     using (SqlCommand sqlCommand = new SqlCommand(UserDetails, sqlConnection))
                     {
@@ -34,16 +34,17 @@ namespace JourneyX
                         sqlCommand.Parameters.AddWithValue("@PhoneNumber", PhoneNumber);
                         sqlCommand.Parameters.AddWithValue("@Password", Password);
 
-                        sqlCommand.ExecuteNonQuery();                        
+                        int result = sqlCommand.ExecuteNonQuery();                       
+                        return result > 0;
                     }
-                    sqlConnection.Close();
+                    
                 }
             }
             catch(Exception ex)
             {
-                return ex.ToString();
+                return false;      
             }
-            return null;
+           
         }
         public string Login(string Email, string password)        
         {      
@@ -83,7 +84,7 @@ namespace JourneyX
                 using (SqlConnection sqlConnection = new SqlConnection(connection))
                 {
                     sqlConnection.Open();
-                    using (SqlCommand sqlCommand = new SqlCommand("SELECT FirstName FROM Users WHERE Email = @PrimaryKeyValue", sqlConnection))
+                    using (SqlCommand sqlCommand = new SqlCommand("SELECT FirstName, PPicture FROM Users WHERE Email = @PrimaryKeyValue", sqlConnection))
                     {
                         sqlCommand.Parameters.AddWithValue("@PrimaryKeyValue", Email);
 
@@ -92,10 +93,16 @@ namespace JourneyX
                             if (sqlDataReader.Read())
                             {
                                 string FirstName = sqlDataReader.GetString(sqlDataReader.GetOrdinal("FirstName"));
-                                return FirstName;
+                                int ProfilePictureId = sqlDataReader.GetInt32(sqlDataReader.GetOrdinal("PPicture"));
+
+                                
+                                string ProfilePictureIdString = ProfilePictureId.ToString();                              
+                                string result = FirstName + "+" + ProfilePictureIdString;
+
+                                return result;
                             }
                             else
-                            {                                
+                            {
                                 return "--No Data--";
                             }
                         }
@@ -108,6 +115,7 @@ namespace JourneyX
                 return "--Error--";
             }
         }
+
 
         public string PDetails(string Email)
         {
@@ -229,7 +237,7 @@ namespace JourneyX
 
         public string[] MySchedule(string Email)
         {
-            string[] placesAndDates = new string[6]; // Since you want the first three rows, and each row has two values (Place and Date)
+            string[] placesAndDates = new string[6]; 
 
             try
             {
@@ -248,12 +256,11 @@ namespace JourneyX
                                 string place = sqlDataReader["Place"].ToString();
                                 string date = sqlDataReader["Date"].ToString();
 
-                                // Concatenate place and date and store in the array
+                               
                                 placesAndDates[index] = place + " - " + date;
                                 index++;
                             }
-
-                            // If fewer than three rows were retrieved, fill the remaining array elements with "--No Data--"
+                           
                             while (index < 3)
                             {
                                 placesAndDates[index] = "--No Data--";
@@ -267,7 +274,7 @@ namespace JourneyX
             catch (Exception e)
             {
                 Console.WriteLine(e.ToString());
-                return new string[] { "--Error--" };
+                return new string[] { "--Error22--" };
             }
         }
 
@@ -334,7 +341,7 @@ namespace JourneyX
         }
 
 
-        public bool InsertTaxiData(string pickup, string dropLocation, DateTime date, string email, int vehicle)
+        public bool Insert(string pickup, string dropLocation, DateTime date, string email, int vehicle)
         {
             try
             {
@@ -342,7 +349,7 @@ namespace JourneyX
                 {
                     sqlConnection.Open();
 
-                    string insertQuery = "INSERT INTO Taxi (pickup, droplocation, date, Email, vehical) " +
+                    string insertQuery = "INSERT INTO TaxiBook (pickup, droplocation, date, Email, vehicle) " +
                                          "VALUES (@Pickup, @DropLocation, @Date, @Email, @Vehicle)";
 
                     using (SqlCommand sqlCommand = new SqlCommand(insertQuery, sqlConnection))
@@ -355,15 +362,26 @@ namespace JourneyX
 
                         int rowsAffected = sqlCommand.ExecuteNonQuery();
 
-                        return rowsAffected > 0; 
+                        Console.WriteLine($"Rows affected: {rowsAffected}");
+
+                        return rowsAffected > 0;
                     }
                 }
             }
-            catch (Exception)
+            catch (SqlException )
+            {               
+                return false;
+            }
+            catch (Exception )
             {
-                return false; 
+                return false;
             }
         }
+
+
+
+
+
 
         public bool InsertOffer(string offerText)
         {
@@ -395,14 +413,14 @@ namespace JourneyX
         }
 
 
-        public string AdmineDetails(string FirstName, string LastName, string Address, DateTime BirthDay, int Gender, string Email, string PhoneNumber, string Password)
+        public bool AdmineDetails(string FirstName, string LastName, string Address, DateTime BirthDay, int Gender, string Email, string PhoneNumber, string Password)
         {
             try
             {
                 using (SqlConnection sqlConnection = new SqlConnection(connection))
                 {
                     sqlConnection.Open();
-                    string UserDetails = "INSERT INTO Admin (FirstName, LastName, Address, BirthDay, Gender, Email, phone_Number, Password ) VALUES(@FirstName, @LastName, @Address, @BirthDay, @Gender, @Email, @PhoneNumber, @Password)";
+                    string UserDetails = "INSERT INTO Admin (FirstName, LastName, Address, BirthDay, Gender, Email, PhoneNumber, Password ) VALUES(@FirstName, @LastName, @Address, @BirthDay, @Gender, @Email, @PhoneNumber, @Password)";
 
                     using (SqlCommand sqlCommand = new SqlCommand(UserDetails, sqlConnection))
                     {
@@ -415,17 +433,23 @@ namespace JourneyX
                         sqlCommand.Parameters.AddWithValue("@PhoneNumber", PhoneNumber);
                         sqlCommand.Parameters.AddWithValue("@Password", Password);
 
-                        sqlCommand.ExecuteNonQuery();
+                        int result = sqlCommand.ExecuteNonQuery();
+                        Console.WriteLine(result);
+                        return result > 0;
                     }
-                    sqlConnection.Close();
+
                 }
+            }
+            catch (SqlException sqlEx)
+            {
+               return false;
             }
             catch (Exception ex)
             {
-                return ex.ToString();
+              return false;
             }
-            return null;
-        }       
+
+        }
 
         public string AdminLogin(string Email, string password)
         {
@@ -457,16 +481,74 @@ namespace JourneyX
             }
         }
 
+        public string GetFirstThreeOffersDetails()
+        {
+            StringBuilder resultBuilder = new StringBuilder();
+
+            try
+            {
+                using (SqlConnection sqlConnection = new SqlConnection(connection))
+                {
+                    sqlConnection.Open();
+
+                    using (SqlCommand sqlCommand = new SqlCommand("SELECT TOP 4 Offers, Date FROM Offers ORDER BY OffersID ASC", sqlConnection))
+                    {
+                        using (SqlDataReader sqlDataReader = sqlCommand.ExecuteReader())
+                        {
+                            while (sqlDataReader.Read())
+                            {
+                                string offer = sqlDataReader.GetString(sqlDataReader.GetOrdinal("Offers"));
+                                DateTime date = sqlDataReader.GetDateTime(sqlDataReader.GetOrdinal("Date"));
+
+                                string formattedDate = date.ToString("yyyy-MM-dd HH:mm:ss");
+                                resultBuilder.Append(offer).Append(" - ").Append(formattedDate).Append("+");
+                            }
+                        }
+                    }
+                }
+
+                string result = resultBuilder.ToString().TrimEnd('+');
+                return !string.IsNullOrEmpty(result) ? result : "--No Data--";
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return "--Error--";
+            }
+        }
 
 
+        public bool UpdateUserProfileAdmin(string email, string firstName, string lastName, string address, int profilePicture)
+        {
 
+            try
+            {
+                using (SqlConnection sqlConnection = new SqlConnection(connection))
+                {
+                    sqlConnection.Open();
 
+                    string updateQuery = "UPDATE Users SET FirstName = @FirstName, LastName = @LastName, Address = @Address, PPicture = @ProfilePicture WHERE Email = @Email";
 
+                    using (SqlCommand sqlCommand = new SqlCommand(updateQuery, sqlConnection))
+                    {
+                        sqlCommand.Parameters.AddWithValue("@FirstName", firstName);
+                        sqlCommand.Parameters.AddWithValue("@LastName", lastName);
+                        sqlCommand.Parameters.AddWithValue("@Address", address);
+                        sqlCommand.Parameters.AddWithValue("@ProfilePicture", profilePicture);
+                        sqlCommand.Parameters.AddWithValue("@Email", email);
 
+                        int rowsAffected = sqlCommand.ExecuteNonQuery();
 
-
-
-
+                        return rowsAffected > 0;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return false;
+            }
+        }
 
 
 

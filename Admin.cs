@@ -48,10 +48,10 @@ namespace JourneyX
 
         private void Button_Profile_Click(object sender, EventArgs e)
         {
-            AdminProfile admin = Application.OpenForms.OfType<AdminProfile>().FirstOrDefault();
-            if(admin != null)
+            Profile prof = Application.OpenForms.OfType<Profile>().FirstOrDefault();
+            if (prof != null)
             {
-                admin.Activate();
+                prof.Activate();
             }
             else
             {

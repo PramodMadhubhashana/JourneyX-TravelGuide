@@ -41,27 +41,16 @@
             this.guna2Button8 = new Guna.UI2.WinForms.Guna2Button();
             this.Button_Exit = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.emtytextfeild = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Label_OFeersAndNews = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2GradientPanel4 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.Button1_add = new Guna.UI2.WinForms.Guna2Button();
             this.tetboxoffers = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.Label_BestDestination = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2GradientPanel9 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.Button1_BDImageAdd = new Guna.UI2.WinForms.Guna2Button();
-            this.Button1_BDAdd = new Guna.UI2.WinForms.Guna2Button();
-            this.PictureBox_BD1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.TextBox1_BDLocation = new Guna.UI2.WinForms.Guna2TextBox();
-            this.TextBox1_BDName = new Guna.UI2.WinForms.Guna2TextBox();
-            this.emtytextfeild = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2GradientPanel1.SuspendLayout();
             this.guna2GradientPanel2.SuspendLayout();
             this.guna2GradientPanel3.SuspendLayout();
             this.guna2GradientPanel4.SuspendLayout();
-            this.guna2Panel1.SuspendLayout();
-            this.guna2GradientPanel9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox_BD1)).BeginInit();
             this.SuspendLayout();
             // 
             // BorderlessForm_Admin
@@ -226,14 +215,25 @@
             // 
             this.guna2GradientPanel3.AutoRoundedCorners = true;
             this.guna2GradientPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.guna2GradientPanel3.BorderRadius = 243;
+            this.guna2GradientPanel3.BorderRadius = 331;
             this.guna2GradientPanel3.Controls.Add(this.emtytextfeild);
             this.guna2GradientPanel3.Controls.Add(this.Label_OFeersAndNews);
             this.guna2GradientPanel3.Controls.Add(this.guna2GradientPanel4);
             this.guna2GradientPanel3.Location = new System.Drawing.Point(245, 46);
             this.guna2GradientPanel3.Name = "guna2GradientPanel3";
-            this.guna2GradientPanel3.Size = new System.Drawing.Size(489, 665);
+            this.guna2GradientPanel3.Size = new System.Drawing.Size(687, 665);
             this.guna2GradientPanel3.TabIndex = 2;
+            // 
+            // emtytextfeild
+            // 
+            this.emtytextfeild.BackColor = System.Drawing.Color.Transparent;
+            this.emtytextfeild.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emtytextfeild.ForeColor = System.Drawing.Color.Red;
+            this.emtytextfeild.Location = new System.Drawing.Point(37, 189);
+            this.emtytextfeild.Name = "emtytextfeild";
+            this.emtytextfeild.Size = new System.Drawing.Size(3, 2);
+            this.emtytextfeild.TabIndex = 6;
+            this.emtytextfeild.Text = null;
             // 
             // Label_OFeersAndNews
             // 
@@ -307,150 +307,12 @@
             this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
-            // guna2Panel1
-            // 
-            this.guna2Panel1.AutoRoundedCorners = true;
-            this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.guna2Panel1.BorderRadius = 119;
-            this.guna2Panel1.Controls.Add(this.Label_BestDestination);
-            this.guna2Panel1.Controls.Add(this.guna2GradientPanel9);
-            this.guna2Panel1.Location = new System.Drawing.Point(757, 53);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(471, 240);
-            this.guna2Panel1.TabIndex = 4;
-            // 
-            // Label_BestDestination
-            // 
-            this.Label_BestDestination.BackColor = System.Drawing.Color.Transparent;
-            this.Label_BestDestination.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label_BestDestination.ForeColor = System.Drawing.Color.White;
-            this.Label_BestDestination.Location = new System.Drawing.Point(13, 12);
-            this.Label_BestDestination.Name = "Label_BestDestination";
-            this.Label_BestDestination.Size = new System.Drawing.Size(174, 22);
-            this.Label_BestDestination.TabIndex = 5;
-            this.Label_BestDestination.Text = "Add Best Destination";
-            this.Label_BestDestination.Click += new System.EventHandler(this.Label_BestDestination_Click);
-            // 
-            // guna2GradientPanel9
-            // 
-            this.guna2GradientPanel9.Controls.Add(this.Button1_BDImageAdd);
-            this.guna2GradientPanel9.Controls.Add(this.Button1_BDAdd);
-            this.guna2GradientPanel9.Controls.Add(this.PictureBox_BD1);
-            this.guna2GradientPanel9.Controls.Add(this.TextBox1_BDLocation);
-            this.guna2GradientPanel9.Controls.Add(this.TextBox1_BDName);
-            this.guna2GradientPanel9.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
-            this.guna2GradientPanel9.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(29)))));
-            this.guna2GradientPanel9.Location = new System.Drawing.Point(10, 56);
-            this.guna2GradientPanel9.Name = "guna2GradientPanel9";
-            this.guna2GradientPanel9.Size = new System.Drawing.Size(452, 131);
-            this.guna2GradientPanel9.TabIndex = 4;
-            // 
-            // Button1_BDImageAdd
-            // 
-            this.Button1_BDImageAdd.Animated = true;
-            this.Button1_BDImageAdd.BackColor = System.Drawing.Color.Transparent;
-            this.Button1_BDImageAdd.BorderColor = System.Drawing.Color.White;
-            this.Button1_BDImageAdd.BorderRadius = 10;
-            this.Button1_BDImageAdd.BorderThickness = 2;
-            this.Button1_BDImageAdd.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.Button1_BDImageAdd.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.Button1_BDImageAdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Button1_BDImageAdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Button1_BDImageAdd.FillColor = System.Drawing.Color.Transparent;
-            this.Button1_BDImageAdd.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.Button1_BDImageAdd.ForeColor = System.Drawing.Color.White;
-            this.Button1_BDImageAdd.Location = new System.Drawing.Point(9, 87);
-            this.Button1_BDImageAdd.Name = "Button1_BDImageAdd";
-            this.Button1_BDImageAdd.Size = new System.Drawing.Size(78, 33);
-            this.Button1_BDImageAdd.TabIndex = 1;
-            this.Button1_BDImageAdd.Text = "Add";
-            this.Button1_BDImageAdd.UseTransparentBackground = true;
-            // 
-            // Button1_BDAdd
-            // 
-            this.Button1_BDAdd.BackColor = System.Drawing.Color.Transparent;
-            this.Button1_BDAdd.BorderColor = System.Drawing.Color.White;
-            this.Button1_BDAdd.BorderRadius = 10;
-            this.Button1_BDAdd.BorderThickness = 2;
-            this.Button1_BDAdd.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.Button1_BDAdd.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.Button1_BDAdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Button1_BDAdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Button1_BDAdd.FillColor = System.Drawing.Color.Transparent;
-            this.Button1_BDAdd.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.Button1_BDAdd.ForeColor = System.Drawing.Color.White;
-            this.Button1_BDAdd.Location = new System.Drawing.Point(360, 34);
-            this.Button1_BDAdd.Name = "Button1_BDAdd";
-            this.Button1_BDAdd.Size = new System.Drawing.Size(78, 33);
-            this.Button1_BDAdd.TabIndex = 1;
-            this.Button1_BDAdd.Text = "Add";
-            // 
-            // PictureBox_BD1
-            // 
-            this.PictureBox_BD1.ImageRotate = 0F;
-            this.PictureBox_BD1.Location = new System.Drawing.Point(5, 5);
-            this.PictureBox_BD1.Name = "PictureBox_BD1";
-            this.PictureBox_BD1.Size = new System.Drawing.Size(87, 68);
-            this.PictureBox_BD1.TabIndex = 1;
-            this.PictureBox_BD1.TabStop = false;
-            // 
-            // TextBox1_BDLocation
-            // 
-            this.TextBox1_BDLocation.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.TextBox1_BDLocation.DefaultText = "";
-            this.TextBox1_BDLocation.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.TextBox1_BDLocation.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.TextBox1_BDLocation.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TextBox1_BDLocation.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TextBox1_BDLocation.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TextBox1_BDLocation.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.TextBox1_BDLocation.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TextBox1_BDLocation.Location = new System.Drawing.Point(150, 63);
-            this.TextBox1_BDLocation.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.TextBox1_BDLocation.Name = "TextBox1_BDLocation";
-            this.TextBox1_BDLocation.PasswordChar = '\0';
-            this.TextBox1_BDLocation.PlaceholderText = "";
-            this.TextBox1_BDLocation.SelectedText = "";
-            this.TextBox1_BDLocation.Size = new System.Drawing.Size(200, 36);
-            this.TextBox1_BDLocation.TabIndex = 0;
-            // 
-            // TextBox1_BDName
-            // 
-            this.TextBox1_BDName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.TextBox1_BDName.DefaultText = "";
-            this.TextBox1_BDName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.TextBox1_BDName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.TextBox1_BDName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TextBox1_BDName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TextBox1_BDName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TextBox1_BDName.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.TextBox1_BDName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TextBox1_BDName.Location = new System.Drawing.Point(150, 3);
-            this.TextBox1_BDName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.TextBox1_BDName.Name = "TextBox1_BDName";
-            this.TextBox1_BDName.PasswordChar = '\0';
-            this.TextBox1_BDName.PlaceholderText = "";
-            this.TextBox1_BDName.SelectedText = "";
-            this.TextBox1_BDName.Size = new System.Drawing.Size(200, 36);
-            this.TextBox1_BDName.TabIndex = 0;
-            // 
-            // emtytextfeild
-            // 
-            this.emtytextfeild.BackColor = System.Drawing.Color.Transparent;
-            this.emtytextfeild.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emtytextfeild.ForeColor = System.Drawing.Color.Red;
-            this.emtytextfeild.Location = new System.Drawing.Point(37, 189);
-            this.emtytextfeild.Name = "emtytextfeild";
-            this.emtytextfeild.Size = new System.Drawing.Size(3, 2);
-            this.emtytextfeild.TabIndex = 6;
-            // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.ClientSize = new System.Drawing.Size(1248, 640);
-            this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.guna2GradientPanel3);
             this.Controls.Add(this.guna2GradientPanel2);
             this.Controls.Add(this.guna2GradientPanel1);
@@ -463,10 +325,6 @@
             this.guna2GradientPanel3.ResumeLayout(false);
             this.guna2GradientPanel3.PerformLayout();
             this.guna2GradientPanel4.ResumeLayout(false);
-            this.guna2Panel1.ResumeLayout(false);
-            this.guna2Panel1.PerformLayout();
-            this.guna2GradientPanel9.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox_BD1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -489,15 +347,7 @@
         private System.Windows.Forms.MonthCalendar monthCalendar1;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
         private Guna.UI2.WinForms.Guna2Button Button_Profile;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel9;
-        public Guna.UI2.WinForms.Guna2HtmlLabel Label_BestDestination;
         public Guna.UI2.WinForms.Guna2HtmlLabel Label_OFeersAndNews;
-        private Guna.UI2.WinForms.Guna2Button Button1_BDImageAdd;
-        private Guna.UI2.WinForms.Guna2Button Button1_BDAdd;
-        private Guna.UI2.WinForms.Guna2PictureBox PictureBox_BD1;
-        private Guna.UI2.WinForms.Guna2TextBox TextBox1_BDLocation;
-        private Guna.UI2.WinForms.Guna2TextBox TextBox1_BDName;
         public Guna.UI2.WinForms.Guna2HtmlLabel emtytextfeild;
     }
 }
